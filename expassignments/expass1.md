@@ -1,6 +1,6 @@
-### DAT250: Software Technology Experiment Assignment 1
+## DAT250: Software Technology Experiment Assignment 1
 
-#### Introduction
+### Introduction
 
 The goal of this assignment is to make sure that you have a working Software Development Environment installed on your PC which will be needed in the reminder of this course. As part of the installation, you will have to validate that the installed software development environment is working.
 
@@ -8,7 +8,7 @@ If you encounter problems during the installation of the software development en
 
 Note that this is an **individual** assignment (see Hand-in at the end of the document).
 
-#### Installation: Software Development Environment
+### Installation: Software Development Environment
 
 You must make sure that you have the following installed on your PC:
 
