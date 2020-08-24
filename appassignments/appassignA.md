@@ -85,6 +85,12 @@ The design document that you are to produce should contain:
 - Mock-up user screens for the front-end
 - An architectural diagram similar to Chap 1 in the IoT book (see Canvas) that relate the FeedApp application to the IoT-levels.
 
+## JPA persistence
+
+In addition to making the overall application design, you are also required to prototype the persistence part of the application by implementing the classes from the domain model as entity classes using the Java Persistence Architecture (JPA) that is to be covered in the lectures in weeks 36/37.
+
+Detailed instruction on this part will be provided as part of the lab in week 36.
+
 ## The OpenPhoneBook example
 
 The OpenPhoneBook example application should help you to create a proper design document. Use it as template for the application that you are going to develop. Note that the example does not contain the required IoT architectural diagram.
