@@ -77,7 +77,7 @@ Information about polls created by users, results from past polls must be persis
 
 ## Summary
 
-The design that you are to produce should contain:
+The design document that you are to produce should contain:
 
 1. A domain model for the application
 - Use case diagrams
