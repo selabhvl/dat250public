@@ -69,7 +69,7 @@ A typical use of the system is as follows:
 
 1. A user sets up a poll using the web/mobile application. It must be possible for a user to have several polls defined in the system and choose among them (past/present/future polls).
 - The IoT feedback device and the IoT display device is linked to (paired with) the poll. A mechanism for pairing the IoT device and the poll must be designed.
-- The user opens the poll - possibly giving a time limit. The poll can be accessed by entering a number on a webpage (as in Kahoot) or via a link. Some polls may be public and do require a voter account, other polls can be made private and require a voter account and login to provide feedback.
+- The user opens the poll - possibly giving a time limit. The poll can be accessed by entering a number on a webpage (as in Kahoot) or via a link. Some polls may be public and do not require a voter account, other polls can be made private and require a voter account and login to provide feedback.
 - The information configured is to be displayed (time remaining, current votes,...) in real-time on a web page and on the IoT display as feedback to the users.
 - The user closes the poll
 
