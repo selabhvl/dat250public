@@ -89,7 +89,9 @@ The design document that you are to produce should contain:
 
 In addition to making the overall application design, you are also required to prototype the persistence part of the application by implementing the classes from the domain model as entity classes using the Java Persistence Architecture (JPA) that is to be covered in the lectures in weeks 36/37.
 
-Detailed instruction on this part will be provided as part of the lab in week 36.
+Detailed instruction on this part is provided as part of the lab in week 36:
+
+https://github.com/selabhvl/dat250public/blob/master/appassignments/appassignA-JPA.md
 
 ## The OpenPhoneBook example
 
