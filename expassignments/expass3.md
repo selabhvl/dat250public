@@ -2,7 +2,7 @@
 
 ### Introduction
 
-The goal of this assignment is to get familiar with MongoDB by following its official tutorial. This will include some preliminar reading about high level details of MongoDB, performing a local installation on each corresponding machine and setting up a small database where basic CRUD operations will be tested on it.
+The goal of this assignment is to get familiar with MongoDB by following its official tutorial. This will include some preliminary reading about high level details of MongoDB, performing a local installation on each corresponding machine and setting up a small database where basic CRUD operations will be tested on it.
 
 If you encounter technical problems during this experiment assignment, then please post your questions and issues on the Canvas discussion forum for the DAT250 course: https://hvl.instructure.com/courses/13451/discussion_topics/103071
 
@@ -20,7 +20,7 @@ Try the following **Examples** located under https://docs.mongodb.com/manual/tut
 1. Populate a collection (Insert)
 2. Select All Documents
 3. Specify Equality Matches
-4. Specify Fields to Return (Projection) 
+4. Specify Fields to Return (Projection)
 
 ### Installation: MongoDB Database
 
@@ -71,7 +71,7 @@ https://docs.mongodb.com/manual/core/bulk-write-operations/
 
 Aggregation operations process data records and return computed results. Aggregation operations group values from multiple documents together, and can perform a variety of operations on the grouped data to return a single result. MongoDB provides three ways to perform aggregation: the aggregation pipeline, the map-reduce function, and single purpose aggregation methods.
 
-We will focus on **Map-Reduce** for this experiment but you are encouraged to take a look at Aggregation Pipeline.
+We will focus on **Map-Reduce** for this experiment, but you are encouraged to take a look at Aggregation Pipeline.
 
 #### Map-Reduce
 
@@ -100,12 +100,12 @@ In particular, you should write about:
 - Screenshots for:
 
   - The correct validation of the installation package (https://docs.mongodb.com/manual/tutorial/verify-mongodb-packages/)
-  
+
   - Relevant results obtained during Experiment 1 (it is not necessary to put a single screenshot on each substep, but at least one significant from each CRUD operation).
-  
+
   - Experiment 2 example working and the additional Map-reduce operation (and its result) developed by each of you.
 
-- Reason about why your implemented Map-reduce operation in Experiment 2 is useful and interpret the obtained collection. 
+- Reason about why your implemented Map-reduce operation in Experiment 2 is useful and interpret the collection obtained. 
 
 - Any pending issues with this assignment which you did not manage to solve
 
