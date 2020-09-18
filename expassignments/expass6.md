@@ -14,7 +14,7 @@ Complete the tutorial on the React framework at: https://reactjs.org/tutorial/tu
 
 ### Hand-in: short report
 
-As hand in, you must add a markdown file called `dat250-expass7.md` to the same repository that you created in the earlier software technology assignments.
+As hand in, you must add a markdown file called `dat250-expass6.md` to the same repository that you created in the earlier software technology assignments.
 
 In particular, you should write about:
 
