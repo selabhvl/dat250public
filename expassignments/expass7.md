@@ -2,22 +2,33 @@
 
 ### Introduction
 
-The goal of this assignment is to make initial experiments front-end technologies for enterprise application. You will be exploring the following technologies:
+The goal of this assignment is to make initial experiments with messaging systems and the publish/subscribe paradigm. In the experiments you will be using the RabbitMQ message broker: https://www.rabbitmq.com
 
-- Spring Framework: spring.io
--
+### Experiment 1: Installation
 
-### Experiment 1: Modell-View-Controller Web Applications
+Start by doing an installation as described here: https://www.rabbitmq.com/download.html
 
-Complete the tutorial on Spring MVC at: https://spring.io/guides/gs/serving-web-content/
+### Experiment 2: Hello World
 
-### Experiment 2: Single-page Web Applications
+Complete the "Hello World" tutorial at: https://www.rabbitmq.com/getstarted.html
 
-Complete the tutorial on the React framework at: https://reactjs.org/tutorial/tutorial.html
+You can freely choose the programming language.
+
+### Experiment 3: Queue messaging
+
+Complete the "Work queues" tutorial at: https://www.rabbitmq.com/getstarted.html
+
+You can freely choose the programming language.
+
+### Experiment 4: Topics
+
+Complete the "Publish/subscribe" tutorial at: https://www.rabbitmq.com/getstarted.html
+
+You can freely choose the programming language.
 
 ### Hand-in: short report
 
-As hand in, you must add a markdown file called `dat250-expass7.md` to the same repository that you created in the earlier software technology assignments.
+As hand in, you must add a markdown file called `dat250-expass6.md` to the same repository that you created in the earlier software technology assignments.
 
 In particular, you should write about:
 
