@@ -2,10 +2,7 @@
 
 ### Introduction
 
-The goal of this assignment is to make initial experiments front-end technologies for enterprise application. You will be exploring the following technologies:
-
-- Spring Framework: spring.io
--
+The goal of this assignment is to make initial experiments front-end technologies for enterprise applications. 
 
 ### Experiment 1: Modell-View-Controller Web Applications
 
