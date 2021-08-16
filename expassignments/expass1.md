@@ -4,7 +4,7 @@
 
 The goal of this assignment is to make sure that you have a working Software Development Environment installed on your PC which will be needed in the reminder of this course. As part of the installation, you will have to validate that the installed software development environment is working properly.
 
-If you encounter problems during the installation of the software development environment, then please post your questions and issues on the Canvas discussion forum for the DAT250 course: https://hvl.instructure.com/courses/13451/discussion_topics/103071
+If you encounter problems during the installation of the software development environment, then please post your questions and issues on the Canvas discussion forum for the DAT250 course.
 
 Note that this is an **individual** assignment (see Hand-in at the end of the document).
 
