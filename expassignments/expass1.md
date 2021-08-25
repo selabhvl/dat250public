@@ -32,6 +32,8 @@ Complete the tutorial for deploying Java applications on the Heroku cloud platfo
 
 https://devcenter.heroku.com/articles/getting-started-with-java
 
+Please add the URL to your project add the end of your report.
+
 ### Hand-in: short report
 
 As hand in, you must create a repository on github and inside the repository add a markdown file called `dat250-expass1.md` which is to contain a short laboratory report documenting what you have done.
