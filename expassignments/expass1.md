@@ -32,6 +32,7 @@ Complete the tutorial for deploying Java applications on the Heroku cloud platfo
 
 https://devcenter.heroku.com/articles/getting-started-with-java
 
+The step **Provision add-ons** is optional since it requires account verfication with payment information.
 Please add the URL to your project add the end of your report.
 
 ### Hand-in: short report
