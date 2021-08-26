@@ -1,22 +1,22 @@
 ## DAT250: Design and Prototyping Assignment A
 
-This is the first part of the design and prototyping assignments where you will develop an IoT-cloud software system. The application is intended to showcase a broad spectrum of important IoT and cloud technology, design principles, software platforms and protocols.
+This is the first design and prototyping assignment, where you will be developing an IoT-cloud software system. The application is intended to showcase a broad spectrum of important IoT and cloud technology, design principles, software platforms and protocols.
 
-**IMPORTANT:** The design and prototyping assignments are to be undertaken in the groups of 2-4 persons that you have formed in the course.
+**IMPORTANT:** The design and prototyping assignments are to be undertaken in the groups of 2-4 persons that you have formed in the course. The design and prototyping assignments will also form the basis of the larger project to be undertaken in the second part of the course.
 
 ### Introduction
 
 The system that you will be developing is a system where users can provide feedback in the form of yes/no votes on polls either via a web-client front-end or via an IoT voting device.
 
-The figure below provide an initial sketch the overall envisioned system architecture
+The figure below provides an initial sketch of the overall envisioned system architecture
 
 ![](assets/markdown-img-paste-20200221143602803.jpg)
 
-In addition to the IoT feedback/voting device, the system consists of a web application deployed using a cloud container. Furthermore, a REST service is deployed in the cloud which can provide meta-data polls that has been initiated.
+In addition to the IoT feedback/voting device, the system consists of a web application deployed using a cloud container. Furthermore, a REST API (web service) is deployed in the cloud which can provide meta-data about polls that has been initiated.
 
-The results of evaluations/polls are stored in a database also in the cloud, and when a poll is being terminated, then the results of the poll is published on a topic in external services such as dweet.io
+The results of evaluations (polls) are stored in a database also in the cloud, and when a poll is being terminated (closed), then the results of the poll are to be publish on a topic in an external service such as dweet.io
 
-A prototype of a voting device is shown below and has four buttons for user input:
+A prototype of an IoT voting/feedback device is shown below and has four buttons (sensor) for user input:
 
 - a "green" button for giving a green vote
 - a "red" button for giving a red vote
@@ -29,13 +29,13 @@ A video-demonstration (in a different application context) can be found here:
 
 https://www.youtube.com/watch?v=oeNdvldsGpA
 
-In addition, the system will also have an IoT display device that can display the current status of an ongoing poll.
+In addition, the system may also have an IoT display device that can display the current status of an ongoing poll.
 
 ### Task
 
-In this assignment you are to produce an initial **design document** for the application.  The main requirements for the application is provided below. In addition, you will find an example design document for a phone book application.  Use this design document as a template for your own design document.
+In this assignment you are to produce an initial **design document** for the application.  The main requirements for the application is provided below. In addition, you will find an example design document for a phone book application at the very end of this page.  The phone book application design document can be used as a template for your own design document.
 
-The requirements provided below may be incomplete, and it is your task to design a useful application. So it is important to try to find a proper balance in terms of the features that you want to support. The application should not be too complex and not too simple either. Keep in mind that eventually you have to complete the application as part of the software technology study project in the second part of the course.
+The requirements provided below may be incomplete, and it is your task to design a useful application. So it is important to find a proper balance in terms of the features that you want to support. The application should not be too complex and not too simple either. Keep in mind that eventually you have to complete the implementation of the application as part of the software technology study project in the second part of the course. You will not be required to build the physical IoT devices in the project, but if you have access access to an IoT device prototyping platform (such as Raspberry PI or Arduino) you may choose to do so.
 
 Each group is required to give a short presentation of their design document (see the course canvas for details), and also submit their design document in PDF format via canvas. It is recommended to structure the design document so that it can be used directly for the presentation.
 
@@ -48,30 +48,29 @@ For creating the design diagrams (use cases, domain model, and application flow)
 
 or some other suitable tool you may know from earlier.
 
-
 ## Development Methodology
 
-For the development of the system is to be partly based on the design methodology proposed in Chap 5 of the IoT book (see Canvas), and realise a software architecture conforming to the architectural level(s) described in Chap 1 of the IoT book. In that respect, part of the project will also be to evaluate the practical applicability of the design methodology and the architectural principles presented in the IoT book.
+The development of the system is to be partly based on the design methodology proposed in Chap 5 of the IoT book (see Canvas), and realise a software architecture conforming to the architectural level(s) described in Chap 1 of the IoT book. In that respect, part of the project will also be to evaluate the practical applicability of the design methodology and the architectural principles presented in the IoT book. You are not required to follow strictly all steps in the design methodology but rather use those that you find is useful for the design of the system.
 
-The two section below contains partial information related to the first steps of the design methodology, and is intended to serve as a staring point for undertaking the project.
+The two sections below contain partial information related to the first steps of the design methodology, and is intended to serve as a staring point for undertaking the project.
 
 ### Step 1: Purpose and requirements
 
-The purpose of the system is for users to be able to set up and carrying out polls for feedback, and in voters to provide feedback either via a web- and mobile application or via a specialized IoT voting device. The IoT voting device and the IoT display device are physical devices that must be configureable such that they can be linked (paired with) an ongoing poll.
+The purpose of the system is for users to be able to set up and carry out polls for feedback, and in voters to provide feedback either via a web- and mobile application or via a specialized IoT voting device. The IoT voting device and the IoT display device are physical devices that must be configureable such that they can be linked (paired with) an ongoing poll.
 
 The system is to support administrators in configuring the system and accounts. The business logic of the application must support storage, analytics, and integration with back-end services using the results from polls to implement new services. The application is to deployed in the cloud using a combination of platform-, infrastructure-, and software as a service (PaaS/IaaS/Saas).
 
-It must be possible for users and voters to create accounts in the system (possible integrated with third-party accounts (such as facebook and google accounts), and communication between the system components must ensure confidentiality.
+It must be possible for users and voters to create accounts in the system (possible integrated with third-party authentication such as facebook and google accounts), and communication between the system components must ensure confidentiality.
 
 ### Step 2: Process Specification
 
 A typical use of the system is as follows:
 
 1. A user sets up a poll using the web/mobile application. It must be possible for a user to have several polls defined in the system and choose among them (past/present/future polls).
-- The IoT feedback device and the IoT display device is linked to (paired with) the poll. A mechanism for pairing the IoT device and the poll must be designed.
+- The IoT feedback device and the IoT display device are linked to (paired with) a poll. A mechanism for pairing the IoT device and the poll must be designed.
 - The user opens the poll - possibly giving a time limit. The poll can be accessed by entering a number on a webpage (as in Kahoot) or via a link. Some polls may be public and do not require a voter account, other polls can be made private and require a voter account and login to provide feedback.
 - The information configured is to be displayed (time remaining, current votes,...) in real-time on a web page and on the IoT display as feedback to the users.
-- The user closes the poll
+- The user closes the poll.
 
 Information about polls created by users, results from past polls must be persistently stored in one or more databases. It must be possible for other applications to integrate with the feedback application and obtain, e.g., information about results of polls, notification when polls are being opened and closed, and retrieve data for further analytics and prediction.
 
@@ -83,13 +82,13 @@ The design document that you are to produce should contain:
 - Use case diagrams
 - Application flow diagrams for the front-end
 - Mock-up user screens for the front-end
-- An architectural diagram similar to Chap 1 in the IoT book (see Canvas) that relate the FeedApp application to the IoT-levels.
+- A system-specific architectural diagram similar to Chap 1 in the IoT book (see Canvas) that relate the FeedApp application to the IoT-levels.
 
 ## JPA persistence
 
-In addition to making the overall application design, you are also required to prototype the persistence part of the application by implementing the classes from the domain model as entity classes using the Java Persistence Architecture (JPA) that is to be covered in the lectures in weeks 36/37.
+In addition to making the overall application design, you are also required to prototype the persistence part of the application by implementing the classes from the domain model as entity classes using the Java Persistence Architecture (JPA) that is to be covered in the lectures in weeks 35/36.
 
-Detailed instruction on this part is provided as part of the lab in week 36:
+Detailed instructions on this part will be provided as part of the lab in week 36:
 
 https://github.com/selabhvl/dat250public/blob/master/appassignments/appassignA-JPA.md
 
@@ -119,7 +118,7 @@ The OpenPhoneBook application requires the concepts shown in the figure below. U
 
 ### Application Flow Diagram
 
-Screen transitions (in the web tier) should be modelled using a basic state machine. Each screen should be modelled as state. Each action (button/link which can be pressed) should be modelled as transition (arrow). A condition (guard) for a transition is written in brackets `[guard]`.
+Screen transitions (in the web application front-end) should be modelled using a basic state machine. Each screen should be modelled as state. Each action (button/link which can be pressed) should be modelled as transition (arrow). A condition (guard) for a transition is written in brackets `[guard]`.
 
 Furthermore, transitions which result from possible errors should be coloured red. If there is a red transition, then there should be also a green one covering the case when an error did not occur. Uncoloured transitions can be merged if it makes sense (see: `Add address`, `Add phone number`, `Remove (address)` and `Remove (phone number)` have been merged to a single transition.
 
@@ -139,7 +138,7 @@ In `Search Phone Number Screen` (see figure below) each user can search by `Last
 
 ![](assets/OpenPhoneBook_S2.png)
 
-In `User Data Screen` (see figure below) a user can register as a new member, change his data or cancel his membership. Addresses are shown in a list. Each *Address* have a sublist containing all the phone numbers for the address. The data is validated when pressing the save button. It is checked that each set of data is complete. In addition, it is validated that the phone number is numerical. Furthermore, it is checked that the user adds add least one address and one phone number. Error messages shown are
+In `User Data Screen` (see figure below) a user can register as a new member, change his data or cancel his membership. Addresses are shown in a list. Each *Address* has a sublist containing all the phone numbers for the address. The data is validated when pressing the save button. It is checked that each set of data is complete. In addition, it is validated that the phone number is numerical. Furthermore, it is checked that the user adds add least one address and one phone number. Error messages shown are
 
 * User data is not complete.
 * Address <1> is not complete.
