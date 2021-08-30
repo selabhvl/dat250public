@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema targetNamespace="https://www.hvl.no/250/courses"
+           xmlns="https://www.hvl.no/250/courses"
+           elementFormDefault="qualified"
+           xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:element name="courses">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element ref="course"/>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="course">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element name="semester" type="xs:string" />
+      </xs:sequence>
+      <xs:attribute name="code" type="xs:string"/>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>

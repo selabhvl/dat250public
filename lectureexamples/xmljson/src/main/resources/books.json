@@ -1,0 +1,49 @@
+{
+  "books": [
+    {
+      "id": "bk101",
+      "author": "Gambardella, Matthew",
+      "title": "XML Developer's Guide",
+      "genre": "Computer",
+      "price": 44.95,
+      "publishDate": "2000-10-01",
+      "description": "An in-depth look at creating applications\n            with XML."
+    },
+    {
+      "id": "bk102",
+      "author": "Ralls, Kim",
+      "title": "Midnight Rain",
+      "genre": "Fantasy",
+      "price": 5.95,
+      "publishDate": "2000-12-16",
+      "description": "A former architect battles corporate zombies,\n            an evil sorceress, and her own childhood to become queen\n            of the world."
+    },
+    {
+      "id": "bk106",
+      "author": "Randall, Cynthia",
+      "title": "Lover Birds",
+      "genre": "Romance",
+      "price": 4.95,
+      "publishDate": "2000-09-02",
+      "description": "When Carla meets Paul at an ornithology\n            conference, tempers fly as feathers get ruffled."
+    },
+    {
+      "id": "bk110",
+      "author": "O'Brien, Tim",
+      "title": "Microsoft .NET: The Programming Bible",
+      "genre": "Computer",
+      "price": 36.95,
+      "publishDate": "2000-12-09",
+      "description": "Microsoft's .NET initiative is explored in\n            detail in this deep programmer's reference."
+    },
+    {
+      "id": "bk112",
+      "author": "Galos, Mike",
+      "title": "Visual Studio 7: A Comprehensive Guide",
+      "genre": "Computer",
+      "price": 49.95,
+      "publishDate": "2001-04-16",
+      "description": "Microsoft Visual Studio 7 is explored in depth,\n            looking at how Visual Basic, Visual C++, C#, and ASP+ are\n            integrated into a comprehensive development\n            environment."
+    }
+  ]
+}
