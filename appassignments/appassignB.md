@@ -1,4 +1,4 @@
-# DAT250: Design and Prototyping Assignment A - JPA part
+# DAT250: Design and Prototyping Assignment B
 
 ## Java Persistence Architecture
 
