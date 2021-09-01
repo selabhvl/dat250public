@@ -12,7 +12,7 @@ Setup a Java application which uses JPA for storing entities in a database based
 
 https://www.vogella.com/tutorials/JavaPersistenceAPI/article.html#installation
 
-Use the Maven project found [here](https://github.com/lmkr/dat250-jpa-examples/tree/master/eclipselink/jpa-basic), so you can skip step 3 (Installation) in the tutorial.
+Use the Maven project found [here](https://github.com/lmkr/dat250-jpa-examples/tree/master/eclipselink/jpa-basic) as a starting point, so you can skip step 3 (Installation) in the tutorial.
 The code for step 4 is also partly present.
 
 Find a way to inspect the database tables being created - either from the IDE or by installing the [derby database server](http://db.apache.org/derby/papers/DerbyTut/index.html) locally.
