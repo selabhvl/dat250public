@@ -6,11 +6,14 @@ The goal of this assignment is to do some initial experiments with the Java Pers
 
 Note that this is an **individual** assignment (see Hand-in at the end of the document).
 
-### Installation: Derby Database
+### Installation: Derby Database (or another relational database)
 
 Download and install the Apache Derby database by going through the tutorial, which can be found here:
 
 http://db.apache.org/derby/papers/DerbyTut/index.html
+
+If you do not want to make a specific database install on you PC, then it is also perfectly fine to instead install docker: https://www.docker.com/ and find an image on docker hi
+ub: https://hub.docker.com/ containing an image with a relational database. You may choose to use a different database than Derby, but please note that you will then have to use a different (corresponding) database driver in your Java project.
 
 ### Experiment 1: Application using JPA
 
