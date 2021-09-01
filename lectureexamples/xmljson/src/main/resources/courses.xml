@@ -1,0 +1,28 @@
+<?xml version = "1.0" encoding = "UTF-8"?>
+<courses xmlns="https://www.hvl.no/250/courses">
+    <course code="DAT250">
+        <semester>H21</semester>
+        <lecturers>
+            <lecturer email="lmkr@hvl.no">Lars Mikael Kristensen</lecturer>
+            <lecturer email="past@hvl.no">Patrick Stünkel</lecturer>
+            <lecturer email="tkra@hvl.no">Tim Kräuter</lecturer>
+        </lecturers>
+        <ects>10</ects>
+        <level>Master</level>
+        <schedule>
+            <lecture day="MON" start="14:15" end="16:00" location="Zoom" />
+            <exercise day="WED" start="10:15" end="12:00" location="M409" />
+            <lecture day="FRI" start="12:15" end="14:00" location="Zoom" />
+        </schedule>
+        <students>
+            <student id="12345">
+                <firstname>Erna</firstname>
+                <lastname>Solberg</lastname>
+            </student>
+            <student id="98765">
+                <firstname>Jonas</firstname>
+                <lastname>Gahr Støre</lastname>
+            </student>
+        </students>
+    </course>
+</courses>
