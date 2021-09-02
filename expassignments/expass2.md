@@ -23,6 +23,11 @@ Find a way to inspect the database tables being created - either from the IDE or
 
 Try to implement the domain model for credit cards corresponding to the small assignment that was introduced in the last lecture video on object-relationship mapping. Do the tables created correspond to your initial answer to the exercise?
 
+Persist the object-world shown in the following object diagram into your database. How can you check that the object links are saved correctly in the database?
+
+![Object Diagram](https://raw.githubusercontent.com/selabhvl/dat250public/master/expassignments/pictures/object-diagram.svg)
+
+
 ### Hand-in: short report
 
 As hand in, you must add a markdown file called `dat250-expass2.md` to the same repository that you created as part of experiment assignment 1:
