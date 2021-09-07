@@ -90,7 +90,7 @@ In addition to making the overall application design, you are also required to p
 
 Detailed instructions on this part will be provided as part of the lab in week 36:
 
-https://github.com/selabhvl/dat250public/blob/master/appassignments/appassignA-JPA.md
+https://github.com/selabhvl/dat250public/blob/master/appassignments/appassignB.md
 
 ## The OpenPhoneBook example
 
