@@ -4,7 +4,7 @@
 
 The goal of this assignment is to get familiar with MongoDB by following its official tutorial. This will include some preliminary reading about high level details of MongoDB, performing a local installation on each corresponding machine and setting up a small database where basic CRUD operations will be tested on it.
 
-If you encounter technical problems during this experiment assignment, then please post your questions and issues on the Canvas discussion forum for the DAT250 course: https://hvl.instructure.com/courses/13451/discussion_topics/103071
+If you encounter technical problems during this experiment assignment, then please post your questions and issues on the Canvas discussion forum for the DAT250 course: https://hvl.instructure.com/courses/17237/discussion_topics
 
 Note that this is an **individual** assignment (see Hand-in at the end of the document).
 
