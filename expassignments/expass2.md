@@ -21,7 +21,11 @@ Find a way to inspect the database tables being created - either from the IDE or
 
 ### Experiment 2: Banking/Credit Card example JPA
 
-Try to implement the domain model for credit cards corresponding to the small assignment that was introduced in the last lecture video on object-relationship mapping. Do the tables created correspond to your initial answer to the exercise?
+Try to implement the domain model for credit cards corresponding to the small assignment that was introduced in the last lecture video on object-relationship mapping.
+Here is the domain model:
+![Class Diagram domain model](https://raw.githubusercontent.com/selabhvl/dat250public/master/expassignments/pictures/creditCard.svg)
+
+Do the tables created correspond to your initial answer to the exercise?
 
 Persist the object-world shown in the following object diagram into your database. How can you check that the object links are saved correctly in the database?
 
