@@ -22,7 +22,7 @@ After having deployed the application, you should inspect the database and check
 
 In order to test the implementation in Part 3, you should populate your database with some test data.
 
-This can be done either by writing an SQL script to the load the data (see Page 120 in Chapter 4) on JPA.
+This can be done either by writing an SQL script to the load the data (see Page 120 in Chapter 4) or the JPA entity manager.
 
 ### Part 3 - Data Access Objects (DAO)
 
