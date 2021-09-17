@@ -85,7 +85,7 @@ Complete the Examples tutorial (the Aggregation alternative part is not mandator
 
 https://docs.mongodb.com/manual/tutorial/map-reduce-examples/
 
-**Add an additional operation developed by you and show its the result given by its execution.**
+**Add an additional operation developed by you and show its result given by its execution.**
 
 ### Hand-in: short report
 
