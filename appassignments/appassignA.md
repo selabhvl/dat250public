@@ -14,7 +14,7 @@ The figure below provides an initial sketch of the overall envisioned system arc
 
 In addition to the IoT feedback/voting device, the system consists of a web application deployed using a cloud container. Furthermore, a REST API (web service) is deployed in the cloud which can provide meta-data about polls that have been initiated.
 
-The results of evaluations (polls) are stored in a database also in the cloud, and when a poll is being terminated (closed), then the results of the poll are to be publish on a topic in an external service such as dweet.io
+The results of evaluations (polls) are stored in a database also in the cloud, and when a poll is being terminated (closed), then the results of the poll should be published on a topic in an external service such as dweet.io
 
 A prototype of an IoT voting/feedback device is shown below and has four buttons (sensor) for user input:
 
