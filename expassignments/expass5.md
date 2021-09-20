@@ -2,7 +2,7 @@
 
 ### Introduction
 
-The goal of this assignment is to make initial experiments with the Spring framework and Spring Boot software technology (spring.io).
+The goal of this assignment is to make initial experiments with the Spring framework and Spring Boot software technology (spring.io) stack.
 
 ### Experiment 1: Getting started
 

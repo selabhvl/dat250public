@@ -46,7 +46,7 @@ You may use the Spark/Java counter service project from experiment 1 as a starti
 
 ### Experiment 3: Swagger (optional)
 
-Try to investigate how Swagger may be used to specify the REST API from experiment 2.
+Investigate how Swagger may be used to specify the REST API from experiment 2.
 
 ### Experiment 4: XML representation (optional)
 
