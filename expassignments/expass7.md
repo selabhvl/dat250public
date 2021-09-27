@@ -10,19 +10,19 @@ Start by doing an installation as described here: https://www.rabbitmq.com/downl
 
 ### Experiment 2: Hello World
 
-Complete the "Hello World" tutorial at: https://www.rabbitmq.com/getstarted.html
+Complete the "Hello World" tutorial at: https://www.rabbitmq.com/tutorials/tutorial-one-java.html
 
 You can freely choose the programming language.
 
 ### Experiment 3: Queue messaging
 
-Complete the "Work queues" tutorial at: https://www.rabbitmq.com/getstarted.html
+Complete the "Work queues" tutorial at: https://www.rabbitmq.com/tutorials/tutorial-two-java.html
 
 You can freely choose the programming language.
 
 ### Experiment 4: Topics
 
-Complete the "Publish/subscribe" tutorial at: https://www.rabbitmq.com/getstarted.html
+Complete the "Publish/subscribe" tutorial at: https://www.rabbitmq.com/tutorials/tutorial-three-java.html
 
 You can freely choose the programming language.
 
