@@ -2,7 +2,7 @@
 
 ### Introduction
 
-The goal of this assignment is to make initial experiments with REST APIs and the Spark/Java framework for implementing microservices. In this assignment, you will be using the following software technology:
+The goal of this assignment is to do initial experiments with REST APIs and the Spark/Java framework for implementing microservices. In this assignment, you will be using the following software technology:
 
 - The Spark/Java framework: http://sparkjava.com
 - The Postman tool: https://www.postman.com
@@ -38,14 +38,14 @@ You should use the following JSON representation of a counter resource in the bo
 
 Go into the todos folder located in https://github.com/selabhvl/dat250-sparkjava-counter/tree/master/todos.
 
-Use the Spark/Java framework to implement a REST API for Todo-items that enables CRUD operations and uses JSON for the representation of todo-resources.
-We have implemented a set of testcases for the REST API. Your job is to implement the API such that all testcases pass.
+Use the Spark/Java framework to implement a REST API for Todo-items that enables CRUD operations and uses JSON for the representation of todo resources.
+We have implemented a set of test cases for the REST API. Your job is to implement the API such that all test cases pass **without** changing them.
 
-The REST API should make it possible to Create (POST) Todo-items, Read (GET) TODO-items, Update (PUT), and Delete (DELETE) Todo-items. See slide 36 from the lectures on web services for design principles on how you should organise the resources in a hierarchical information space of todo-items.
+The REST API should make it possible to Create (POST) Todo-items, Read (GET) TODO-items, Update (PUT), and Delete (DELETE) Todo-items. See slide 36 from the lectures on web services for design principles on how you should organise the resources in a hierarchical information space of todo-items. The test cases will also hint at how the API should be structured.
 
 You may use the Spark/Java counter service project from experiment 1 as a starting point for the implementation.
 
-**Make sure that the testsuite located under src/test/java runs successfully after your implementation is finished.**
+**Make sure that the test suite located under src/test/java runs successfully after your implementation is finished.**
 
 ### Experiment 3: Swagger (optional)
 
