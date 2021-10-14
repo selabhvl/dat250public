@@ -36,9 +36,10 @@ You should use the following JSON representation of a counter resource in the bo
 
 ### Experiment 2: REST API for TODO-items
 
-Consider the Todo-class from software technology assignment 1: https://www.vogella.com/tutorials/JavaPersistenceAPI/article.html#installation
+Go into the todos folder located in https://github.com/selabhvl/dat250-sparkjava-counter/tree/master/todos.
 
-Use the Spark/Java framework to implement a REST API for Todo-items that enables CRUD operations and uses JSON for the representation of todo-resources .
+Use the Spark/Java framework to implement a REST API for Todo-items that enables CRUD operations and uses JSON for the representation of todo-resources.
+**Make sure** that the testsuite located under src/test/java runs successfully after your implementation is finished.
 
 The REST API should make it possible to Create (POST) Todo-items, Read (GET) TODO-items, Update (PUT), and Delete (DELETE) Todo-items. See slide 36 from the lectures on web services for design principles on how you should organise the resources in a hierarchical information space of todo-items.
 
