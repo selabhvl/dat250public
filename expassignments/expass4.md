@@ -10,7 +10,7 @@ The goal of this assignment is to do initial experiments with REST APIs and the 
 
 ### Experiment 1: Spark/Java Framework project and Postman
 
-Clone the Spark/Java red-green-counter example from the lectures:
+Clone/fork the Spark/Java red-green-counter example from the lectures:
 
 https://github.com/selabhvl/dat250-sparkjava-counter
 
@@ -36,7 +36,8 @@ You should use the following JSON representation of a counter resource in the bo
 
 ### Experiment 2: REST API for TODO-items
 
-Go into the todos folder located in https://github.com/selabhvl/dat250-sparkjava-counter/tree/master/todos.
+Keep working with the repository from experiment 1.
+Go into the todos folder located in https://github.com/selabhvl/dat250-sparkjava-counter/tree/master/todos and import the project as a maven project, such that there are no compile errors and you can run the testsuite **TodoAPITest**.
 
 Use the Spark/Java framework to implement a REST API for Todo-items that enables CRUD operations and uses JSON for the representation of todo resources.
 We have implemented a set of test cases for the REST API. Your job is to implement the API such that all test cases pass **without** changing them.
