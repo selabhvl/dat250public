@@ -16,7 +16,7 @@ https://www.vogella.com/tutorials/JavaPersistenceAPI/article.html#installation
 
 Use the Maven project _experiment-1_ found [here](https://github.com/timKraeuter/dat250-jpa-example) as a starting point, so that you can skip step 3 (Installation) in the tutorial. You do not have to download or move jars manually. Be careful to change the tutorial's file paths or package names to match yours!
 
-Complete the tutorial and find a way to inspect the database tables being created - either from the IDE or by installing the [derby database server](http://db.apache.org/derby/papers/DerbyTut/index.html) locally.
+Complete the tutorial until **step 6** and find a way to inspect the database tables being created - either from the IDE or by installing the [derby database server](http://db.apache.org/derby/papers/DerbyTut/index.html) locally.
 
 ### Experiment 2: Banking/Credit Card example JPA
 
