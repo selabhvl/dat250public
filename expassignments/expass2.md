@@ -22,7 +22,8 @@ Complete the tutorial and find a way to inspect the database tables being create
 
 Implement the domain model for credit cards corresponding to the small assignment that was introduced in the last lecture video on object-relationship mapping.
 Use the Maven project _experiment-2_ found [here](https://github.com/timKraeuter/dat250-jpa-example) as a starting point.
-Here is a screenshot of the domain model:
+Pay close attention to the bidirectional associations in the domain model.
+
 ![Class Diagram domain model](https://raw.githubusercontent.com/selabhvl/dat250public/master/expassignments/pictures/creditCard.svg)
 
 Find a way to inspect the database tables being created and attach a screenshot of the database schema to your report.
