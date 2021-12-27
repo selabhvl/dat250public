@@ -8,14 +8,13 @@ Note that this is an **individual** assignment (see Hand-in at the end of the do
 
 ### Experiment 1: JPA tutorial (optional)
 
-You will have to complete a simple tutorial which gives you an overview and a gentle introduction on JPA.
-Especially technicalities which will hinder you to complete experiment 2 will be solved here.
+You will have to complete a simple tutorial that gives you an overview and a gentle introduction to JPA. Especially technicalities that will hinder you from completing experiment 2 will be solved here.
 
-Setup a Java application which uses JPA for storing entities in a database based on the following tutorial:
+Setup a Java application that uses JPA for storing entities in a database based on the following tutorial:
 
 https://www.vogella.com/tutorials/JavaPersistenceAPI/article.html#installation
 
-Use the Maven project _experiment-1_ found [here](https://github.com/timKraeuter/dat250-jpa-example) as a starting point, so you can skip step 3 (Installation) in the tutorial.
+Use the Maven project _experiment-1_ found [here](https://github.com/timKraeuter/dat250-jpa-example) as a starting point, so that you can skip step 3 (Installation) in the tutorial.
 
 Complete the tutorial and find a way to inspect the database tables being created - either from the IDE or by installing the [derby database server](http://db.apache.org/derby/papers/DerbyTut/index.html) locally.
 
@@ -33,7 +32,7 @@ Persist the objects shown in the following object diagram into your database in 
 
 ![Object Diagram](https://raw.githubusercontent.com/selabhvl/dat250public/master/expassignments/pictures/object-diagram.svg)
 
-Make sure the associated testcase **_MainTest_** runs succesfully. You are **not** allowed to change the test case!
+Make sure the associated test case **_MainTest_** runs successfully. You are **not** allowed to change the test case!
 
 ### Hand-in: short report
 
@@ -45,7 +44,7 @@ In particular, you should write about:
 
 - technical problems that you encountered during installation and use of Java Persistence Architecture (JPA) and how you resolved
 
-- a link to your code for 2 above. Make sure the included test case passes!
+- a link to your code for experiment 2 above. Make sure the included test case passes!
 
 - an explanation of how you inspected the database tables and what tables were created. For the latter, you may provide screenshots.
 
