@@ -2,35 +2,38 @@
 
 ### Introduction
 
-The goal of this assignment is to do some initial experiments with the Java Persistence Architecture (JPA). This will include setting up a database for experimentation and study object-relational mapping.
+The goal of this assignment is to get to know the Java Persistence Architecture (JPA). This will include setting up a database for experimentation and study object-relational mapping.
 
 Note that this is an **individual** assignment (see Hand-in at the end of the document).
 
-### Experiment 1: Application using JPA
+### Experiment 1: JPA tutorial (optional)
+
+You will have to complete a simple tutorial which gives you an overview and a gentle introduction on JPA.
+Especially technicalities which will hinder you to complete experiment 2 will be solved here.
 
 Setup a Java application which uses JPA for storing entities in a database based on the following tutorial:
 
 https://www.vogella.com/tutorials/JavaPersistenceAPI/article.html#installation
 
-Use the Maven project found [here](https://github.com/timKraeuter/dat250-jpa-example) as a starting point, so you can skip step 3 (Installation) in the tutorial.
-Start with step 4.3 to validate that all database dependencies are present and then continue the tutorial.
+Use the Maven project _experiment-1_ found [here](https://github.com/timKraeuter/dat250-jpa-example) as a starting point, so you can skip step 3 (Installation) in the tutorial.
 
-Find a way to inspect the database tables being created - either from the IDE or by installing the [derby database server](http://db.apache.org/derby/papers/DerbyTut/index.html) locally.
-
-**Please add a screenshot of the generated database tables to your report.**
+Complete the tutorial and find a way to inspect the database tables being created - either from the IDE or by installing the [derby database server](http://db.apache.org/derby/papers/DerbyTut/index.html) locally.
 
 ### Experiment 2: Banking/Credit Card example JPA
 
-Try to implement the domain model for credit cards corresponding to the small assignment that was introduced in the last lecture video on object-relationship mapping.
-Here is the domain model:
+Implement the domain model for credit cards corresponding to the small assignment that was introduced in the last lecture video on object-relationship mapping.
+Use the Maven project _experiment-2_ found [here](https://github.com/timKraeuter/dat250-jpa-example) as a starting point.
+Here is a screenshot of the domain model:
 ![Class Diagram domain model](https://raw.githubusercontent.com/selabhvl/dat250public/master/expassignments/pictures/creditCard.svg)
 
+Find a way to inspect the database tables being created and attach a screenshot of the database schema to your report.
 Do the tables created correspond to your initial answer to the exercise?
 
-Persist the object-world shown in the following object diagram into your database. How can you check that the object links are saved correctly in the database?
+Persist the objects shown in the following object diagram into your database in the Main class of the project.
 
 ![Object Diagram](https://raw.githubusercontent.com/selabhvl/dat250public/master/expassignments/pictures/object-diagram.svg)
 
+Make sure the associated testcase **_MainTest_** runs succesfully. You are **not** allowed to change the test case!
 
 ### Hand-in: short report
 
@@ -42,7 +45,7 @@ In particular, you should write about:
 
 - technical problems that you encountered during installation and use of Java Persistence Architecture (JPA) and how you resolved
 
-- a link to your code for experiments 1 and 2 above
+- a link to your code for 2 above. Make sure the included test case passes!
 
 - an explanation of how you inspected the database tables and what tables were created. For the latter, you may provide screenshots.
 
