@@ -34,8 +34,6 @@ https://devcenter.heroku.com/articles/getting-started-with-java
 
 The step **Provision add-ons** is optional since it requires account verfication with payment information.
 
-**Please add the URL to your project add the end of your report.**
-
 ### Hand-in: short report
 
 As hand in, you must create a repository on github and inside the repository add a markdown file called `dat250-expass1.md` which is to contain a short laboratory report documenting what you have done.
@@ -49,4 +47,6 @@ In particular, you should write about:
 - technical problems encountered with the Heroku platform and how you solved them
 - any pending issues with this assignment which you did not manage to solve
 
-The hand-in should be written in **English**.
+**Please add the URL to your project add the end of your report.**
+
+The hand-in must be written in **English**.
