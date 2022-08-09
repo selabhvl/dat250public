@@ -2,7 +2,7 @@
 
 ### Introduction
 
-The goal of this assignment is to make initial experiments with REST APIs and the Spark/Java framework for implementing microservices. In this assignment, you will be using the following software technology:
+The goal of this assignment is to do initial experiments with REST APIs and the Spark/Java framework for implementing microservices. In this assignment, you will be using the following software technology:
 
 - The Spark/Java framework: http://sparkjava.com
 - The Postman tool: https://www.postman.com
@@ -10,7 +10,7 @@ The goal of this assignment is to make initial experiments with REST APIs and th
 
 ### Experiment 1: Spark/Java Framework project and Postman
 
-Clone the Spark/Java red-green-counter example from the lectures:
+Clone/fork the Spark/Java red-green-counter example from the lectures:
 
 https://github.com/selabhvl/dat250-sparkjava-counter
 
@@ -36,13 +36,17 @@ You should use the following JSON representation of a counter resource in the bo
 
 ### Experiment 2: REST API for TODO-items
 
-Consider the Todo-class from software technology assignment 1: https://www.vogella.com/tutorials/JavaPersistenceAPI/article.html#installation
+Keep working with the repository from experiment 1.
+Go into the todos folder located in https://github.com/selabhvl/dat250-sparkjava-counter/tree/master/todos and import the project as a maven project, such that there are no compile errors and you can run the testsuite **TodoAPITest**.
 
-Use the Spark/Java framework to implement a REST API for Todo-items that enables CRUD operations and uses JSON for the representation of todo-resources .
+Use the Spark/Java framework to implement a REST API for Todo-items that enables CRUD operations and uses JSON for the representation of todo resources.
+We have implemented a set of test cases for the REST API. Your job is to implement the API such that all test cases pass **without** changing them.
 
-The REST API should make it possible to Create (POST) Todo-items, Read (GET) TODO-items, Update (PUT), and Delete (DELETE) Todo-items. See slide 36 from the lectures on web services for design principles on how you should organise the resources in a hierarchical information space of todo-items.
+The REST API should make it possible to Create (POST) Todo-items, Read (GET) TODO-items, Update (PUT), and Delete (DELETE) Todo-items. See slide 36 from the lectures on web services for design principles on how you should organise the resources in a hierarchical information space of todo-items. The test cases will also hint at how the API should be structured.
 
 You may use the Spark/Java counter service project from experiment 1 as a starting point for the implementation.
+
+**Make sure that the test suite located under src/test/java runs successfully after your implementation is finished.**
 
 ### Experiment 3: Swagger (optional)
 
