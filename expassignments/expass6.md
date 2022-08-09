@@ -2,9 +2,9 @@
 
 ### Introduction
 
-The goal of this assignment is to make initial experiments front-end technologies for enterprise applications. 
+The goal of this assignment is to make initial experiments front-end technologies for enterprise applications.
 
-### Experiment 1: Modell-View-Controller Web Applications
+### Experiment 1: Model-View-Controller Web Applications
 
 Complete the tutorial on Spring MVC at: https://spring.io/guides/gs/serving-web-content/
 

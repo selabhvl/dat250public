@@ -1,4 +1,4 @@
-## DAT250: Design and Prototyping Assignment B
+## DAT250: Design and Prototyping Assignment C
 
 This is the third part of the design and prototyping assignments where you will develop an IoT-cloud software system in the form of the FeedApp application that you started designing and prototyping in assignments A and B.
 
