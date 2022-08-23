@@ -47,6 +47,6 @@ In particular, you should write about:
 - technical problems encountered with the Heroku platform and how you solved them
 - any pending issues with this assignment which you did not manage to solve
 
-**Please add the URL to your project add the end of your report.**
+**Please add the URL to your deployed heroku app add the end of your report.**
 
 The hand-in must be written in **English**.
