@@ -29,7 +29,7 @@ Pay close attention to the bidirectional associations in the domain model.
 Find a way to inspect the database tables being created and attach a screenshot of the database schema to your report.
 Do the created tables correspond to your initial answer to the exercise?
 
-Persist the objects shown in the following object diagram into your database in the Main class of the project. If you need more knowledge about persistence management (entityManager-operations persist(), find(), etc...), look [here]([https://github.com/timKraeuter/dat250-jpa-example](https://hvl.instructure.com/courses/21915/pages/lecture-5-persistence-management-and-queries?module_item_id=531426)).
+Persist the objects shown in the following object diagram into your database in the Main class of the project. If you need more knowledge about persistence management (entityManager-operations persist(), find(), etc...), look [into these lecture notes](https://hvl.instructure.com/courses/21915/pages/lecture-5-persistence-management-and-queries?module_item_id=531426).
 
 ![Object Diagram](https://raw.githubusercontent.com/selabhvl/dat250public/master/expassignments/pictures/object-diagram.svg)
 
