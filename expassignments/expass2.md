@@ -20,16 +20,16 @@ Complete the tutorial until **step 6** and find a way to inspect the database ta
 
 ### Experiment 2: Banking/Credit Card example JPA
 
-Implement the domain model for credit cards corresponding to the small assignment that was introduced in the last lecture video on object-relationship mapping.
+Implement the domain model for credit cards similarly to the Person-Address-Examples in Monday's lecture on object-relational mappings.
 Use the Maven project _experiment-2_ found [here](https://github.com/timKraeuter/dat250-jpa-example) as a starting point.
 Pay close attention to the bidirectional associations in the domain model.
 
 ![Class Diagram domain model](https://raw.githubusercontent.com/selabhvl/dat250public/master/expassignments/pictures/creditCard.svg)
 
 Find a way to inspect the database tables being created and attach a screenshot of the database schema to your report.
-Do the tables created correspond to your initial answer to the exercise?
+Do the created tables correspond to your initial answer to the exercise?
 
-Persist the objects shown in the following object diagram into your database in the Main class of the project.
+Persist the objects shown in the following object diagram into your database in the Main class of the project. If you need more knowledge about persistence management (entityManager-operations persist(), find(), etc...), look [here]([https://github.com/timKraeuter/dat250-jpa-example](https://hvl.instructure.com/courses/21915/pages/lecture-5-persistence-management-and-queries?module_item_id=531426)).
 
 ![Object Diagram](https://raw.githubusercontent.com/selabhvl/dat250public/master/expassignments/pictures/object-diagram.svg)
 
