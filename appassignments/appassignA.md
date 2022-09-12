@@ -82,7 +82,7 @@ The design document that you are to produce should contain:
 - Use case diagrams
 - Application flow diagrams for the front-end
 - Mock-up user screens for the front-end
-- A system-specific architectural diagram similar to Chap 1 in the IoT book (see Canvas) that relate the FeedApp application to the IoT-levels.
+- A system-specific architectural diagram similar to Chap 1 in the IoT book (see Canvas) that relate the FeedApp application to the IoT-levels (Fig 1.14 - 1.19).
 
 ## JPA persistence
 
