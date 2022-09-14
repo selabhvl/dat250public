@@ -78,7 +78,7 @@ Information about polls created by users, results from past polls must be persis
 
 The design document that you are to produce should contain:
 
-1. A domain model for the application
+- A domain model for the application
 - Use case diagrams
 - Application flow diagrams for the front-end
 - Mock-up user screens for the front-end
