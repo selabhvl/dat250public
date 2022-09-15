@@ -33,8 +33,8 @@ You should use the following JSON representation of a counter resource in the bo
 
 ### Experiment 2: REST API for TODO-items
 
-Keep working with the forked repository from experiment 1 and also impor the maven project located in **todos**.
-After importing run the testsuite **TodoAPITest**. The tests should run but fail for now.
+Keep working with the forked repository from experiment 1 and also import the maven project located in **todos**.
+After importing, run the test suite **TodoAPITest**. The tests should run but fail for now.
 
 Use the Spark/Java framework to implement a REST API for Todo-items that enables CRUD operations and uses JSON for the representation of todo resources.
 We have implemented a set of test cases for the REST API. Your job is to implement the API such that all test cases pass **without** changing them.
@@ -55,14 +55,14 @@ Investigate how the Spark/Java may be used to return and consume XML resource re
 
 ### Hand-in: short report
 
-As hand in, you must add a markdown file called `dat250-expass4.md` to the same repository that you created in the earlier software technology assignments.
+As hand-in, you must add a markdown file called `dat250-expass4.md` to the same repository that you created in the earlier software technology assignments.
 
 In particular, you should write about:
 
 - technical problems that you encountered during installation and use of Java Persistence Architecture (JPA) and how you resolved
 
-- a link to your code for experiment 2-4 above
+- a link to your code for experiments 2-4 above
 
-- any pending issues with this assignment which you did not manage to solve
+- any pending issues with this assignment that you did not manage to solve
 
 The hand-in should be written in **English**.
