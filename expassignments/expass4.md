@@ -10,11 +10,8 @@ The goal of this assignment is to do initial experiments with REST APIs and the 
 
 ### Experiment 1: Spark/Java Framework project and Postman
 
-Clone/fork the Spark/Java red-green-counter example from the lectures:
-
-https://github.com/selabhvl/dat250-sparkjava-counter
-
-and import it into your IDE. Use a web browser to run a GET request targeting `http://localhost:8080/counters` to check that the service is deployed and operational.
+Fork the Spark/Java [red-green-counter example](https://github.com/selabhvl/dat250-sparkjava-counter) from the lectures using GitHub. Enable workflows under the **Actions** tab in your fork such that test cases are automatically run when your code changes.
+Clone your project and import it into your IDE (maven project). Use a web browser to run a GET request targeting `http://localhost:8080/counters` to check that the service is deployed and operational.
 
 Now use the Postman tool to test the counter service by creating the following HTTP requests in a collection in Postman:
 
@@ -36,8 +33,8 @@ You should use the following JSON representation of a counter resource in the bo
 
 ### Experiment 2: REST API for TODO-items
 
-Keep working with the repository from experiment 1.
-Go into the todos folder located in https://github.com/selabhvl/dat250-sparkjava-counter/tree/master/todos and import the project as a maven project, such that there are no compile errors and you can run the testsuite **TodoAPITest**.
+Keep working with the forked repository from experiment 1 and also impor the maven project located in **todos**.
+After importing run the testsuite **TodoAPITest**. The tests should run but fail for now.
 
 Use the Spark/Java framework to implement a REST API for Todo-items that enables CRUD operations and uses JSON for the representation of todo resources.
 We have implemented a set of test cases for the REST API. Your job is to implement the API such that all test cases pass **without** changing them.
@@ -46,7 +43,7 @@ The REST API should make it possible to Create (POST) Todo-items, Read (GET) TOD
 
 You may use the Spark/Java counter service project from experiment 1 as a starting point for the implementation.
 
-**Make sure that the test suite located under src/test/java runs successfully after your implementation is finished.**
+**Make sure that the test suite located under src/test/java runs successfully after your implementation is finished.** A green tick should appear next to your commit in the GitHub repository since test cases are executed upon code changes. You can check those runs under the **Actions** tab.
 
 ### Experiment 3: Swagger (optional)
 
