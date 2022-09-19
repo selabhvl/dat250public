@@ -11,7 +11,9 @@ The goal of this assignment is to do initial experiments with REST APIs and the 
 ### Experiment 1: Spark/Java Framework project and Postman
 
 Fork the Spark/Java [red-green-counter example](https://github.com/selabhvl/dat250-sparkjava-counter) from the lectures using GitHub. Enable workflows under the **Actions** tab in your fork such that test cases are automatically run when your code changes.
-Clone your project and import it into your IDE (maven project). Use a web browser to run a GET request targeting `http://localhost:8080/counters` to check that the service is deployed and operational.
+Clone your project and import it into your IDE (maven project).
+
+Start the webserver by running the main class in App.java. Use a web browser to run a GET request targeting `http://localhost:8080/counters` to check that the service is deployed and operational.
 
 Now use the Postman tool to test the counter service by creating the following HTTP requests in a collection in Postman:
 
