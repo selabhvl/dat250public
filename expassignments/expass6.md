@@ -19,6 +19,8 @@ The application should use the Rest-API developed in assignment 4 and be able to
 
 See the lecture slides for information on installing Angular, loading data from a server, and display lists.
 For this assignment, the application's functionality is critical, not the looks.
+You can use this [HTML template](./code/start.html) and [CSS](./code/start.css) to start.
+
 
 ### Experiment 3: Using an SPA component library (optional)
 
