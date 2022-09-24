@@ -22,9 +22,9 @@ For this assignment, the application's functionality is critical, not the looks.
 
 ### Experiment 3: Using an SPA component library (optional)
 
-Use a component libary such as [Angular Material](https://material.angular.io/guide/getting-started) for your application of experiment 2.
+Use a component library such as [Angular Material](https://material.angular.io/guide/getting-started) for your application of experiment 2.
 Try components such as [buttons](https://material.angular.io/components/button/overview), [inputs](https://material.angular.io/components/input/overview), [tabels](https://material.angular.io/components/table/overview) and [cards](https://material.angular.io/components/card/overview).
-Your final application could look like this:
+The final application could look like this:
 
 ![Sample UI with component usage](./pictures/todo_ui.png)
 
