@@ -44,8 +44,6 @@ We have implemented a set of test cases for the REST API. You'll need to impleme
 
 The REST API should make it possible to Create (POST) Todo-items, Read (GET) TODO-items, Update (PUT), and Delete (DELETE) Todo-items. Please look at slide 36 from the lectures on web services for design principles on how to organize the resources in a hierarchical information space of todo-items. The test cases will require the API to be structured correctly.
 
-You may use the Spark/Java counter service project from experiment 1 as a starting point for the implementation.
-
 **Make sure that the test suite located under src/test/java runs successfully after your implementation is finished.** A green tick should appear next to your commit in the GitHub repository since test cases are executed upon code changes. You can check those runs under the **Actions** tab.
 
 ### Experiment 3: Swagger (optional)
