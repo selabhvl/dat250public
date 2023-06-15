@@ -2,15 +2,15 @@
 
 ### Introduction
 
-The goal of this assignment is to do initial experiments with REST APIs and the Spark/Java framework for implementing microservices. In this assignment, you will be using the following software technology:
+The goal of this assignment is to implement a simple REST API using the Spring framework. In this assignment, you will be using the following software technology:
 
-- The Spark/Java framework: http://sparkjava.com
-- The Postman tool: https://www.postman.com
-- Swagger: https://swagger.io
+- The Spring framework: [https://spring.io/](https://spring.io/)
+- The Postman tool: [https://www.postman.com](https://www.postman.com)
+- Swagger: [https://swagger.io](https://swagger.io)
 
 ### Experiment 1: Spring project and Postman
 
-Fork the Spring project [counters and todos](https://github.com/selabhvl/dat250-sparkjava-counter) from the lectures using GitHub. Enable workflows under the **Actions** tab in your fork such that test cases are automatically run when your code changes.
+Fork the Spring project [counters and todos](https://github.com/selabhvl/dat250-spring-counters-todos) from the lectures using GitHub. Enable workflows under the **Actions** tab in your fork such that test cases are automatically run when your code changes.
 Then clone and import your project into your IDE (maven project). You can use any git client, but we suggest [GitHub Desktop](https://www.google.com/search?q=GitHub+Desktop) or the git client integrated into IntelliJ IDEA.
 
 Start the webserver by running the main class in *RestServiceApplication.java*. Use Postman to run a GET request targeting `http://localhost:8080/counters` to check that the service is deployed and operational.
@@ -36,10 +36,10 @@ You should use the following JSON representation of a counter resource in the bo
 
 ### Experiment 2: REST API for TODO-items
 
-Keep working with the forked repository from experiment 1 and import the maven project in **todos**.
-After importing, run the test suite **TodoControllerTest**. The tests should run but fail for now.
+Keep working with the project from experiment 1 and go to the package **todos**.
+Run the test suite **TodoControllerTest**. The tests should run but fail for now.
 
-Use the Spark/Java framework to implement a REST API for Todo-items that enables CRUD operations and uses JSON to represent todo resources.
+Use the Spring framework to implement a REST API for Todo-items that enables CRUD operations and uses JSON to represent todo resources.
 We have implemented a set of test cases for the REST API. You'll need to implement the API so that all test cases pass **without** changing them.
 
 The REST API should make it possible to Create (POST) Todo-items, Read (GET) TODO-items, Update (PUT), and Delete (DELETE) Todo-items. Please look at slide 36 from the lectures on web services for design principles on how to organize the resources in a hierarchical information space of todo-items. The test cases will require the API to be structured correctly.
@@ -62,7 +62,7 @@ As a hand-in, you must add a markdown file called `dat250-expass4.md` to the sam
 
 In particular, you should write about:
 
-- technical problems that you encountered during installation and use of Java Persistence Architecture (JPA) and how you resolved
+- technical problems that you encountered during installation and how you resolved
 
 - a link to your code for experiments 2-4 above
 
