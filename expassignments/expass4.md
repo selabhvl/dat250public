@@ -15,7 +15,7 @@ Then clone and import your project into your IDE (maven project). You can use an
 
 Start the webserver by running the main class in *RestServiceApplication.java*. Use Postman to run a GET request targeting `http://localhost:8080/counters` to check that the service is deployed and operational.
 
-Now use the Postman tool to test the counter service by creating the following HTTP requests in a collection in Postman:
+Now use Postman to test the counter service by creating the following HTTP requests in a collection in Postman:
 
 ```
 GET localhost:8080/counters
