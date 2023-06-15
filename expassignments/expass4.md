@@ -8,18 +8,19 @@ The goal of this assignment is to do initial experiments with REST APIs and the 
 - The Postman tool: https://www.postman.com
 - Swagger: https://swagger.io
 
-### Experiment 1: Spark/Java Framework project and Postman
+### Experiment 1: Spring project and Postman
 
-Fork the Spark/Java [red-green-counter example](https://github.com/selabhvl/dat250-sparkjava-counter) from the lectures using GitHub. Enable workflows under the **Actions** tab in your fork such that test cases are automatically run when your code changes.
-Clone your project and import it into your IDE (maven project).
+Fork the Spring project [counters and todos](https://github.com/selabhvl/dat250-sparkjava-counter) from the lectures using GitHub. Enable workflows under the **Actions** tab in your fork such that test cases are automatically run when your code changes.
+Then clone and import your project into your IDE (maven project). You can use any git client, but we suggest [GitHub desktop](https://www.google.com/search?q=github+desktop) or the git client integrated into IntelliJ IDEA.
 
-Start the webserver by running the main class in App.java. Use a web browser to run a GET request targeting `http://localhost:8080/counters` to check that the service is deployed and operational.
+Start the webserver by running the main class in *RestServiceApplication.java*. Use Postman to run a GET request targeting `http://localhost:8080/counters` to check that the service is deployed and operational.
 
 Now use the Postman tool to test the counter service by creating the following HTTP requests in a collection in Postman:
 
 ```
 GET localhost:8080/counters
 PUT localhost:8080/counters
+GET localhost:8080/counters
 ```
 
 and execute them.
@@ -35,13 +36,13 @@ You should use the following JSON representation of a counter resource in the bo
 
 ### Experiment 2: REST API for TODO-items
 
-Keep working with the forked repository from experiment 1 and also import the maven project located in **todos**.
-After importing, run the test suite **TodoAPITest**. The tests should run but fail for now.
+Keep working with the forked repository from experiment 1 and import the maven project in **todos**.
+After importing, run the test suite **TodoControllerTest**. The tests should run but fail for now.
 
-Use the Spark/Java framework to implement a REST API for Todo-items that enables CRUD operations and uses JSON for the representation of todo resources.
-We have implemented a set of test cases for the REST API. Your job is to implement the API such that all test cases pass **without** changing them.
+Use the Spark/Java framework to implement a REST API for Todo-items that enables CRUD operations and uses JSON to represent todo resources.
+We have implemented a set of test cases for the REST API. You'll need to implement the API so that all test cases pass **without** changing them.
 
-The REST API should make it possible to Create (POST) Todo-items, Read (GET) TODO-items, Update (PUT), and Delete (DELETE) Todo-items. See slide 36 from the lectures on web services for design principles on how you should organise the resources in a hierarchical information space of todo-items. The test cases will also hint at how the API should be structured.
+The REST API should make it possible to Create (POST) Todo-items, Read (GET) TODO-items, Update (PUT), and Delete (DELETE) Todo-items. Please look at slide 36 from the lectures on web services for design principles on how to organize the resources in a hierarchical information space of todo-items. The test cases will require the API to be structured correctly.
 
 You may use the Spark/Java counter service project from experiment 1 as a starting point for the implementation.
 
@@ -53,11 +54,11 @@ Investigate how Swagger may be used to specify the REST API from experiment 2.
 
 ### Experiment 4: XML representation (optional)
 
-Investigate how the Spark/Java may be used to return and consume XML resource representations of the Todo-items.
+Investigate how the Spring may be used to return and consume XML resource representations of the Todo-items.
 
 ### Hand-in: short report
 
-As hand-in, you must add a markdown file called `dat250-expass4.md` to the same repository that you created in the earlier software technology assignments.
+As a hand-in, you must add a markdown file called `dat250-expass4.md` to the same repository you created in the earlier software technology assignments.
 
 In particular, you should write about:
 
