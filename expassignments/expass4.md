@@ -11,7 +11,7 @@ The goal of this assignment is to do initial experiments with REST APIs and the 
 ### Experiment 1: Spring project and Postman
 
 Fork the Spring project [counters and todos](https://github.com/selabhvl/dat250-sparkjava-counter) from the lectures using GitHub. Enable workflows under the **Actions** tab in your fork such that test cases are automatically run when your code changes.
-Then clone and import your project into your IDE (maven project). You can use any git client, but we suggest [GitHub desktop](https://www.google.com/search?q=github+desktop) or the git client integrated into IntelliJ IDEA.
+Then clone and import your project into your IDE (maven project). You can use any git client, but we suggest [GitHub Desktop](https://www.google.com/search?q=GitHub+Desktop) or the git client integrated into IntelliJ IDEA.
 
 Start the webserver by running the main class in *RestServiceApplication.java*. Use Postman to run a GET request targeting `http://localhost:8080/counters` to check that the service is deployed and operational.
 
@@ -44,7 +44,9 @@ We have implemented a set of test cases for the REST API. You'll need to impleme
 
 The REST API should make it possible to Create (POST) Todo-items, Read (GET) TODO-items, Update (PUT), and Delete (DELETE) Todo-items. Please look at slide 36 from the lectures on web services for design principles on how to organize the resources in a hierarchical information space of todo-items. The test cases will require the API to be structured correctly.
 
-**Make sure that the test suite located under src/test/java runs successfully after your implementation is finished.** A green tick should appear next to your commit in the GitHub repository since test cases are executed upon code changes. You can check those runs under the **Actions** tab.
+**Make sure that the test suite located under src/test/java runs successfully after your implementation is finished:**
+
+A green tick should appear next to your commit in the GitHub repository since test cases are executed upon code changes. You can check those runs under the **Actions** tab.
 
 ### Experiment 3: Swagger (optional)
 
