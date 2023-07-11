@@ -27,8 +27,9 @@ Please finish Experiment 1 first if you get stuck on Experiment 2 before asking 
 
 ![Class Diagram domain model](https://raw.githubusercontent.com/selabhvl/dat250public/master/expassignments/pictures/creditCard.svg)
 
-Find a way to inspect the database tables being created and attach a screenshot of the database schema to your report.
-Do the created tables correspond to your initial answer to the exercise?
+Questions:
+- Where is the database? Explain the used database and how/when it runs.
+- Find a way to inspect the database tables being created and attach a screenshot of the database schema to your report. Do the created tables correspond to your initial thoughts regarding the exercise?
 
 Persist the objects shown in the following object diagram into your database in the class **_CreditCardsMain_** of the project. If you need more knowledge about persistence management (entityManager-operations persist(), find(), etc...), look into the lecture notes of [Lecture 5](https://hvl.instructure.com/courses/21915/pages/lecture-5-persistence-management-and-queries?module_item_id=531426).
 
