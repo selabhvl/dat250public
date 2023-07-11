@@ -26,13 +26,12 @@ In addition, you must make sure that you have a GitHub account: https://github.c
 
 In this experiment, you are to deploy a small Java application in the cloud using the Heroku cloud application platform: https://www.heroku.com
 
-For the experiment, you need to create an account on Heroku.
+For the experiment, you need to create an account on Heroku and apply for a student developer pack via https://blog.heroku.com/github-student-developer-program in order to be able to deploy applications in the cloud.
 
 Complete the tutorial for deploying Java applications on the Heroku cloud platform:
 
 https://devcenter.heroku.com/articles/getting-started-with-java
 
-The step **Provision add-ons** is optional since it requires account verification with payment information.
 
 ### Hand-in: short report
 
