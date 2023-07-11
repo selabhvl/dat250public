@@ -1,13 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<!-- Edit the diagram at https://timkraeuter.com/object-diagram-modeler/ -->
 <od:definitions xmlns:od="http://tk/schema/od" xmlns:odDi="http://tk/schema/odDi" xmlns:dc="http://www.omg.org/spec/DD/20100524/DC">
   <od:odBoard id="Board_debug">
-    <od:object name="1:Person" id="Object_1pcaiku" attributeValues="name=&#34;Max Mustermann&#34;">
+    <od:object name="1:Customer" id="Object_1pcaiku" attributeValues="name=&#34;Max Mustermann&#34;">
       <od:links>Link_116g5xh</od:links>
       <od:links>Link_1hrc4i5</od:links>
       <od:links>Link_1vctwua</od:links>
     </od:object>
-    <od:object name="1:Adress" id="Object_0bue4yb" attributeValues="street=&#34;Inndalsveien&#34;&#10;number=28">
+    <od:object name="1:Address" id="Object_0bue4yb" attributeValues="street=&#34;Inndalsveien&#34;&#10;number=28">
       <od:links>Link_1128iwb</od:links>
     </od:object>
     <od:link name="owner" id="Link_1128iwb" sourceRef="Object_0bue4yb" targetRef="Object_1pcaiku" />
@@ -36,6 +35,72 @@
   </od:odBoard>
   <odDi:odRootBoard id="RootBoard_debug">
     <odDi:odPlane id="Plane_debug" boardElement="Board_debug">
+      <odDi:link id="Link_1vctwua_di" boardElement="Link_1vctwua">
+        <odDi:waypoint x="500" y="325" />
+        <odDi:waypoint x="690" y="325" />
+        <odDi:odLabel>
+          <dc:Bounds x="630" y="307" width="45" height="18" />
+        </odDi:odLabel>
+      </odDi:link>
+      <odDi:link id="Link_1xfhe0z_di" boardElement="Link_1xfhe0z">
+        <odDi:waypoint x="270" y="515" />
+        <odDi:waypoint x="340" y="515" />
+        <odDi:odLabel>
+          <dc:Bounds x="295" y="497" width="21" height="18" />
+        </odDi:odLabel>
+      </odDi:link>
+      <odDi:link id="Link_0ewfzaj_di" boardElement="Link_0ewfzaj">
+        <odDi:waypoint x="560" y="515" />
+        <odDi:waypoint x="490" y="515" />
+        <odDi:odLabel>
+          <dc:Bounds x="515" y="497" width="21" height="18" />
+        </odDi:odLabel>
+      </odDi:link>
+      <odDi:link id="Link_1dt12zm_di" boardElement="Link_1dt12zm">
+        <odDi:waypoint x="395" y="680" />
+        <odDi:waypoint x="395" y="620" />
+        <odDi:waypoint x="635" y="620" />
+        <odDi:waypoint x="635" y="560" />
+        <odDi:odLabel>
+          <dc:Bounds x="560" y="570" width="68" height="18" />
+        </odDi:odLabel>
+      </odDi:link>
+      <odDi:link id="Link_081wjql_di" boardElement="Link_081wjql">
+        <odDi:waypoint x="635" y="560" />
+        <odDi:waypoint x="635" y="620" />
+        <odDi:waypoint x="395" y="620" />
+        <odDi:waypoint x="395" y="680" />
+        <odDi:odLabel>
+          <dc:Bounds x="410" y="650" width="34" height="18" />
+        </odDi:odLabel>
+      </odDi:link>
+      <odDi:link id="Link_026clpl_di" boardElement="Link_026clpl">
+        <odDi:waypoint x="395" y="680" />
+        <odDi:waypoint x="395" y="620" />
+        <odDi:waypoint x="195" y="620" />
+        <odDi:waypoint x="195" y="560" />
+        <odDi:odLabel>
+          <dc:Bounds x="200" y="570" width="68" height="18" />
+        </odDi:odLabel>
+      </odDi:link>
+      <odDi:link id="Link_0h87xxl_di" boardElement="Link_0h87xxl">
+        <odDi:waypoint x="195" y="560" />
+        <odDi:waypoint x="195" y="620" />
+        <odDi:waypoint x="395" y="620" />
+        <odDi:waypoint x="395" y="680" />
+        <odDi:odLabel>
+          <dc:Bounds x="350" y="650" width="34" height="18" />
+        </odDi:odLabel>
+      </odDi:link>
+      <odDi:link id="Link_1hrc4i5_di" boardElement="Link_1hrc4i5">
+        <odDi:waypoint x="395" y="370" />
+        <odDi:waypoint x="395" y="420" />
+        <odDi:waypoint x="635" y="420" />
+        <odDi:waypoint x="635" y="470" />
+        <odDi:odLabel>
+          <dc:Bounds x="600" y="440" width="30" height="18" />
+        </odDi:odLabel>
+      </odDi:link>
       <odDi:link id="Link_116g5xh_di" boardElement="Link_116g5xh">
         <odDi:waypoint x="395" y="370" />
         <odDi:waypoint x="395" y="420" />
@@ -52,89 +117,23 @@
           <dc:Bounds x="510" y="307" width="43" height="18" />
         </odDi:odLabel>
       </odDi:link>
-      <odDi:link id="Link_1hrc4i5_di" boardElement="Link_1hrc4i5">
-        <odDi:waypoint x="395" y="370" />
-        <odDi:waypoint x="395" y="420" />
-        <odDi:waypoint x="635" y="420" />
-        <odDi:waypoint x="635" y="470" />
-        <odDi:odLabel>
-          <dc:Bounds x="600" y="440" width="30" height="18" />
-        </odDi:odLabel>
-      </odDi:link>
-      <odDi:link id="Link_0h87xxl_di" boardElement="Link_0h87xxl">
-        <odDi:waypoint x="195" y="560" />
-        <odDi:waypoint x="195" y="620" />
-        <odDi:waypoint x="395" y="620" />
-        <odDi:waypoint x="395" y="680" />
-        <odDi:odLabel>
-          <dc:Bounds x="350" y="650" width="34" height="18" />
-        </odDi:odLabel>
-      </odDi:link>
-      <odDi:link id="Link_026clpl_di" boardElement="Link_026clpl">
-        <odDi:waypoint x="395" y="680" />
-        <odDi:waypoint x="395" y="620" />
-        <odDi:waypoint x="195" y="620" />
-        <odDi:waypoint x="195" y="560" />
-        <odDi:odLabel>
-          <dc:Bounds x="200" y="570" width="68" height="18" />
-        </odDi:odLabel>
-      </odDi:link>
-      <odDi:link id="Link_081wjql_di" boardElement="Link_081wjql">
-        <odDi:waypoint x="635" y="560" />
-        <odDi:waypoint x="635" y="620" />
-        <odDi:waypoint x="395" y="620" />
-        <odDi:waypoint x="395" y="680" />
-        <odDi:odLabel>
-          <dc:Bounds x="410" y="650" width="34" height="18" />
-        </odDi:odLabel>
-      </odDi:link>
-      <odDi:link id="Link_1dt12zm_di" boardElement="Link_1dt12zm">
-        <odDi:waypoint x="395" y="680" />
-        <odDi:waypoint x="395" y="620" />
-        <odDi:waypoint x="635" y="620" />
-        <odDi:waypoint x="635" y="560" />
-        <odDi:odLabel>
-          <dc:Bounds x="560" y="570" width="68" height="18" />
-        </odDi:odLabel>
-      </odDi:link>
-      <odDi:link id="Link_0ewfzaj_di" boardElement="Link_0ewfzaj">
-        <odDi:waypoint x="560" y="515" />
-        <odDi:waypoint x="490" y="515" />
-        <odDi:odLabel>
-          <dc:Bounds x="515" y="497" width="21" height="18" />
-        </odDi:odLabel>
-      </odDi:link>
-      <odDi:link id="Link_1xfhe0z_di" boardElement="Link_1xfhe0z">
-        <odDi:waypoint x="270" y="515" />
-        <odDi:waypoint x="340" y="515" />
-        <odDi:odLabel>
-          <dc:Bounds x="295" y="497" width="21" height="18" />
-        </odDi:odLabel>
-      </odDi:link>
-      <odDi:link id="Link_1vctwua_di" boardElement="Link_1vctwua">
-        <odDi:waypoint x="500" y="325" />
-        <odDi:waypoint x="690" y="325" />
-        <odDi:odLabel>
-          <dc:Bounds x="630" y="307" width="45" height="18" />
-        </odDi:odLabel>
-      </odDi:link>
       <odDi:odShape id="Object_1pcaiku_di" boardElement="Object_1pcaiku">
         <dc:Bounds x="290" y="280" width="210" height="90" />
-      </odDi:odShape>
-      <odDi:odShape id="Object_00o4fid_di" boardElement="Object_00o4fid">
-        <dc:Bounds x="305" y="680" width="180" height="90" />
-      </odDi:odShape>
-      <odDi:odShape id="Object_1hp9irm_di" boardElement="Object_1hp9irm">
-        <dc:Bounds x="340" y="470" width="150" height="90" />
-      </odDi:odShape>
-      <odDi:odShape id="Object_0ohxl4c_di" boardElement="Object_0ohxl4c">
-        <dc:Bounds x="560" y="470" width="150" height="90" />
       </odDi:odShape>
       <odDi:odShape id="Object_0bue4yb_di" boardElement="Object_0bue4yb">
         <dc:Bounds x="690" y="280" width="185" height="90" />
       </odDi:odShape>
+      <odDi:odShape id="Object_00o4fid_di" boardElement="Object_00o4fid">
+        <dc:Bounds x="305" y="680" width="180" height="90" />
+      </odDi:odShape>
       <odDi:odShape id="Object_0916ill_di" boardElement="Object_0916ill">
         <dc:Bounds x="120" y="470" width="150" height="90" />
+      </odDi:odShape>
+      <odDi:odShape id="Object_0ohxl4c_di" boardElement="Object_0ohxl4c">
+        <dc:Bounds x="560" y="470" width="150" height="90" />
+      </odDi:odShape>
+      <odDi:odShape id="Object_1hp9irm_di" boardElement="Object_1hp9irm">
+        <dc:Bounds x="340" y="470" width="150" height="90" />
       </odDi:odShape>
     </odDi:odPlane>
   </odDi:odRootBoard>
