@@ -14,7 +14,7 @@ You must make sure that you have the following installed on your PC:
 
 - Java Development Environment (JDK): https://www.oracle.com/java/technologies/javase-downloads.html
 
-- An Integrated Development Environment (IDE), which could be Eclipse: https://www.eclipse.org/downloads/packages/ , IntelliJ: https://www.jetbrains.com/idea/, or some other IDE of your choice.
+- An Integrated Development Environment (IDE), which could be Eclipse: https://www.eclipse.org/downloads/packages/ , IntelliJ: https://www.jetbrains.com/idea/ ([free educational license](https://www.jetbrains.com/community/education/#students/)), or some other IDE of your choice.
 
 - Maven software management tool: https://maven.apache.org
 
