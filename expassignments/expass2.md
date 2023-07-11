@@ -16,6 +16,7 @@ The goal is to set up a Java application that uses JPA for storing entities in a
 1. Fork the template project using git from [here](https://github.com/timKraeuter/dat250-jpa-tutorial), for example, by using [GitHub Desktop](https://www.google.com/search?q=GitHub+Desktop) or any other git-client.
 2. Import the contained **maven project** into your IDEA (will be demonstrated in the Lab).
 3. Run the class **Main**. It should terminate without errors.
+4. Follow the [JPA tutorial](https://github.com/timKraeuter/dat250-jpa-tutorial#jpa-tutorial) to get used to JPA and understand the project setup.
 
 ### Experiment 2: Banking/Credit Card example JPA
 
