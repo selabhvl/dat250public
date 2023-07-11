@@ -37,6 +37,7 @@ Persist the objects shown in the following object diagram into your database in 
 ![Object Diagram](https://raw.githubusercontent.com/selabhvl/dat250public/master/expassignments/pictures/object-diagram.svg)
 
 Make sure the associated test case **_CreditCardsMainTest_** runs successfully. You are **not** allowed to change the test case!
+If you forked the repository correctly tests are automatically run when you push your changes (see [README.md](https://github.com/timKraeuter/dat250-jpa-tutorial/blob/master/README.md#experiment-2-tests)).
 
 ### Hand-in: short report
 
