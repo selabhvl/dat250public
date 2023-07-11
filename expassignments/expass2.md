@@ -22,7 +22,7 @@ The goal is to set up a Java application that uses JPA for storing entities in a
 Implement the domain model for credit cards similar to the Person-Address-Examples in Monday's lecture on object-relational mappings.
 Pay close attention to the bidirectional associations in the domain model.
 
-Use the [template project](https://github.com/timKraeuter/dat250-jpa-tutorial) from experiment 1 to start the implementation.
+Fork the [template project](https://github.com/timKraeuter/dat250-jpa-tutorial) from experiment 1 to start the implementation.
 Please finish Experiment 1 first if you get stuck on Experiment 2 before asking questions.
 
 ![Class Diagram domain model](https://raw.githubusercontent.com/selabhvl/dat250public/master/expassignments/pictures/creditCard.svg)
