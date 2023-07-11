@@ -18,7 +18,7 @@ You must make sure that you have the following installed on your PC:
 
 - Maven software management tool: https://maven.apache.org
 
-- A Git client: https://git-scm.com
+- A Git client: https://git-scm.com or [GitHub Desktop]([url](https://desktop.github.com/)).
 
 In addition, you must make sure that you have a GitHub account: https://github.com, which you will use for handing in the assignments in the course.
 
