@@ -13,7 +13,7 @@ You will complete a simple tutorial with an overview and a gentle introduction t
 The goal is to set up a Java application that uses JPA for storing entities in a database.
 
 **Initial setup:**
-1. Clone the template project using git from [here](https://github.com/timKraeuter/dat250-jpa-tutorial), for example, by using [GitHub Desktop](https://www.google.com/search?q=GitHub+Desktop) or any other git-client.
+1. Fork the template project using git from [here](https://github.com/timKraeuter/dat250-jpa-tutorial), for example, by using [GitHub Desktop](https://www.google.com/search?q=GitHub+Desktop) or any other git-client.
 2. Import the contained **maven project** into your IDEA (will be demonstrated in the Lab).
 3. Run the class **Main**. It should terminate without errors.
 
