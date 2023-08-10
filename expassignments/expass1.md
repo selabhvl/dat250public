@@ -1,39 +1,96 @@
-## DAT250: Software Technology Experiment Assignment 1
+# DAT250: Software Technology Experiment Assignment 1
 
-### Introduction
+## Introduction
 
-The goal of this assignment is to ensure that you have a working Software Development Environment installed on your PC which will be needed in the remainder of this course. As part of the installation, you will have to validate that the installed software development environment is working properly.
+The goal of this assignment is to ensure that you have a working Software Development Environment installed on your computer, which will be needed in the remainder of this course. As part of the installation, you will have to validate that the installed software development environment is working properly.
 
 If you encounter problems during the installation of the software development environment, then please post your questions and issues on the Canvas discussion forum for the DAT250 course.
 
 Note that this is an **individual** assignment (see Hand-in at the end of the document).
 
-### Installation: Software Development Environment
+## Installation: Software Development Environment
 
 You must make sure that you have the following installed on your PC:
 
-- Java Development Environment (JDK): https://www.oracle.com/java/technologies/javase-downloads.html
+- Java Development Environment (JDK),
 
-- An Integrated Development Environment (IDE), which could be Eclipse: https://www.eclipse.org/downloads/packages/ , IntelliJ: https://www.jetbrains.com/idea/ ([free educational license](https://www.jetbrains.com/community/education/#students/)), or some other IDE of your choice.
+- An Integrated Development Environment (IDE) or sufficiently sophisticated code editor, 
 
-- Maven software management tool: https://maven.apache.org
+- The _Gradle_ software build tool,
 
-- A Git client: https://git-scm.com or [GitHub Desktop](https://desktop.github.com/).
+- A _Git_ client,
 
-In addition, you must make sure that you have a GitHub account: https://github.com, which you will use for handing in the assignments in the course.
+- An environment to execute _containers_ like _Podman_ or _Docker_.
 
-### Experiment: Heroku and Platform as a Service
+In addition, you must make sure that you have a GitHub as well as an account in DockerHub.
 
-In this experiment, you are to deploy a small Java application in the cloud using the Heroku cloud application platform: https://www.heroku.com
+### Java
 
-For the experiment, you need to create an account on Heroku and apply for a student developer pack via https://blog.heroku.com/github-student-developer-program in order to be able to deploy applications in the cloud.
+The minimum requirement for this course is a Java Development Kit (JDK), i.e. availability of the binaries `java` and `javac` on the `$PATH`, in version _11_ (class file format: `>= 55`).
 
-Complete the tutorial for deploying Java applications on the Heroku cloud platform:
+With the acquisition of Sun Microsystems by Oracle and the associated changes to the licensing of the original Java virtual machine and JDK, a plethora of Java distributions has become available, e.g. Oracle JDK, OpenJDK, Eclipse Adoptium, Amazon Coretto, etc.
 
-https://devcenter.heroku.com/articles/getting-started-with-java
+To ease the management of multiple Java editions on one machine, we recommend using [SDKman](https://sdkman.io).
 
+Follow the instructions [here](https://sdkman.io/install) to install _SDKman.
+**Note**: If you are using windows, you first have to either install [Windows Subsystem for Linux (WSL)](https://learn.microsoft.com/en-us/windows/wsl/install) or install a CYGWin environment (If you install the Git SCM client for windows you will actually get such a CYGwin environment via _Git-Bash_).
 
-### Hand-in: short report
+After you have _SDKman_ installed, you can easily install and switch between JDKs.
+
+Type
+```bash
+sdk install java
+```
+to install the latest JDK.
+After installation you will be prompted whether you want to use it as your default:
+Just say (Y)es!
+
+Otherwise, you can look for a specific version via
+```bash
+sdk list java
+```
+and install it e.g. with
+```bash
+sdk install java 11-tem
+```
+to install Java 11 delivered by Eclipse Adoptium Temurin.
+
+You can show the JDK currently in use (i.e. where the `java` and `javac` are pointing to) via
+```bash
+sdk current
+```
+and switch to another installed version via
+```bash
+sdk use java <version>
+```
+### IDE
+
+Software Development in Java should be done in a full-fledged IDE rather than in Notepad.
+Today there are basically two viable choices for Java IDE:
+
+- [Eclipse](https://www.eclipse.org/downloads/packages/)
+- [JetBrains IntelliJ](https://www.jetbrains.com/idea/) where there are two choices:
+  -- Community Edition (open)
+  -- Ultimate Edition (commercial), [free educational licenses available](https://www.jetbrains.com/community/education/#students/)
+
+Otherwise you could also use a sophisticated Code Editor like
+- [Viusal Studio Code](https://code.visualstudio.com/) or 
+- [NeoVim](https://neovim.io/)
+
+combined with a Language Server for Java: https://github.com/eclipse-jdtls/eclipse.jdt.ls
+Note that the latter option is only recommended if have experience with the Language Server Protocol and its intricacies.
+
+### Gradle
+
+### Git
+
+### Containers 
+
+## Exercise: Make an application production-ready
+
+**TODO: patrick**
+
+## Hand-in: short report
 
 As hand in, you must create a repository on GitHub and inside the repository add a markdown file called `dat250-expass1.md`, containing a short laboratory report documenting what you have done.
 
@@ -43,9 +100,9 @@ In particular, you should write about:
 
 - technical problems that you encountered during installation of the software development environment and how you have solved them
 - how you have *validated* (checked) that the software development environment is working
-- technical problems encountered with the Heroku platform and how you solved them
-- any pending issues with this assignment which you did not manage to solve
+- technical problems and how you (tried to) sove them, 
+- any pending issues with this assignment which you did not manage to solve.
 
-**Please add the URL to your deployed Heroku app at the end of your report.**
+**Please add the URL to your published container on DockerHub in the report.**
 
-The hand-in must be written in **English**.
+The hand-in must be written in **English**!
