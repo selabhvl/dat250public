@@ -51,7 +51,7 @@ sdk list java
 ```
 and install it e.g. with
 ```bash
-sdk install java 11-tem
+sdk install java 11.0.20-tem
 ```
 to install Java 11 delivered by Eclipse Adoptium Temurin.
 
@@ -63,6 +63,21 @@ and switch to another installed version via
 ```bash
 sdk use java <version>
 ```
+
+You can test, that java is installed by running
+
+```bash
+java -version
+javac -version
+```
+
+The output should be something like:
+```
+<...>jdk version "mm.n.n" YYYY-MM-DD
+<...>JDK Runtime Environment (build <...>)
+```
+where `mm` is a number `>= 11`.
+
 ### IDE
 
 Software Development in Java should be done in a full-fledged IDE rather than in Notepad.
@@ -70,8 +85,8 @@ Today there are basically two viable choices for Java IDE:
 
 - [Eclipse](https://www.eclipse.org/downloads/packages/)
 - [JetBrains IntelliJ](https://www.jetbrains.com/idea/) where there are two choices:
-  -- Community Edition (open)
-  -- Ultimate Edition (commercial), [free educational licenses available](https://www.jetbrains.com/community/education/#students/)
+  - Community Edition (free)
+  - Ultimate Edition (commercial), [free educational licenses available](https://www.jetbrains.com/community/education/#students/)
 
 Otherwise you could also use a sophisticated Code Editor like
 - [Viusal Studio Code](https://code.visualstudio.com/) or 
@@ -82,11 +97,79 @@ Note that the latter option is only recommended if have experience with the Lang
 
 ### Gradle
 
+In the course, we will use [Gradle](https://gradle.org/) as a _build tool_. 
+
+You can install it simply via _SDKman_:
+```bash
+sdk install gradle
+```
+
+To check that is is working run 
+```bash
+gradle -v
+```
+in a terminal.
+
 ### Git
+
+Git has become a de-facto standard for software versioning and we will use it throughout the course to share code examples.
+
+On Linux and Mac machines, git is usually already installed. 
+If you are using Windows, you can install a git client from [here](https://git-scm.com/download/win) (The latter will also install a Unix-like shell on your machine called `Git Bash`).
+
+You can verify the installation by running
+```bash
+git -v
+```
+which should print out the version number of the git client you are using.
 
 ### Containers 
 
+Containers are a more recent approach of delivering a whole application encapsulated with all its dependencies. They simplify portability of software application to a high degree and becoming more and more the de-facto standard for deployment of applications (especially in the cloud).
+
+The underlying technology that is enabling containers is part of the Linux kernel. 
+However, it is also possible to emulate this functionality on Windows or Mac via specialized clients.
+
+The most popular options are `docker`, `podman` or `containerd`.
+For this course, we recommend [Podman](https://podman.io/) because it has a lower resource footprint than other clients.
+If you have already been using another client, like for example Docker, you can simply keep using that one ;-) (Podman and Docker share exactly the same command line interface, i.e. you can treat `podman` as an alias for `docker`).
+
+Read the [instructions](https://podman.io/docs/installation) on how to install Podman on your machine.
+
+Also, you need to create an account on [DockerHub](https://hub.docker.com/), which is free of charge.
+On DockerHub you can upload containers, i.e. packaged applications that are directly for production.
+
 ## Exercise: Make an application production-ready
+
+To check that your local installation is ready for professional software development, your task now is to make an existing program _"production-ready"_.
+This will get you a feel of how you have to set up your projects later in the course.
+
+[Behind this link](https://raw.githubusercontent.com/selabhvl/dat250public/master/expassignments/code/App.java) you will find a Java web application that allows to perform some simple _unit conversions_ (feet to meter, inch to feet etc.). Currently, this app has several issues:
+- the whole program is contained in a single method inside a single file (i.e. lacking modularity),
+- it depends on external libraries that are not included in the file,
+- there are no tests or other means of quality assurance,
+- there is currently no way of automatically building and deploying it into production,
+- ...
+
+### Step 1: Source code versioning
+
+As a first step, you should put the whole project into a version control system in order to track changes, jump back to previous versions and enable collaboration with other developers.
+Start by creating a GitHub repository:
+
+1. Log in to your GitHub account
+2. Visit the dashboard (https://github.com/) and in the upper right corner click on the small `+` icon
+3. Select `New repository`
+4. Give a meaningful name, e.g. `dat250assignment1` and select `PUBLIC` repository type
+4. Optionally, you can add a `README`, `License`, and the `Java`-`.gitignore`-template
+5. Clone the newly created repository onto your machine using `git clone <repo-url>`
+
+### Step 2: Set up build system 
+
+Next, we gonna set up `gradle` as our build system for this app. This allows for making the whole build process reproducable such that other developers can build our app also or allows us to run the whole build on a _continuous integration (CI)_ server. 
+
+1. Open up a command line shell and navigate to the location of the repository you just cloned.
+2. Run `gradle init` in that location
+
 
 **TODO: patrick**
 
