@@ -277,7 +277,14 @@ For a quick start, you can just follow along [this guide](https://docs.docker.co
 A viable starting point for your app could be the following Dockerfile:
 ```docker
 FROM eclipse-temurin:11.0.20_8-jdk
-COPY 
+COPY settings.gradle.kts .
+COPY gradlew .
+RUN mkdir -p gradle/wrapper
+COPY gradle/* gradle/wrapper
+RUN chmod +x gradlew
+COPY app ./app
+RUN ./gradlew build
+CMD ['./gradlew', 'run']
 ```
 
 You can build the image using
