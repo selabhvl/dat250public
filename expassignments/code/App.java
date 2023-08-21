@@ -45,7 +45,7 @@ public class App {
                     ctx.html(WEBPAGE);
                 })
                 .post("/convert", ctx -> {
-                    double val = Double.parseDouble(ctx.formParam("value"));
+                    double value = Double.parseDouble(ctx.formParam("value"));
                     String fromUnit = ctx.formParam("sunit");
                     String toUnit = ctx.formParam("tunit");
                     double inMeters;
