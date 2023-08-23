@@ -11,7 +11,7 @@ The goal of this assignment is to implement a simple REST API using the Spring f
 ### Experiment 1: Spring project and Postman
 
 Fork the Spring project [counters and todos](https://github.com/selabhvl/dat250-spring-counters-todos) from the lectures using GitHub. Enable workflows under the **Actions** tab in your fork such that test cases are automatically run when your code changes.
-Then clone and import your project into your IDE (maven project). You can use any git client, but we suggest [GitHub Desktop](https://www.google.com/search?q=GitHub+Desktop) or the git client integrated into IntelliJ IDEA.
+Then clone and import your project into your IDE (gradle project). You can use any git client, but we suggest [GitHub Desktop](https://www.google.com/search?q=GitHub+Desktop) or the git client integrated into IntelliJ IDEA.
 
 Start the webserver by running the main class in *RestServiceApplication.java*. Use Postman to run a GET request targeting `http://localhost:8080/counters` to check that the service is deployed and operational.
 
