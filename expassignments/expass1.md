@@ -121,6 +121,10 @@ You can verify the installation by running
 ```bash
 git -v
 ```
+
+> [!NOTE]
+> In some older versions of `git`. The `-v` shorthand is not recognized. You will have to use `--version` instead then.
+
 which should print out the version number of the git client you are using.
 
 ### Containers 
@@ -182,8 +186,9 @@ Source package: ...     # choose something meaningful, e.g. 'no.hvl.dat250.<stud
 When the wizard has finished, browse the resulting directory layout, explore the contents of the `app/build.gradle.kts` and the `settings.gradle.kts` files.
 Try executing the following commands and see how the contents of the `app/build` folder change after each command. 
 
-In the following, I assume that you are using a UNIX shell enviroment (i.e. `sh`, `bash`, `zsh`, `fish` on a Linux or Mac, MinGW, Git-Bash or WSL if you are using Windows).
-If you are using the Windows CMD or PowerShell, however, please replace `./gradlew` with `gradlew.bat` in the following!
+> [!NOTE]
+> In the following, I assume that you are using a UNIX shell enviroment (i.e. `sh`, `bash`, `zsh`, `fish` on a Linux or Mac, MinGW, Git-Bash or WSL if you are using Windows).
+> If you are using the Windows CMD or PowerShell, however, please replace `./gradlew` with `gradlew.bat` in the following!
 
 ```bash
 ./gradlew check
