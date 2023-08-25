@@ -314,7 +314,7 @@ Copy the password string and enter the following command:
 ```bash
 podman login -u <your docker.io username> docker.io
 ```
-When asked for the password, past the content of your clipboard.
+When asked for the password, paste the content of your clipboard.
 You should see a message that you are successfully logged in.
 
 Next, you have to create a repository where you can push your images.
@@ -338,7 +338,7 @@ If you are interested, you may try one of the following
 - [Calculate Code Coverage of your Unit Tests](https://docs.gradle.org/current/userguide/jacoco_plugin.html)
 - [Analyze Code Quality via SonarQube](https://docs.sonarsource.com/sonarqube/latest/analyzing-source-code/scanners/sonarscanner-for-gradle/)
 - [Set up a CI/CD pipeline that automatically builds your project on every commit to GitHub and publishes the result on DockerHub](https://docs.docker.com/language/java/configure-ci-cd/)
-- [Set up Ascidoctor to produce a professional documenation of your app](https://docs.docker.com/language/java/configure-ci-cd/)
+- [Set up Ascidoctor to produce a professional documentation of your app](https://docs.docker.com/language/java/configure-ci-cd/)
 - ...
 
 
