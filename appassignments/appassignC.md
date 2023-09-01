@@ -10,7 +10,7 @@ The application is intended to eventually showcase a broad spectrum of important
 
 Use the Spark/Java framework http://sparkjava.com or Spring Boot  https://spring.io/guides/gs/rest-service/ to implement a REST API for polls and voting.
 
-The API must enable CRUD operations and use JSON (and/or XML) for the representation of poll and voting resources. See slide 36 from the lectures on web services for design principles on how you should organise the resources for polls and votes in a hierarchical information space.
+The API must enable CRUD operations and use JSON (and/or XML) for the representation of poll and voting resources. See the slides from the lectures on web services for design principles on how you should organise the resources for polls and votes in a hierarchical information space.
 
 Test the API using for instance the [Postman](https://learning.getpostman.com/?_ga=2.261200462.231504413.1536569579-264554042.1522913654) tool
 

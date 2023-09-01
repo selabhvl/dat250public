@@ -35,7 +35,7 @@ In addition, the system may also have an IoT display device that can display the
 
 In this assignment you are to produce an initial **design document** for the application.  The main requirements for the application is provided below. In addition, you will find an example design document for a phone book application at the very end of this page.  The phone book application design document can be used as a template for your own design document.
 
-The requirements provided below may be incomplete, and it is your task to design a useful application. So it is important to find a proper balance in terms of the features that you want to support. The application should not be too complex and not too simple either. Keep in mind that eventually you have to complete the implementation of the application as part of the software technology study project in the second part of the course. You will not be required to build the physical IoT devices in the project, but if you have access access to an IoT device prototyping platform (such as Raspberry PI or Arduino) you may choose to do so.
+The requirements provided below may be incomplete, and it is your task to design a useful application. So it is important to find a proper balance in terms of the features that you want to support. The application should not be too complex and not too simple either. Keep in mind that eventually you have to complete the implementation of the application as part of the software technology study project in the second part of the course. You will not be required to build the physical IoT devices in the project, but if you have access access to an IoT device prototyping platform (such as Raspberry Pi or Arduino) you may choose to do so.
 
 Each group is required to give a short presentation of their design document (see the course canvas for details), and also submit their design document in PDF format via canvas. It is recommended to structure the design document so that it can be used directly for the presentation.
 
@@ -50,7 +50,7 @@ or some other suitable tool you may know from earlier.
 
 ## Development Methodology
 
-The development of the system is to be partly based on the design methodology proposed in Chap 5 of the IoT book (see Canvas), and realise a software architecture conforming to the architectural level(s) described in Chap 1 of the IoT book. In that respect, part of the project will also be to evaluate the practical applicability of the design methodology and the architectural principles presented in the IoT book. You are not required to follow strictly all steps in the design methodology but rather use those that you find is useful for the design of the system.
+The development of the system is to be partly based on the design methodology proposed in Chap 5 of the IoT book (see Canvas), and realise a software architecture conforming to the architectural level(s) described in Chap 1 of the IoT book. In that respect, part of the project will also be to evaluate the practical applicability of the design methodology and the architectural principles presented in the IoT book. You are not required to follow strictly all steps in the design methodology, but rather use those that you find is useful for the design of the system.
 
 The two sections below contain partial information related to the first steps of the design methodology, and is intended to serve as a staring point for undertaking the project.
 
@@ -86,9 +86,9 @@ The design document that you are to produce should contain:
 
 ## JPA persistence
 
-In addition to making the overall application design, you are also required to prototype the persistence part of the application by implementing the classes from the domain model as entity classes using the Java Persistence Architecture (JPA) that is to be covered in the lectures in weeks 36/37.
+In addition to making the overall application design, you are also required to prototype the persistence part of the application by implementing the classes from the domain model as entity classes using the Java Persistence Architecture (JPA) that is to be covered in the lectures.
 
-Detailed instructions on this part will be provided as part of the lab in week 37:
+Detailed instructions on this part is provided here:
 
 https://github.com/selabhvl/dat250public/blob/master/appassignments/appassignB.md
 
