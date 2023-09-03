@@ -20,7 +20,7 @@ The goal is to set up a Java application that uses JPA for storing entities in a
 
 ### Experiment 2: Banking/Credit Card example JPA
 
-Implement the domain model for credit cards similar to the Person-Address-Examples in Monday's lecture on object-relational mappings.
+Implement the domain model for credit cards similar to the Person-Address-Examples in the lecture on object-relational mappings.
 Pay close attention to the bidirectional associations in the domain model.
 
 Fork the [template project](https://github.com/timKraeuter/dat250-jpa-tutorial) from experiment 1 to start the implementation.
