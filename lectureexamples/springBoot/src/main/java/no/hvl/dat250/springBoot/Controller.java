@@ -8,7 +8,7 @@ import org.springframework.web.bind.annotation.RestController;
 public class Controller {
 
     @Autowired
-    private Service service;
+    private AppService service;
 
 
     @GetMapping("/hello")
@@ -18,7 +18,7 @@ public class Controller {
 
     @GetMapping("/quote")
     public Quote randomQuote() {
-        return service.randomQuote();
+        return service.getRandomQuote();
     }
 
 }
