@@ -11,12 +11,12 @@ import java.io.IOException;
 import java.io.InputStreamReader;
 import java.util.List;
 
-@Component
+@Component // makes this class a Spring-managed bean as well
 public class QuoteCLI {
 
     private QuoteService service;
 
-    public QuoteCLI(@Autowired QuoteService service) {
+    public QuoteCLI(@Autowired QuoteService service) { // Spring resolves an instance of QuoteService automatically
         this.service = service;
     }
 
