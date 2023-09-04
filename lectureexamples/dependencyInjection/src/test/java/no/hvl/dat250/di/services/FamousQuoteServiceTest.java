@@ -3,6 +3,8 @@ package no.hvl.dat250.di.services;
 import no.hvl.dat250.di.domain.Quote;
 import no.hvl.dat250.di.entities.QuoteEntity;
 import org.junit.jupiter.api.Test;
+import org.springframework.context.ApplicationContext;
+import org.springframework.context.support.ClassPathXmlApplicationContext;
 
 import java.util.List;
 
@@ -13,7 +15,9 @@ public class FamousQuoteServiceTest {
 
     @Test
     public void testCorrectOrder() {
-        QuoteService service = new FamousQuoteService();
+        ApplicationContext context = new ClassPathXmlApplicationContext("beans.xml");
+        QuoteService service = context.getBean("testService", QuoteService.class);
+
         List<Quote> quotes = service.listQuotes();
         // expects at least two elements
         assertNotEquals(0, quotes.size());

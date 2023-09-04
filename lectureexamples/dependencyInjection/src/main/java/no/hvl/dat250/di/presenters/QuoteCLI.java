@@ -3,18 +3,21 @@ package no.hvl.dat250.di.presenters;
 import no.hvl.dat250.di.domain.Quote;
 import no.hvl.dat250.di.services.FamousQuoteService;
 import no.hvl.dat250.di.services.QuoteService;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Component;
 
 import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStreamReader;
 import java.util.List;
 
+@Component
 public class QuoteCLI {
 
     private QuoteService service;
 
-    public QuoteCLI() {
-        this.service = new FamousQuoteService();
+    public QuoteCLI(@Autowired QuoteService service) {
+        this.service = service;
     }
 
     public void run() {

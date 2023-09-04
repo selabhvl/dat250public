@@ -14,8 +14,8 @@ public class FamousQuoteService  implements QuoteService{
     private QuoteStorage quoteStorage;
 
 
-    public FamousQuoteService() {
-        this.quoteStorage = new InMemoryQuoteStore();
+    public FamousQuoteService(QuoteStorage quoteStorage) {
+        this.quoteStorage = quoteStorage;
     }
 
     public List<Quote> listQuotes() {
