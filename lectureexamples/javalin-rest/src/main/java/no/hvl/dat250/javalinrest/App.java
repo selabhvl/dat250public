@@ -10,17 +10,25 @@ public class App {
     public final static String HTML_CONTENT = "<html>.....";
 
     public static void main(String[] args) {
-        Javalin javalinServer = Javalin.create();
+        Javalin javalinServer = Javalin.create( javalinConfig -> {
+            javalinConfig.staticFiles.add(staticFileConfig ->
+                    staticFileConfig.directory = "/static"
+            );
+        });
 
         javalinServer.get("/", ctx -> ctx.result("it works"));
-        javalinServer.get("/recommendations/bergen", App::handleBergenWeather);
-
+        javalinServer.get("/recommendation/{location}", App::handleLocation);
 
         javalinServer.start(7072);
     }
 
-    private static void handleBergenWeather(Context context) {
-        context.json(RecommendationDTO.createRandom("bergen"));
+    private static void handleLocation(Context context) {
+        String location = context.pathParam("location");
+        String name = context.queryParam("name");
+        System.out.println(name + " was asking");
 
+        context.json(RecommendationDTO.createRandom(location));
     }
+
+
 }
