@@ -16,6 +16,10 @@ dependencies {
 
     // This dependency is used by the application.
     implementation("io.javalin:javalin:5.6.1")
+    implementation("org.slf4j:slf4j-simple:2.0.7")
+    implementation("com.fasterxml.jackson.core:jackson-databind:2.15.0")
+
+
 }
 
 // Apply a specific Java toolchain to ease working on different environments.

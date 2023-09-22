@@ -10,4 +10,11 @@ public class WebController {
     public String index() {
         return "it works";
     }
+
+    @GetMapping("/recommendations/bergen")
+    public RecommendationDTO getRecommendationBergenn() {
+        return RecommendationDTO.createRandom("bergen");
+    }
+
+
 }
