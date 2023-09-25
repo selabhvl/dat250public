@@ -8,7 +8,7 @@ The application is intended to eventually showcase a broad spectrum of important
 
 ### Task 1 - RESTful web API and services
 
-Use the Spark/Java framework http://sparkjava.com or Spring Boot  https://spring.io/guides/gs/rest-service/ to implement a REST API for polls and voting.
+Use Spring Boot  https://spring.io/guides/gs/rest-service/ (or another REST framework of your choice) to implement a REST API for polls and voting.
 
 The API must enable CRUD operations and use JSON (and/or XML) for the representation of poll and voting resources. See the slides from the lectures on web services for design principles on how you should organise the resources for polls and votes in a hierarchical information space.
 
