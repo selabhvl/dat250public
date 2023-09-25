@@ -12,9 +12,9 @@ Complete the Spring Boot tutorial: https://spring.io/quickstart
 
 Complete the tutorial: https://spring.io/guides/gs/spring-boot/
 
-### Experiment 3: REST service
+### Experiment 3: Model-View-Controller Web Applications
 
-Complete the tutorial: https://spring.io/guides/gs/rest-service/
+Complete the tutorial on Spring MVC at: https://spring.io/guides/gs/serving-web-content/
 
 ### Experiment 4: Data Access
 
