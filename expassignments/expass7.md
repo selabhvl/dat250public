@@ -17,9 +17,11 @@ You can freely choose the programming language.
 
 If you choose Java, using a Gradle/Maven project and adding the [amqp-client dependency](https://mvnrepository.com/artifact/com.rabbitmq/amqp-client) and then running the main classes from the IDE is the fastest way to complete the tutorial.
 
-### Experiment 3: Queue messaging
+### Experiment 3: Work Queues
 
-Complete the **"Work queues"** tutorial at: https://www.rabbitmq.com/tutorials/tutorial-two-java.html
+Complete the **"Work queues"** tutorial at: https://www.rabbitmq.com/tutorials/tutorial-two-java.html.
+
+Work queues implement the [competing consumer pattern](https://www.enterpriseintegrationpatterns.com/patterns/messaging/CompetingConsumers.html) mentioned in the lecture.
 
 You can freely choose the programming language.
 
