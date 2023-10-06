@@ -6,7 +6,8 @@ The goal of this assignment is to make initial experiments with messaging system
 
 ### Experiment 1: Installation
 
-Start by doing an installation as described here: https://www.rabbitmq.com/download.html
+Start by doing an installation as described here: https://www.rabbitmq.com/download.html.
+We recommend the docker or local installation.
 
 ### Experiment 2: Hello World
 
