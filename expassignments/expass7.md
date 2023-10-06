@@ -14,7 +14,7 @@ Complete the **"Hello World"** tutorial at: https://www.rabbitmq.com/tutorials/t
 
 You can freely choose the programming language.
 
-If you choose Java, using a Maven project and adding the [amqp-client dependency](https://mvnrepository.com/artifact/com.rabbitmq/amqp-client) and then running the main classes from the IDE is the fastest way to complete the tutorial.
+If you choose Java, using a Gradle/Maven project and adding the [amqp-client dependency](https://mvnrepository.com/artifact/com.rabbitmq/amqp-client) and then running the main classes from the IDE is the fastest way to complete the tutorial.
 
 ### Experiment 3: Queue messaging
 
