@@ -3,9 +3,11 @@
 ### Introduction
 
 The goal of this assignment is to make initial experiments front-end technologies for enterprise applications.
+You are _not_ following a tutorial, so this assignment usually takes longer than most previous ones.
+An Angular tutorial which can help you can be found [here]([url](https://angular.io/tutorial/tour-of-heroes)). 
 
 ### Experiment 1: Single-page applications
-Use Angular to build an SPA to implement a **Todo list** (see example in experiment 3 below).
+Use Angular to build a SPA to implement a **Todo list** (see example in experiment 3 below).
 The application should use the Rest-API developed in assignment 4 and be able to:
 
 1. Load todos using the Todo-API (HTTP GET),
