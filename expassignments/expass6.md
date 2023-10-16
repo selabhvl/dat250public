@@ -4,7 +4,7 @@
 
 The goal of this assignment is to make initial experiments front-end technologies for enterprise applications.
 You are _not_ following a tutorial, so this assignment usually takes longer than most previous ones.
-An Angular tutorial which can help you can be found [here]([url](https://angular.io/tutorial/tour-of-heroes)). 
+An Angular tutorial that can help you can be found [here](https://angular.io/tutorial/tour-of-heroes). 
 
 ### Experiment 1: Single-page applications
 Use Angular to build a SPA to implement a **Todo list** (see example in experiment 3 below).
