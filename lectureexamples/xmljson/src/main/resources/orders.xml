@@ -1,6 +1,0 @@
-<?xml version="1.0" encoding="UTF-8" ?>
-<order xmlns="https://www.hvl.no/250/orders" orderNo="23456" customer="John Smith" date="2002-10-15">
-    <item itemNo="a528" quantity="1"/>
-    <item itemNo="c817" quantity="3"/>
-    <item itemNo="h899" quantity="2"/>
-</order>
