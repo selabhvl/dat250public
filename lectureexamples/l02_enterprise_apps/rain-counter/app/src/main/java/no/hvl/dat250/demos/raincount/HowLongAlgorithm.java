@@ -1,16 +1,19 @@
 package no.hvl.dat250.demos.raincount;
 
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Component;
+
 import java.time.OffsetDateTime;
 import java.time.temporal.ChronoUnit;
 import java.util.Comparator;
 import java.util.Iterator;
 
-
+@Component
 public class HowLongAlgorithm {
 
     private final WeatherForecastSource forecastSource;
 
-    public HowLongAlgorithm(WeatherForecastSource forecastSource) {
+    public HowLongAlgorithm(@Autowired WeatherForecastSource forecastSource) {
         this.forecastSource = forecastSource;
     }
 

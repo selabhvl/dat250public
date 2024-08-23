@@ -3,6 +3,8 @@
  */
 package no.hvl.dat250.demos.raincount;
 
+import org.springframework.context.annotation.AnnotationConfigApplicationContext;
+
 import java.io.File;
 import java.time.LocalDateTime;
 import java.time.OffsetDateTime;
@@ -11,11 +13,12 @@ import java.time.ZoneId;
 public class App {
 
     public static void main(String[] args) {
+        AnnotationConfigApplicationContext context = new AnnotationConfigApplicationContext(Config.class);
+
+
         // creation
         CommandLineResultPresenter presenter = new CommandLineResultPresenter();
-        File f = new File("app/src/test/resources/forecast1.json");
-        WeatherForecastSource source =  new JsonFileBasedForecastSource(f);
-        HowLongAlgorithm algorithm = new HowLongAlgorithm(source);
+        HowLongAlgorithm algorithm = context.getBean(HowLongAlgorithm.class);
 
         // params
         LocalDateTime questionTime = LocalDateTime.of(2024, 8, 22, 13, 11, 15);

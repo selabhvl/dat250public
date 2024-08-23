@@ -14,7 +14,7 @@ public class CommandLineResultPresenter {
             hours *= -1;
             System.out.println("From " + ts + " it will remain dry for " + hours + " more hours! hopefully..." );
         } else {
-            System.out.println("From " + ts + " it will take " + hours + " before it stops raining..." );
+            System.out.println("From " + ts + " it will take " + hours + " more hours before it stops raining..." );
 
         }
     }
