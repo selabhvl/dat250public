@@ -26,8 +26,7 @@ public class JsonFileBasedForecastSource implements WeatherForecastSource {
     @Override
     public Collection<Forecast> getForecast() {
         try {
-            List<Forecast> result = objectMapper.readValue(jsonFile, objectMapper.getTypeFactory().constructCollectionType(List.class, Forecast.class));
-            return result;
+            return objectMapper.<List<Forecast>>readValue(jsonFile, objectMapper.getTypeFactory().constructCollectionType(List.class, Forecast.class));
         } catch (IOException e) {
             e.printStackTrace();
             return Collections.emptyList();

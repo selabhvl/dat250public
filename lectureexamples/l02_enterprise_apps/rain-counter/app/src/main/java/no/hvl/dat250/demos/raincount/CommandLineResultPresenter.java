@@ -4,7 +4,7 @@ import java.time.OffsetDateTime;
 import java.time.ZoneId;
 import java.time.format.DateTimeFormatter;
 
-public class CommandLinePresenter implements Presenter {
+public class CommandLineResultPresenter {
 
 
     public void presentResult(long hours, OffsetDateTime start) {

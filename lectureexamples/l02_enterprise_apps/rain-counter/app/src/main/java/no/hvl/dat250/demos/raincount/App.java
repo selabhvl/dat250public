@@ -12,7 +12,7 @@ public class App {
 
     public static void main(String[] args) {
         // creation
-        Presenter presenter = new CommandLinePresenter();
+        CommandLineResultPresenter presenter = new CommandLineResultPresenter();
         File f = new File("app/src/test/resources/forecast1.json");
         WeatherForecastSource source =  new JsonFileBasedForecastSource(f);
         HowLongAlgorithm algorithm = new HowLongAlgorithm(source);
