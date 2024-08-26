@@ -12,15 +12,15 @@ Note that this is an **individual** assignment (see Hand-in at the end of the do
 
 You must make sure that you have the following installed on your PC:
 
-- Java Development Environment (JDK) in at least verion `<= 21`,
+- Java Development Environment (JDK) in at least version `>= 21`,
 
 - An Integrated Development Environment (IDE) or sufficiently sophisticated code editor, 
 
-- The _Gradle_ software build tool in at least version `<= 8`,
+- The _Gradle_ software build tool in at least version `>= 8`,
 
 - A _Git_ client,
 
-- Node.js (`<= 20`) and NPM (`<= 10`), which will be needed later for the SPA assignment.
+- Node.js (`>= 20`) and NPM (`>= 10`), which will be needed later for the SPA assignment.
 
 - An environment to execute _containers_, e.g. _Docker_.
 
@@ -85,20 +85,20 @@ where `mm` is a number `>= 21`.
 
 ### IDE
 
-Software Development in Java should be done in a full-fledged IDE rather than in Notepad.
-Today there are basically two viable choices for Java IDE:
+Software Development in Java should be done in a full-fledged IDE rather than in Notepad :P
 
-- [Eclipse](https://www.eclipse.org/downloads/packages/)
-- [JetBrains IntelliJ](https://www.jetbrains.com/idea/) where there are two choices:
-  - Community Edition (free)
-  - Ultimate Edition (commercial), [free educational licenses available](https://www.jetbrains.com/community/education/#students/)
+Over time, [IntelliJ IDEA](https://www.jetbrains.com/idea/) by JetBrains has become the most popular IDE for the Java programming language (or other JVM based languages). It offers the most features and has arguably the best editor support. 
+The drawback is that it is quite _resource intensive_ and thus puts higher demands on your computing Hardware.
 
-Otherwise, you could also use a sophisticated Code Editor like
-- [Viusal Studio Code](https://code.visualstudio.com/) or 
-- [NeoVim](https://neovim.io/)
+For IntelliJ IDEA there are two choices:
+-  where there are two choices:
+  - the free Community Edition, or  
+  - the commercial Ultimate Edition ([free educational licenses available](https://www.jetbrains.com/community/education/#students/)), which offers additional framework support (e.g. Spring, Web technologies, ...).
 
-combined with a Language Server for Java: https://github.com/eclipse-jdtls/eclipse.jdt.ls
-Note that the latter option is only recommended if have experience with the Language Server Protocol and its intricacies.
+If you prefer a more leightweight alternative, you may experiment with the following alternatives (on your own):
+- [Viusal Studio Code](https://code.visualstudio.com/) with the [SpringBoot](https://marketplace.visualstudio.com/items?itemName=vmware.vscode-boot-dev-pack) and [Java](https://marketplace.visualstudio.com/items?itemName=vscjava.vscode-java-pack) extensions, or
+- [NeoVim](https://neovim.io/) with the [nvim-java](https://github.com/nvim-java/nvim-java) plugin.
+
 
 ### Gradle
 
@@ -163,7 +163,9 @@ Select the following values:
 - Add Dependency: Spring Web 
 
 When you are done, click on `Generate` to download a ZIP file containing the application starter template. 
-Place the file at a location that you will find again, unzip it, and try running the following gradle tasks:
+Place the file at a location that you will find again, unzip it, open up a _shell session_ within that folder,
+and try running the following gradle tasks (commands are based on a POSIX shell, if you have a Windows shell: 
+replace `./gradlew` with `gradlew.bat`):
 
 ```sh
 ./gradlew test 
@@ -187,7 +189,7 @@ give you a nicer greeting than the current error message, like e.g. `Hello World
 For this, have a look at the [Spring Boot Quickstart Tutorial](https://spring.io/quickstart).
 
 
-## Hand-in: short report
+## Hand-in: Screenshot
 
 In the Canvas assignment, you shall deliver a screenshot showing that you successfully created your first Spring Boot application like so:
 
