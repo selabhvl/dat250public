@@ -27,8 +27,7 @@ dependencies {
     // support for LocalDateTime and so on
     implementation("com.fasterxml.jackson.datatype:jackson-datatype-jsr310")
 
-    // https://mvnrepository.com/artifact/org.springframework/spring-context
-    implementation("org.springframework:spring-context:6.1.12")
+
 
 
 }
@@ -36,7 +35,7 @@ dependencies {
 // Apply a specific Java toolchain to ease working on different environments.
 java {
     toolchain {
-        languageVersion.set(JavaLanguageVersion.of(20))
+        languageVersion.set(JavaLanguageVersion.of(21))
     }
 }
 

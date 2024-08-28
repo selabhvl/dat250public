@@ -1,23 +1,36 @@
-package no.hvl.dat250.demos.raincount;
+package no.hvl.dat250.l02;
 
-import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.stereotype.Component;
+
 
 import java.time.OffsetDateTime;
 import java.time.temporal.ChronoUnit;
 import java.util.Comparator;
 import java.util.Iterator;
 
-@Component
 public class HowLongAlgorithm {
+
+    public static enum ExceptionType {
+        NO_DATA,
+        NOT_ENOUGH_DATA,
+
+        TOO_FAR_ADVANCED
+    }
+
+    public static class AlgorithmException extends Exception {
+        public ExceptionType type;
+
+        public AlgorithmException(ExceptionType type) {
+            this.type = type;
+        }
+    }
 
     private final WeatherForecastSource forecastSource;
 
-    public HowLongAlgorithm(@Autowired WeatherForecastSource forecastSource) {
+    public HowLongAlgorithm(WeatherForecastSource forecastSource) {
         this.forecastSource = forecastSource;
     }
 
-    public long calculate(OffsetDateTime start) {
+    public long calculate(OffsetDateTime start) throws AlgorithmException {
         OffsetDateTime resetStart = OffsetDateTime.of(
                 start.getYear(),
                 start.getMonthValue(),
@@ -32,10 +45,14 @@ public class HowLongAlgorithm {
                 .sorted(Comparator.comparing(Forecast::getTs))
                 .toList().iterator();
         if (!forecasts.hasNext()) {
-            throw new RuntimeException("No data available :(");
+            throw new AlgorithmException(ExceptionType.NO_DATA);
         }
         Forecast first = forecasts.next();
         OffsetDateTime current = first.getTs();
+        long initDiff = ChronoUnit.HOURS.between(start, current);
+        if (initDiff > 2) {
+            throw new AlgorithmException(ExceptionType.TOO_FAR_ADVANCED);
+        }
         long hours = 0;
         boolean isDry = first.getRain() == 0.0;
         while (forecasts.hasNext()) {
@@ -48,7 +65,7 @@ public class HowLongAlgorithm {
             }
             current = next.getTs();
         }
-        throw new RuntimeException("Not enough data available");
+        throw new AlgorithmException(ExceptionType.NOT_ENOUGH_DATA);
     }
 
 }

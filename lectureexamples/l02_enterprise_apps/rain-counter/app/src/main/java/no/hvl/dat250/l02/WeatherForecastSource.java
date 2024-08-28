@@ -1,4 +1,4 @@
-package no.hvl.dat250.demos.raincount;
+package no.hvl.dat250.l02;
 
 import java.util.Collection;
 
