@@ -1,0 +1,27 @@
+<?xml version = "1.0" encoding = "UTF-8"?>
+<courses xmlns="https://www.hvl.no/250/courses">
+    <course code="DAT250">
+        <semester>H24</semester>
+        <lecturers>
+            <lecturer email="Harald.Koenig@fhdw.de">Harald König</lecturer>
+            <lecturer email="past@hvl.no">Patrick Stünkel</lecturer>
+        </lecturers>
+        <ects>10</ects>
+        <level>Master</level>
+        <schedule>
+            <lecture day="MON" start="10:15" end="12:00" location="C114" />
+            <exercise day="WED" start="10:15" end="12:00" location="E443" />
+            <lecture day="FRI" start="12:15" end="14:00" location="C114" />
+        </schedule>
+        <students>
+            <student id="12345">
+                <firstname>Erna</firstname>
+                <lastname>Solberg</lastname>
+            </student>
+            <student id="98765">
+                <firstname>Jonas</firstname>
+                <lastname>Gahr Støre</lastname>
+            </student>
+        </students>
+    </course>
+</courses>
