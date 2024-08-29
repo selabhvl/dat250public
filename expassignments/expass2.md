@@ -1,58 +1,70 @@
-## DAT250: Software Technology Experiment Assignment 2
+## DAT250: Software Technology Experiment Assignment 4
 
 ### Introduction
 
-The goal of this assignment is to get to know the Java Persistence Architecture (JPA). This will include setting up a database for experimentation and study object-relational mapping.
+The goal of this assignment is to implement a simple REST API using the Spring framework. In this assignment, you will be using the following software technology:
 
-Note that this is an **individual** assignment (see Hand-in at the end of the document).
+- The Spring framework: [https://spring.io/](https://spring.io/)
+- The Postman tool: [https://www.postman.com](https://www.postman.com)
+- Swagger: [https://swagger.io](https://swagger.io)
 
-### Experiment 1: JPA tutorial (optional)
+### Experiment 1: Spring project and Postman
 
-You will complete a simple tutorial with an overview and a gentle introduction to JPA. Especially technicalities that will hinder you from completing experiment 2 will be solved here.
+Fork the Spring project [counters and todos](https://github.com/selabhvl/dat250-spring-counters-todos) from the lectures using GitHub. Enable workflows under the **Actions** tab in your fork such that test cases are automatically run when your code changes.
+Then clone and import your project into your IDE (gradle project). You can use any git client, but we suggest [GitHub Desktop](https://www.google.com/search?q=GitHub+Desktop) or the git client integrated into IntelliJ IDEA.
 
-The goal is to set up a Java application that uses JPA for storing entities in a database.
+Start the webserver by running the main class in *RestServiceApplication.java*. Use Postman to run a GET request targeting `http://localhost:8080/counters` to check that the service is deployed and operational.
 
-**Initial setup:**
-1. Fork the template project using git from [here](https://github.com/timKraeuter/dat250-jpa-tutorial), for example, by using [GitHub Desktop](https://www.google.com/search?q=GitHub+Desktop) or any other git-client.
-2. Import the contained **maven project** into your IDEA (will be demonstrated in the Lab).
-3. Run the class **Main**. It should terminate without errors.
-4. Follow the [JPA tutorial](https://github.com/timKraeuter/dat250-jpa-tutorial#jpa-tutorial) to get used to JPA and understand the project setup.
+Now use Postman to test the counter service by creating the following HTTP requests in a collection in Postman:
 
-### Experiment 2: Banking/Credit Card example JPA
+```
+GET localhost:8080/counters
+PUT localhost:8080/counters
+GET localhost:8080/counters
+```
 
-Implement the domain model for credit cards similar to the Person-Address-Examples in the lecture on object-relational mappings.
-Pay close attention to the bidirectional associations in the domain model.
+and execute them.
 
-Fork the [template project](https://github.com/timKraeuter/dat250-jpa-tutorial) from experiment 1 to start the implementation.
-Please finish Experiment 1 first if you get stuck on Experiment 2 before asking questions.
+You should use the following JSON representation of a counter resource in the body of the HTTP PUT request:
 
-![Class Diagram domain model](https://raw.githubusercontent.com/selabhvl/dat250public/master/expassignments/pictures/creditCard.svg)
+```
+{
+    "red": 3,
+    "green": 2
+}
+```
 
-Questions:
-- Where is the database? Explain the used database and how/when it runs.
-- Can you provide the SQl used to create the table **Customer** (Hint: **Hibernate** is used for the object-relational-mapping)?
-- Find a way to inspect the database tables being created and attach a screenshot of the database schema to your report. Do the created tables correspond to your initial thoughts regarding the exercise?
+### Experiment 2: REST API for TODO-items
 
-Persist the objects shown in the following object diagram into your database in the class **_CreditCardsMain_** of the project. If you need more knowledge about persistence management (entityManager-operations persist(), find(), etc...), look into the lecture notes of [Lecture 5](https://hvl.instructure.com/courses/21915/pages/lecture-5-persistence-management-and-queries?module_item_id=531426).
+Keep working with the project from experiment 1 and go to the package **todos**.
+Run the test suite **TodoControllerTest**. The tests should run but fail for now.
 
-![Object Diagram](https://raw.githubusercontent.com/selabhvl/dat250public/master/expassignments/pictures/object-diagram.svg)
+Use the Spring framework to implement a REST API for Todo-items that enables CRUD operations and uses JSON to represent todo resources.
+We have implemented a set of test cases for the REST API. You'll need to implement the API so that all test cases pass **without** changing them.
 
-Make sure the associated test case **_CreditCardsMainTest_** runs successfully. You are **not** allowed to change the test case!
-If you forked the repository correctly tests are automatically run when you push your changes (see [README.md](https://github.com/timKraeuter/dat250-jpa-tutorial/blob/master/README.md#experiment-2-tests)).
+The REST API should make it possible to Create (POST) Todo-items, Read (GET) TODO-items, Update (PUT), and Delete (DELETE) Todo-items. Please look at slide 36 from the lectures on web services for design principles on how to organize the resources in a hierarchical information space of todo-items. The test cases will require the API to be structured correctly.
+
+**Make sure that the test suite located under src/test/java runs successfully after your implementation is finished:**
+
+A green tick should appear next to your commit in the GitHub repository since test cases are executed upon code changes. You can check those runs under the **Actions** tab.
+
+### Experiment 3: Swagger (optional)
+
+Investigate how Swagger may be used to specify the REST API from experiment 2.
+
+### Experiment 4: XML representation (optional)
+
+Investigate how the Spring may be used to return and consume XML resource representations of the Todo-items.
 
 ### Hand-in: short report
 
-As hand in, you must add a markdown file called `dat250-expass2.md` to the same repository that you created as part of experiment assignment 1:
-
-https://github.com/selabhvl/dat250public/blob/master/expassignments/expass1.md
+As a hand-in, you must add a markdown file called `dat250-expass4.md` to the same repository you created in the earlier software technology assignments.
 
 In particular, you should write about:
 
-- technical problems that you encountered during installation and use of Java Persistence Architecture (JPA) and how you resolved
+- technical problems that you encountered during installation and how you resolved
 
-- a link to your code for experiment 2 above. Make sure the included test case passes!
-
-- an explanation of how you inspected the database tables and what tables were created. For the latter, you may provide screenshots.
+- a link to your code for experiments 2-4 above
 
 - any pending issues with this assignment that you did not manage to solve
 

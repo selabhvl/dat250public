@@ -1,112 +1,59 @@
-## DAT250: Software Technology Experiment Assignment 3
+## DAT250: Software Technology Experiment Assignment 2
 
 ### Introduction
 
-The goal of this assignment is to get familiar with MongoDB by following its official tutorial. This will include some preliminary reading about high level details of MongoDB, performing a local installation on each corresponding machine and setting up a small database where basic CRUD operations will be tested on it.
-
-If you encounter technical problems during this experiment assignment, then please post your questions and issues on the Canvas discussion forum for the DAT250 course: https://hvl.instructure.com/courses/17237/discussion_topics
+The goal of this assignment is to get to know the Java Persistence Architecture (JPA). This will include setting up a database for experimentation and study object-relational mapping.
 
 Note that this is an **individual** assignment (see Hand-in at the end of the document).
 
-### Getting started
+### Experiment 1: JPA tutorial (optional)
 
-MongoDB is a document database designed for ease of development and scaling. Visit its introduction page to get an overview:
+You will complete a simple tutorial with an overview and a gentle introduction to JPA. Especially technicalities that will hinder you from completing experiment 2 will be solved here.
 
-https://docs.mongodb.com/manual/introduction/
+The goal is to set up a Java application that uses JPA for storing entities in a database.
 
-Try the following **Examples** located under https://docs.mongodb.com/manual/tutorial/getting-started/ section within the embedded console provided:
+**Initial setup:**
+1. Fork the template project using git from [here](https://github.com/timKraeuter/dat250-jpa-tutorial), for example, by using [GitHub Desktop](https://www.google.com/search?q=GitHub+Desktop) or any other git-client.
+2. Import the contained **maven project** into your IDEA (will be demonstrated in the Lab).
+3. Run the class **Main**. It should terminate without errors.
+4. Follow the [JPA tutorial](https://github.com/timKraeuter/dat250-jpa-tutorial#jpa-tutorial) to get used to JPA and understand the project setup.
 
-0. Switch Database
-1. Populate a collection (Insert)
-2. Select All Documents
-3. Specify Equality Matches
-4. Specify Fields to Return (Projection)
+### Experiment 2: Banking/Credit Card example JPA
 
-### Installation: MongoDB Database
+Implement the domain model for credit cards similar to the Person-Address-Examples in the lecture on object-relational mappings.
+Pay close attention to the bidirectional associations in the domain model.
 
-We will install the MongoDB 4.4 Community Edition as it is enough for the experiments on this assignment. **We will work with a local installation, not with the MongoDB Atlas cloud services.**
+Fork the [template project](https://github.com/timKraeuter/dat250-jpa-tutorial) from experiment 1 to start the implementation.
+Please finish Experiment 1 first if you get stuck on Experiment 2 before asking questions.
 
-You will find installation instructions depending on the operative system here:
+![Class Diagram domain model](https://raw.githubusercontent.com/selabhvl/dat250public/master/expassignments/pictures/creditCard.svg)
 
-https://docs.mongodb.com/manual/administration/install-community/
+Questions:
+- Where is the database? Explain the used database and how/when it runs.
+- Can you provide the SQl used to create the table **Customer** (Hint: **Hibernate** is used for the object-relational-mapping)?
+- Find a way to inspect the database tables being created and attach a screenshot of the database schema to your report. Do the created tables correspond to your initial thoughts regarding the exercise?
 
-**NOTE** that before installing MongoDB, you should validate the package using either the provided PGP signature or SHA-256 checksum.
+Persist the objects shown in the following object diagram into your database in the class **_CreditCardsMain_** of the project. If you need more knowledge about persistence management (entityManager-operations persist(), find(), etc...), look into the lecture notes of [Lecture 5](https://hvl.instructure.com/courses/21915/pages/lecture-5-persistence-management-and-queries?module_item_id=531426).
 
-Follow this tutorial to do so: https://docs.mongodb.com/manual/tutorial/verify-mongodb-packages/
+![Object Diagram](https://raw.githubusercontent.com/selabhvl/dat250public/master/expassignments/pictures/object-diagram.svg)
 
-Windows tip:
-
-Note that if the option "MongoDB as a Windows service" is not installed, one needs to run the **mongod** instance (the server) before running the **mongo** commands which runs a client instance.
-
-Details on how to run **mongod** can be found here: https://docs.mongodb.com/manual/tutorial/install-mongodb-on-windows/#run-mongodb-from-cmd
-
-General installation tip:
-
-Adding your <mongo shell installation dir> to the PATH environment variable allows you to type mongo directly instead of having to first go to the <mongo shell installation dir> directory or specify the full path to the binary.
-Alternatively, you can copy the mongo shell to a location on your filesystem that is already present in your PATH, such as /usr/bin on Linux.
-
-#### Mongo Shell
-
-The mongo shell is an interactive JavaScript interface to MongoDB. You can use the mongo shell to query and update data as well as perform administrative operations.
-Further details can be found in https://docs.mongodb.com/manual/mongo/
-
-### Experiment 1: MongoDB CRUD operations
-
-CRUD operations stands for create, read, update, and delete documents.
-
-Follow and do the tutorials through the CRUD operations section:
-
-https://docs.mongodb.com/manual/tutorial/insert-documents/
-
-https://docs.mongodb.com/manual/tutorial/query-documents/
-
-https://docs.mongodb.com/manual/tutorial/update-documents/
-
-https://docs.mongodb.com/manual/tutorial/remove-documents/
-
-https://docs.mongodb.com/manual/core/bulk-write-operations/
-
-
-### Experiment 2: Aggregation
-
-Aggregation operations process data records and return computed results. Aggregation operations group values from multiple documents together, and can perform a variety of operations on the grouped data to return a single result. MongoDB provides three ways to perform aggregation: the aggregation pipeline, the map-reduce function, and single purpose aggregation methods.
-
-We will focus on **Map-Reduce** for this experiment, but you are encouraged to take a look at Aggregation Pipeline.
-
-#### Map-Reduce
-
-First, read the material provided in:
-
-https://docs.mongodb.com/manual/aggregation/
-
-https://docs.mongodb.com/manual/core/map-reduce/
-
-Complete the Examples tutorial (the Aggregation alternative part is not mandatory, but you can do it) from:
-
-https://docs.mongodb.com/manual/tutorial/map-reduce-examples/
-
-**Add an additional operation developed by you and show its result given by its execution.**
+Make sure the associated test case **_CreditCardsMainTest_** runs successfully. You are **not** allowed to change the test case!
+If you forked the repository correctly tests are automatically run when you push your changes (see [README.md](https://github.com/timKraeuter/dat250-jpa-tutorial/blob/master/README.md#experiment-2-tests)).
 
 ### Hand-in: short report
 
-As hand in, you must add a markdown file called `dat250-expass3.md` to the same repository that you created as part of experiment assignment 1:
+As hand in, you must add a markdown file called `dat250-expass2.md` to the same repository that you created as part of experiment assignment 1:
 
 https://github.com/selabhvl/dat250public/blob/master/expassignments/expass1.md
 
 In particular, you should write about:
 
-- Technical problems that you encountered during installation and use of MongoDB and how you resolved
+- technical problems that you encountered during installation and use of Java Persistence Architecture (JPA) and how you resolved
 
-- Screenshots for:
+- a link to your code for experiment 2 above. Make sure the included test case passes!
 
-  - The correct validation of the installation package (https://docs.mongodb.com/manual/tutorial/verify-mongodb-packages/)
+- an explanation of how you inspected the database tables and what tables were created. For the latter, you may provide screenshots.
 
-  - Relevant results obtained during Experiment 1 (it is not necessary to put a single screenshot on each substep, but at least one significant from each CRUD operation).
-
-  - Experiment 2 example working and the additional Map-reduce operation (and its result) developed by each of you.
-
-- Reason about why your implemented Map-reduce operation in Experiment 2 is useful and interpret the collection obtained. 
-
-- Any pending issues with this assignment which you did not manage to solve
+- any pending issues with this assignment that you did not manage to solve
 
 The hand-in should be written in **English**.

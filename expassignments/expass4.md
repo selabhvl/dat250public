@@ -1,71 +1,112 @@
-## DAT250: Software Technology Experiment Assignment 4
+## DAT250: Software Technology Experiment Assignment 3
 
 ### Introduction
 
-The goal of this assignment is to implement a simple REST API using the Spring framework. In this assignment, you will be using the following software technology:
+The goal of this assignment is to get familiar with MongoDB by following its official tutorial. This will include some preliminary reading about high level details of MongoDB, performing a local installation on each corresponding machine and setting up a small database where basic CRUD operations will be tested on it.
 
-- The Spring framework: [https://spring.io/](https://spring.io/)
-- The Postman tool: [https://www.postman.com](https://www.postman.com)
-- Swagger: [https://swagger.io](https://swagger.io)
+If you encounter technical problems during this experiment assignment, then please post your questions and issues on the Canvas discussion forum for the DAT250 course: https://hvl.instructure.com/courses/17237/discussion_topics
 
-### Experiment 1: Spring project and Postman
+Note that this is an **individual** assignment (see Hand-in at the end of the document).
 
-Fork the Spring project [counters and todos](https://github.com/selabhvl/dat250-spring-counters-todos) from the lectures using GitHub. Enable workflows under the **Actions** tab in your fork such that test cases are automatically run when your code changes.
-Then clone and import your project into your IDE (gradle project). You can use any git client, but we suggest [GitHub Desktop](https://www.google.com/search?q=GitHub+Desktop) or the git client integrated into IntelliJ IDEA.
+### Getting started
 
-Start the webserver by running the main class in *RestServiceApplication.java*. Use Postman to run a GET request targeting `http://localhost:8080/counters` to check that the service is deployed and operational.
+MongoDB is a document database designed for ease of development and scaling. Visit its introduction page to get an overview:
 
-Now use Postman to test the counter service by creating the following HTTP requests in a collection in Postman:
+https://docs.mongodb.com/manual/introduction/
 
-```
-GET localhost:8080/counters
-PUT localhost:8080/counters
-GET localhost:8080/counters
-```
+Try the following **Examples** located under https://docs.mongodb.com/manual/tutorial/getting-started/ section within the embedded console provided:
 
-and execute them.
+0. Switch Database
+1. Populate a collection (Insert)
+2. Select All Documents
+3. Specify Equality Matches
+4. Specify Fields to Return (Projection)
 
-You should use the following JSON representation of a counter resource in the body of the HTTP PUT request:
+### Installation: MongoDB Database
 
-```
-{
-    "red": 3,
-    "green": 2
-}
-```
+We will install the MongoDB 4.4 Community Edition as it is enough for the experiments on this assignment. **We will work with a local installation, not with the MongoDB Atlas cloud services.**
 
-### Experiment 2: REST API for TODO-items
+You will find installation instructions depending on the operative system here:
 
-Keep working with the project from experiment 1 and go to the package **todos**.
-Run the test suite **TodoControllerTest**. The tests should run but fail for now.
+https://docs.mongodb.com/manual/administration/install-community/
 
-Use the Spring framework to implement a REST API for Todo-items that enables CRUD operations and uses JSON to represent todo resources.
-We have implemented a set of test cases for the REST API. You'll need to implement the API so that all test cases pass **without** changing them.
+**NOTE** that before installing MongoDB, you should validate the package using either the provided PGP signature or SHA-256 checksum.
 
-The REST API should make it possible to Create (POST) Todo-items, Read (GET) TODO-items, Update (PUT), and Delete (DELETE) Todo-items. Please look at slide 36 from the lectures on web services for design principles on how to organize the resources in a hierarchical information space of todo-items. The test cases will require the API to be structured correctly.
+Follow this tutorial to do so: https://docs.mongodb.com/manual/tutorial/verify-mongodb-packages/
 
-**Make sure that the test suite located under src/test/java runs successfully after your implementation is finished:**
+Windows tip:
 
-A green tick should appear next to your commit in the GitHub repository since test cases are executed upon code changes. You can check those runs under the **Actions** tab.
+Note that if the option "MongoDB as a Windows service" is not installed, one needs to run the **mongod** instance (the server) before running the **mongo** commands which runs a client instance.
 
-### Experiment 3: Swagger (optional)
+Details on how to run **mongod** can be found here: https://docs.mongodb.com/manual/tutorial/install-mongodb-on-windows/#run-mongodb-from-cmd
 
-Investigate how Swagger may be used to specify the REST API from experiment 2.
+General installation tip:
 
-### Experiment 4: XML representation (optional)
+Adding your <mongo shell installation dir> to the PATH environment variable allows you to type mongo directly instead of having to first go to the <mongo shell installation dir> directory or specify the full path to the binary.
+Alternatively, you can copy the mongo shell to a location on your filesystem that is already present in your PATH, such as /usr/bin on Linux.
 
-Investigate how the Spring may be used to return and consume XML resource representations of the Todo-items.
+#### Mongo Shell
+
+The mongo shell is an interactive JavaScript interface to MongoDB. You can use the mongo shell to query and update data as well as perform administrative operations.
+Further details can be found in https://docs.mongodb.com/manual/mongo/
+
+### Experiment 1: MongoDB CRUD operations
+
+CRUD operations stands for create, read, update, and delete documents.
+
+Follow and do the tutorials through the CRUD operations section:
+
+https://docs.mongodb.com/manual/tutorial/insert-documents/
+
+https://docs.mongodb.com/manual/tutorial/query-documents/
+
+https://docs.mongodb.com/manual/tutorial/update-documents/
+
+https://docs.mongodb.com/manual/tutorial/remove-documents/
+
+https://docs.mongodb.com/manual/core/bulk-write-operations/
+
+
+### Experiment 2: Aggregation
+
+Aggregation operations process data records and return computed results. Aggregation operations group values from multiple documents together, and can perform a variety of operations on the grouped data to return a single result. MongoDB provides three ways to perform aggregation: the aggregation pipeline, the map-reduce function, and single purpose aggregation methods.
+
+We will focus on **Map-Reduce** for this experiment, but you are encouraged to take a look at Aggregation Pipeline.
+
+#### Map-Reduce
+
+First, read the material provided in:
+
+https://docs.mongodb.com/manual/aggregation/
+
+https://docs.mongodb.com/manual/core/map-reduce/
+
+Complete the Examples tutorial (the Aggregation alternative part is not mandatory, but you can do it) from:
+
+https://docs.mongodb.com/manual/tutorial/map-reduce-examples/
+
+**Add an additional operation developed by you and show its result given by its execution.**
 
 ### Hand-in: short report
 
-As a hand-in, you must add a markdown file called `dat250-expass4.md` to the same repository you created in the earlier software technology assignments.
+As hand in, you must add a markdown file called `dat250-expass3.md` to the same repository that you created as part of experiment assignment 1:
+
+https://github.com/selabhvl/dat250public/blob/master/expassignments/expass1.md
 
 In particular, you should write about:
 
-- technical problems that you encountered during installation and how you resolved
+- Technical problems that you encountered during installation and use of MongoDB and how you resolved
 
-- a link to your code for experiments 2-4 above
+- Screenshots for:
 
-- any pending issues with this assignment that you did not manage to solve
+  - The correct validation of the installation package (https://docs.mongodb.com/manual/tutorial/verify-mongodb-packages/)
+
+  - Relevant results obtained during Experiment 1 (it is not necessary to put a single screenshot on each substep, but at least one significant from each CRUD operation).
+
+  - Experiment 2 example working and the additional Map-reduce operation (and its result) developed by each of you.
+
+- Reason about why your implemented Map-reduce operation in Experiment 2 is useful and interpret the collection obtained. 
+
+- Any pending issues with this assignment which you did not manage to solve
 
 The hand-in should be written in **English**.
