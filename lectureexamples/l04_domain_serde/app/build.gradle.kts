@@ -25,7 +25,7 @@ dependencies {
     implementation("com.google.guava:guava:32.1.1-jre")
 
     implementation("com.fasterxml.jackson.core:jackson-databind:2.17.2")
-
+    implementation("com.fasterxml.jackson.dataformat:jackson-dataformat-xml:2.17.2")
 }
 
 // Apply a specific Java toolchain to ease working on different environments.
@@ -53,5 +53,12 @@ tasks.register<JavaExec>("readJsonDOM") {
     group = "examples"
     dependsOn("classes")
     mainClass = "no.hvl.dat250.l04.examples.JSONDomBasedReading"
+    classpath(sourceSets.main.get().runtimeClasspath)
+}
+
+tasks.register<JavaExec>("readXMLStream") {
+    group = "examples"
+    dependsOn("classes")
+    mainClass = "no.hvl.dat250.l04.examples.XmlStreamReading"
     classpath(sourceSets.main.get().runtimeClasspath)
 }

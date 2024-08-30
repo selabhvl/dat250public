@@ -10,5 +10,5 @@ plugins {
     id("org.gradle.toolchains.foojay-resolver-convention") version "0.4.0"
 }
 
-rootProject.name = "l03_domain_serialization"
+rootProject.name = "l04_domain_serde"
 include("app")

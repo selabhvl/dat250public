@@ -4,6 +4,7 @@ import com.fasterxml.jackson.core.JsonEncoding;
 import com.fasterxml.jackson.core.JsonFactory;
 import com.fasterxml.jackson.core.JsonGenerator;
 import com.fasterxml.jackson.databind.ObjectMapper;
+import com.fasterxml.jackson.databind.SerializationFeature;
 
 import java.io.File;
 import java.io.IOException;
@@ -11,8 +12,10 @@ import java.io.IOException;
 public class JSONStreamBasedWriting {
 
     public static void main(String[] args) {
-        File outout = new File("result.json");
+        File outout = new File("person.json");
+
         ObjectMapper mapper = new ObjectMapper();
+
         JsonFactory factory = mapper.getFactory();
 
 

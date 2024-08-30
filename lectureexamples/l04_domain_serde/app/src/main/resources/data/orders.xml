@@ -5,14 +5,14 @@
     <item itemNo="c817" quantity="3" unitPrice="4.99"/>
     <item itemNo="h899" quantity="2" unitPrice="25.34"/>
 </order>
-<order orderNo="23456" customer="Ola Nordmann" date="2002-10-14">
+<order orderNo="6969" customer="Ola Nordmann" date="2002-10-14">
     <item itemNo="gho986" quantity="2" unitPrice="13.99"/>
     <item itemNo="ef475" quantity="1" unitPrice="101.99"/>
 </order>
-<order orderNo="23456" customer="Max Mustermann" date="2002-10-14">
+<order orderNo="4241" customer="Max Mustermann" date="2002-10-14">
     <item itemNo="h899" quantity="3" unitPrice="25.34"/>
     <item itemNo="gho986" quantity="2" unitPrice="13.99"/>
     <item itemNo="a528" quantity="2" unitPrice="10.99"/>
     <item itemNo="aaef1" quantity="5" unitPrice="2.89"/>
 </order>
-<orders>
+</orders>
