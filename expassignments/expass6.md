@@ -2,41 +2,44 @@
 
 ### Introduction
 
-The goal of this assignment is to make initial experiments front-end technologies for enterprise applications.
-You are _not_ following a tutorial, so this assignment usually takes longer than most previous ones.
-An Angular tutorial that can help you can be found [here](https://angular.io/tutorial/tour-of-heroes). 
+The goal of this assignment is to make initial experiments with messaging systems and the publish/subscribe paradigm. In the experiments you will be using the RabbitMQ message broker: https://www.rabbitmq.com
 
-### Experiment 1: Single-page applications
-Use Angular to build a SPA to implement a **Todo list** (see example in experiment 3 below).
-The application should use the Rest-API developed in assignment 4 and be able to:
+### Experiment 1: Installation
 
-1. Load todos using the Todo-API (HTTP GET),
-2. Display all todos in a table, including a delete button in every row (HTTP DELETE),
-3. Refresh displayed todos by clicking a button (HTTP GET),
-4. Add a todo by giving its description and summary (HTTP POST).
+Start by doing an installation as described here: https://www.rabbitmq.com/download.html.
+We recommend the docker or local installation.
 
-Please take a look at the lecture slides for information on installing Angular, loading data from a server, and display lists.
-For this assignment, the application's functionality is critical, not the looks.
-You can use this [HTML template](./code/start.html) and [CSS](./code/start.css) to start.
+### Experiment 2: Hello World
 
+Complete the **"Hello World"** tutorial at: https://www.rabbitmq.com/tutorials/tutorial-one-java.html
 
-### Experiment 2: Using an SPA component library (optional)
+You can freely choose the programming language.
 
-Use a component library such as [Angular Material](https://material.angular.io/guide/getting-started) and apply them to experiment 1.
-Try components such as [buttons](https://material.angular.io/components/button/overview), [inputs](https://material.angular.io/components/input/overview), [tabels](https://material.angular.io/components/table/overview) and [cards](https://material.angular.io/components/card/overview).
-The final application could look like this:
+If you choose Java, using a Gradle/Maven project and adding the [amqp-client dependency](https://mvnrepository.com/artifact/com.rabbitmq/amqp-client) and then running the main classes from the IDE is the fastest way to complete the tutorial.
 
-![Sample UI with component usage](./pictures/todo_ui.png)
+### Experiment 3: Work Queues
+
+Complete the **"Work queues"** tutorial at: https://www.rabbitmq.com/tutorials/tutorial-two-java.html.
+
+Work queues implement the [competing consumer pattern](https://www.enterpriseintegrationpatterns.com/patterns/messaging/CompetingConsumers.html) mentioned in the lecture.
+
+You can freely choose the programming language.
+
+### Experiment 4: Topics
+
+Complete the **"Publish/subscribe"** tutorial at: https://www.rabbitmq.com/tutorials/tutorial-three-java.html
+
+You can freely choose the programming language.
 
 ### Hand-in: short report
 
-As hand-in, you must add a markdown file called `dat250-expass6.md` to the same repository that you created in the earlier software technology assignments.
+As hand in, you must add a markdown file called `dat250-expass7.md` to the same repository that you created in the earlier software technology assignments.
 
 In particular, you should write about:
 
 - technical problems that you encountered during the completion of the tutorial
 
-- a link to your code for experiments 1-2 above
+- a link to your code for experiments 1-4 above
 
 - any pending issues with this assignment which you did not manage to solve
 

@@ -1,59 +1,52 @@
-## DAT250: Software Technology Experiment Assignment 2
+## DAT250: Software Technology Experiment Assignment 3
 
 ### Introduction
 
-The goal of this assignment is to get to know the Java Persistence Architecture (JPA). This will include setting up a database for experimentation and study object-relational mapping.
+The goal of this assignment is to make initial experiments with front-end technologies for enterprise applications.
+Your goal is develop web-based graphical user interface for your REST API from [last week](./expass2.md),
+which allows to _create a user_, _create a poll_, _vote on a poll_. 
+The GUI shall be realised as a _Single Page Application (SPA)_, comprising three components: `CreateUserComponent`, `CreatePollComponent`,
+`VoteComponent`.
 
-Note that this is an **individual** assignment (see Hand-in at the end of the document).
+You can use the SPA-library/framework of your choice.
+The potential candidates are:
 
-### Experiment 1: JPA tutorial (optional)
+- [Angular](https://angular.dev/)
+- [React](https://react.dev/)
+- [Vue.js](https://vuejs.org/)
+- or [Svelte](https://svelte.dev/).
 
-You will complete a simple tutorial with an overview and a gentle introduction to JPA. Especially technicalities that will hinder you from completing experiment 2 will be solved here.
+You can use the library/framework that you like the most/that you are most familiar with.
+If you are not familiar with any of them, we recommend you to use svelte, which is also covered in the lecture.
 
-The goal is to set up a Java application that uses JPA for storing entities in a database.
+### Step 1: Set up Node project
 
-**Initial setup:**
-1. Fork the template project using git from [here](https://github.com/timKraeuter/dat250-jpa-tutorial), for example, by using [GitHub Desktop](https://www.google.com/search?q=GitHub+Desktop) or any other git-client.
-2. Import the contained **maven project** into your IDEA (will be demonstrated in the Lab).
-3. Run the class **Main**. It should terminate without errors.
-4. Follow the [JPA tutorial](https://github.com/timKraeuter/dat250-jpa-tutorial#jpa-tutorial) to get used to JPA and understand the project setup.
+### Step 2: Develop components 
 
-### Experiment 2: Banking/Credit Card example JPA
+### Step 3: Enable CORS on the server side (for testing purposes)
 
-Implement the domain model for credit cards similar to the Person-Address-Examples in the lecture on object-relational mappings.
-Pay close attention to the bidirectional associations in the domain model.
+### Step 4: Integrate frontend and backend via `fetch`
 
-Fork the [template project](https://github.com/timKraeuter/dat250-jpa-tutorial) from experiment 1 to start the implementation.
-Please finish Experiment 1 first if you get stuck on Experiment 2 before asking questions.
+### Step 5: Deploy
 
-![Class Diagram domain model](https://raw.githubusercontent.com/selabhvl/dat250public/master/expassignments/pictures/creditCard.svg)
+### Step 6: Extensions (optional)
 
-Questions:
-- Where is the database? Explain the used database and how/when it runs.
-- Can you provide the SQl used to create the table **Customer** (Hint: **Hibernate** is used for the object-relational-mapping)?
-- Find a way to inspect the database tables being created and attach a screenshot of the database schema to your report. Do the created tables correspond to your initial thoughts regarding the exercise?
+- Server-sent updates in votes via WebSockets
+- GraphQL API
 
-Persist the objects shown in the following object diagram into your database in the class **_CreditCardsMain_** of the project. If you need more knowledge about persistence management (entityManager-operations persist(), find(), etc...), look into the lecture notes of [Lecture 5](https://hvl.instructure.com/courses/21915/pages/lecture-5-persistence-management-and-queries?module_item_id=531426).
 
-![Object Diagram](https://raw.githubusercontent.com/selabhvl/dat250public/master/expassignments/pictures/object-diagram.svg)
 
-Make sure the associated test case **_CreditCardsMainTest_** runs successfully. You are **not** allowed to change the test case!
-If you forked the repository correctly tests are automatically run when you push your changes (see [README.md](https://github.com/timKraeuter/dat250-jpa-tutorial/blob/master/README.md#experiment-2-tests)).
 
 ### Hand-in: short report
 
-As hand in, you must add a markdown file called `dat250-expass2.md` to the same repository that you created as part of experiment assignment 1:
-
-https://github.com/selabhvl/dat250public/blob/master/expassignments/expass1.md
+As hand-in, you must add a markdown file called `dat250-expass6.md` to the same repository that you created in the earlier software technology assignments.
 
 In particular, you should write about:
 
-- technical problems that you encountered during installation and use of Java Persistence Architecture (JPA) and how you resolved
+- technical problems that you encountered during the completion of the tutorial
 
-- a link to your code for experiment 2 above. Make sure the included test case passes!
+- a link to your code for experiments 1-2 above
 
-- an explanation of how you inspected the database tables and what tables were created. For the latter, you may provide screenshots.
-
-- any pending issues with this assignment that you did not manage to solve
+- any pending issues with this assignment which you did not manage to solve
 
 The hand-in should be written in **English**.
