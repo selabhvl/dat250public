@@ -1,0 +1,16 @@
+# GeoNorge places search
+# Docs: https://ws.geonorge.no/stedsnavn/v1/
+GET https://ws.geonorge.no/stedsnavn/v1/sted?sok=Bergen
+
+###
+
+
+# Met.no locationforecast
+# Docs: https://api.met.no/weatherapi/locationforecast/2.0/documentation
+GET https://api.met.no/weatherapi/locationforecast/2.0/compact?lat=69.654&lon=18.963
+User-Agent: hvl-teaching-dat250 past@hvl.no
+
+
+
+
+
