@@ -12,6 +12,10 @@ public class LocationRepository {
 
     private final Map<String, Location> locationMap = new HashMap<>();
 
+    public LocationRepository() {
+        this.locationMap.put("Oslo", new Location("Oslo", 58.12, 6.1, 0.8, 24.3));
+    }
+
     public void addLocation(Location l) throws AlreadyExistsException {
         if (locationMap.containsKey(l.getName())) {
             throw new AlreadyExistsException(l.getName());

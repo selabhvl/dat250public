@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+<table>
+    <tr>
+        <td>Location</td>
+        <td>Latitude</td>
+        <td>Longitude</td>
+        <td>Precipitation</td>
+        <td>Temperature</td>
+    </tr>
+    <tr  th:each="l: ${locations}">
+        <td th:text="${l.getName()}"></td>
+        <td th:text="${l.getLatitude()}"></td>
+        <td th:text="${l.getLongitude()}"></td>
+        <td th:text="${l.getPrecipitation()}"></td>
+        <td th:text="${l.getTemperature()}"></td>
+    </tr>
+</table>
+</body>
+</html>
