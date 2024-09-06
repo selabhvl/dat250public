@@ -22,8 +22,9 @@ public class LocationController {
         this.repo = repo;
     }
 
-    @GetMapping("/locations")
 
+
+    @GetMapping("/locations")
     public Collection<Location> getAllLocationsHandler() {
         return repo.getAllLocations();
     }

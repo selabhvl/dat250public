@@ -26,7 +26,6 @@ public class GuiController {
     }
 
     @GetMapping("/gui/locations")
-
     public String newHandler(Model model) {
         model.addAttribute("locations", new ArrayList<>(this.repository.getAllLocations()));
 
