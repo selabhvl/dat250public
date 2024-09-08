@@ -28,3 +28,7 @@ tasks.withType<Test> {
 	useJUnitPlatform()
 }
 
+
+tasks.named("processResources") {
+	dependsOn(":frontend:copyWebApp")
+}
