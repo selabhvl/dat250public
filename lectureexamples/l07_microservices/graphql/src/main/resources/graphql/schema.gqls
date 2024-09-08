@@ -1,0 +1,28 @@
+type Query {
+    getUsers: [User]
+    getPolls: [Poll]
+}
+
+type User {
+    username: String
+    created: [Poll]
+    allVotes: [Vote]
+}
+
+type Vote {
+    user: User!
+    option: VoteOption!
+}
+
+type VoteOption {
+    text: String!
+    poll: Poll!
+    votes: [Vote]
+}
+
+type Poll {
+    id: ID!
+    question: String
+    owner: User!
+    options: [VoteOption]
+}
