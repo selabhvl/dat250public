@@ -61,6 +61,8 @@ Your task is to build two components:
 
 For instance, the Poll-component may look something like this.
 
+![UI Mockup](./pictures/mockup.png)
+
 However, this is just a suggestion: It is up to you and your imagination how these components shall look like :wink:
 We recommend, having some stub-data to test the initial layout and behaviour.
 
