@@ -30,7 +30,7 @@ npm -v
 
 Now, you can create your frontend project with 
 ```sh 
-npm init vite@lates
+npm init vite@latest
 ```
 This will open the set-up wizard from the JavaScript _Bundler_ [Vite](https://vitejs.dev/), which is used by most modern web frameworks.
 The dialog will ask your first for a project name and then which framwork you want to use.
