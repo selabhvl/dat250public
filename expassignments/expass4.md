@@ -2,7 +2,7 @@
 
 ### Introduction
 
-The goal of this assignment is to get to know the Java Persistence Architecture (JPA). This will include setting up a database for experimentation and study object-relational mapping.
+The goal of this assignment is to get to know the Java Persistence Architecture (JPA) and study object-relational mapping.
 
 Note that this is an **individual** assignment (see Hand-in at the end of the document).
 
@@ -13,38 +13,35 @@ You will complete a simple tutorial with an overview and a gentle introduction t
 The goal is to set up a Java application that uses JPA for storing entities in a database.
 
 **Initial setup:**
-1. Fork the template project using git from [here](https://github.com/timKraeuter/dat250-jpa-tutorial), for example, by using [GitHub Desktop](https://www.google.com/search?q=GitHub+Desktop) or any other git-client.
-2. Import the contained **maven project** into your IDEA (will be demonstrated in the Lab).
+1. Fork the template project using git from [here](https://github.com/webminz/dat250-jpa-tutorial) by using your git-client.
+2. Perform gradle run
 3. Run the class **Main**. It should terminate without errors.
-4. Follow the [JPA tutorial](https://github.com/timKraeuter/dat250-jpa-tutorial#jpa-tutorial) to get used to JPA and understand the project setup.
+4. Follow the JPA tutorial at (https://github.com/webminz/dat250-jpa-tutorial/blob/master/README.md) to get used to JPA and understand the project setup.
 
 ### Experiment 2: Banking/Credit Card example JPA
 
 Implement the domain model for credit cards similar to the Person-Address-Examples in the lecture on object-relational mappings.
 Pay close attention to the bidirectional associations in the domain model.
 
-Fork the [template project](https://github.com/timKraeuter/dat250-jpa-tutorial) from experiment 1 to start the implementation.
 Please finish Experiment 1 first if you get stuck on Experiment 2 before asking questions.
 
 ![Class Diagram domain model](https://raw.githubusercontent.com/selabhvl/dat250public/master/expassignments/pictures/creditCard.svg)
 
 Questions:
 - Where is the database? Explain the used database and how/when it runs.
-- Can you provide the SQl used to create the table **Customer** (Hint: **Hibernate** is used for the object-relational-mapping)?
+- Can you provide the SQL used to create the table **Customer** (Hint: **Hibernate** is used for the object-relational-mapping)?
 - Find a way to inspect the database tables being created and attach a screenshot of the database schema to your report. Do the created tables correspond to your initial thoughts regarding the exercise?
 
-Persist the objects shown in the following object diagram into your database in the class **_CreditCardsMain_** of the project. If you need more knowledge about persistence management (entityManager-operations persist(), find(), etc...), look into the lecture notes of [Lecture 5](https://hvl.instructure.com/courses/21915/pages/lecture-5-persistence-management-and-queries?module_item_id=531426).
+Persist the objects shown in the following object diagram into your database in the class **_CreditCardsMain_** of the project. If you need more knowledge about persistence management (entityManager-operations persist(), find(), etc...), look into the lecture notes of [Lecture 9](https://hvl.instructure.com/courses/28936/pages/lecture-9-persistence-management-and-queries-monday?module_item_id=819339).
 
 ![Object Diagram](https://raw.githubusercontent.com/selabhvl/dat250public/master/expassignments/pictures/object-diagram.svg)
 
 Make sure the associated test case **_CreditCardsMainTest_** runs successfully. You are **not** allowed to change the test case!
-If you forked the repository correctly tests are automatically run when you push your changes (see [README.md](https://github.com/timKraeuter/dat250-jpa-tutorial/blob/master/README.md#experiment-2-tests)).
+If you forked the repository correctly, tests are automatically run when you push your changes.
 
 ### Hand-in: short report
 
-As hand in, you must add a markdown file called `dat250-expass2.md` to the same repository that you created as part of experiment assignment 1:
-
-https://github.com/selabhvl/dat250public/blob/master/expassignments/expass1.md
+As hand in, you must add a markdown file called `dat250-expass4.md`, which you should hand in via Canvas by posting a link to it.
 
 In particular, you should write about:
 
