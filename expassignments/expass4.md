@@ -13,7 +13,7 @@ You will complete a simple tutorial with an overview and a gentle introduction t
 The goal is to set up a Java application that uses JPA for storing entities in a database.
 
 **Initial setup:**
-1. Fork the template project using git from [here](https://github.com/webminz/dat250-jpa-tutorial) by using your git-client.
+1. Fork the template project using git from [here](https://github.com/webminz/dat250-jpa-tutorial).
 2. Perform gradle run
 3. Run the class **Main**. It should terminate without errors.
 4. Follow the JPA tutorial at (https://github.com/webminz/dat250-jpa-tutorial/blob/master/README.md) to get used to JPA and understand the project setup.
@@ -28,9 +28,9 @@ Please finish Experiment 1 first if you get stuck on Experiment 2 before asking 
 ![Class Diagram domain model](https://raw.githubusercontent.com/selabhvl/dat250public/master/expassignments/pictures/creditCard.svg)
 
 Questions:
-- Where is the database? Explain the used database and how/when it runs.
-- Can you provide the SQL used to create the table **Customer** (Hint: **Hibernate** is used for the object-relational-mapping)?
-- Find a way to inspect the database tables being created and attach a screenshot of the database schema to your report. Do the created tables correspond to your initial thoughts regarding the exercise?
+- Explain the used database and how/when it runs.
+- Can you provide the SQL used to create the table **Customer**?
+- Find a way to inspect the database tables being created and create a database schema in your report. Do the created tables correspond to your initial thoughts regarding the exercise?
 
 Persist the objects shown in the following object diagram into your database in the class **_CreditCardsMain_** of the project. If you need more knowledge about persistence management (entityManager-operations persist(), find(), etc...), look into the lecture notes of [Lecture 9](https://hvl.instructure.com/courses/28936/pages/lecture-9-persistence-management-and-queries-monday?module_item_id=819339).
 
