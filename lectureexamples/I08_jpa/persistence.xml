@@ -1,0 +1,47 @@
+<persistence xmlns="https://jakarta.ee/xml/ns/persistence"
+  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+  xsi:schemaLocation="https://jakarta.ee/xml/ns/persistence https://jakarta.ee/xml/ns/persistence/persistence_3_1.xsd"
+  version="3.1">
+    <persistence-unit name="jpa-tutorial" transaction-type="RESOURCE_LOCAL">
+        <provider>org.hibernate.jpa.HibernatePersistenceProvider</provider>
+<!-- 
+      	<class>no.hvl.dat250.jpa.tutorial.lectureBasic.Person</class>
+      	<class>no.hvl.dat250.jpa.tutorial.lectureBasic.Address</class>
+--> 
+<!-- 
+      	<class>no.hvl.dat250.jpa.tutorial.lectureInheritance.Person</class>
+      	<class>no.hvl.dat250.jpa.tutorial.lectureInheritance.Address</class>
+      	<class>no.hvl.dat250.jpa.tutorial.lectureInheritance.Address_Commercial</class>
+      	<class>no.hvl.dat250.jpa.tutorial.lectureInheritance.Address_Private</class>
+ -->
+
+      	<class>no.hvl.dat250.jpa.tutorial.lectureQueries.Person</class>
+      	<class>no.hvl.dat250.jpa.tutorial.lectureQueries.Address</class>
+
+        <properties>    
+        	<property name="hibernate.archive.autodetection" value=""/>
+<!--       	<property name="hibernate.archive.autodetection" value="class"/>  Special classes at the moment -->
+            <property name="hibernate.dialect" value="org.hibernate.dialect.H2Dialect"/>
+            <property name="hibernate.connection.driver_class" value="org.h2.Driver"/>
+            <property name="hibernate.connection.url" value="jdbc:h2:file:./DB;DB_CLOSE_DELAY=-1"/>
+
+            <property name="hibernate.connection.pool_size" value="1"/>
+            <property name="hibernate.show_sql" value="false"/>
+            <property name="hibernate.format_sql" value="true"/>
+            <property name="hibernate.hbm2ddl.auto" value="none"/>
+<!--        Other options:
+			<property name="hibernate.hbm2ddl.auto" value=  e.g. "none", "validate", "create-drop", "create", etc.../> 
+ -->            
+<!--  
+All options: 
+    validate: validate the schema, makes no changes to the database.
+    create-only: database creation will be generated.
+    drop: database dropping will be generated.
+    update: updates the schema partially possibly without destroying data ...
+    create: creates the schema, destroying previous data.
+    create-drop: drop the schema when the SessionFactory is closed explicitly, typically when the application is stopped.
+    none: does nothing with the schema, makes no changes to the database
+ --> 
+        </properties>
+    </persistence-unit>
+</persistence>
