@@ -6,9 +6,9 @@ The goal of this assignment is to get to know the Java Persistence Architecture 
 
 Note that this is an **individual** assignment (see Hand-in at the end of the document).
 
-### Experiment 1: JPA tutorial (optional)
+### Experiment 1: Preparation and optional tutorial
 
-You will complete a simple tutorial with an overview and a gentle introduction to JPA. Especially technicalities that will hinder you from completing experiment 2 will be solved here.
+You can complete a simple tutorial with an overview and a gentle introduction to JPA. Especially technicalities that will hinder you from completing experiment 2 will be solved here.
 
 The goal is to set up a Java application that uses JPA for storing entities in a database.
 
@@ -16,7 +16,7 @@ The goal is to set up a Java application that uses JPA for storing entities in a
 1. Fork the template project using git from [here](https://github.com/webminz/dat250-jpa-tutorial).
 2. Perform gradle run
 3. Run the class **Main**. It should terminate without errors.
-4. Follow the JPA tutorial at (https://github.com/webminz/dat250-jpa-tutorial/blob/master/README.md) to get used to JPA and understand the project setup.
+4. (Optional) Follow the JPA tutorial at (https://github.com/webminz/dat250-jpa-tutorial/blob/master/README.md) to get used to JPA and understand the project setup.
 
 ### Experiment 2: Banking/Credit Card example JPA
 
