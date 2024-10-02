@@ -5,7 +5,7 @@
     let status = "disconnected";
 
     function connect() {
-        ws = new WebSocket("http://localhost:8081/chat");
+        ws = new WebSocket("http://localhost:8081/ws/chat");
         messages = [];
 
         ws.addEventListener("message", (event) => {

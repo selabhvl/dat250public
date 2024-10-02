@@ -11,8 +11,10 @@
     let newLocationLat;
     let newLocationLon;
 
+    let result;
+
     // initially lead the existing weather locations via GET request.
-    let result = fetch("http://127.0.0.1:8080/locations").then((response) => {
+    result = fetch("http://localhost:8080/api/locations").then((response) => {
             return response.json();
         }
     )
@@ -21,7 +23,7 @@
     // This function gets executed when `create` button is clicked.
     // It performs a POST request to the API to create a new location.
     function createNewLocation() {
-        fetch("http://127.0.0.1:8080/locations", {
+        fetch("http://localhost:8080/api/locations", {
             method: "POST",
             body: JSON.stringify({
                 name: newLocationName,
@@ -48,7 +50,7 @@
         // here we use it register a background task (using JS setInterval() function) that every 5 sec (5000 ms)
         // refreshes the weather location data by calling the GET request again
         const intervalId = setInterval(() => {
-            result = fetch("http://127.0.0.1:8080/locations").then((response) => response.json());
+            result = fetch("http://localhost:8080/api/locations").then((response) => response.json());
         }, 5000);
 
         // the onMount function can return a callback function that "clears up" after a component has been removed.
