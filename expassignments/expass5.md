@@ -69,23 +69,36 @@ https://docs.mongodb.com/manual/core/bulk-write-operations/
 
 ### Experiment 2: Aggregation
 
-Aggregation operations process data records and return computed results. Aggregation operations group values from multiple documents together, and can perform a variety of operations on the grouped data to return a single result. MongoDB provides three ways to perform aggregation: the aggregation pipeline, the map-reduce function, and single purpose aggregation methods.
+Aggregation operations process data records and return computed results.
+The architecture of these operations is based on the _map reduce_ pattern (the API was actually originally [called this way](https://www.mongodb.com/docs/manual/core/map-reduce/) but has been deprecated later...).
+The workflow is to apply _filters_ and _transformations_ on multiple documents first ("map"-stage)
+and then group values from multiple documents together, where one can perform a variety of operations on the grouped data to return a single result.
 
-We will focus on **Map-Reduce** for this experiment, but you are encouraged to take a look at Aggregation Pipeline.
 
-#### Map-Reduce
+#### Pipelines
 
 First, read the material provided in:
 
 https://docs.mongodb.com/manual/aggregation/
 
-https://docs.mongodb.com/manual/core/map-reduce/
+https://www.mongodb.com/docs/manual/core/aggregation-pipeline/
 
-Complete the Examples tutorial (the Aggregation alternative part is not mandatory, but you can do it) from:
+Complete the Zip Code example:
 
-https://docs.mongodb.com/manual/tutorial/map-reduce-examples/
+https://www.mongodb.com/docs/manual/tutorial/aggregation-zip-code-data-set/
 
-**Add an additional operation developed by you and show its result given by its execution.**
+#### Reflect: Map-Reduce Aggregation vs. SQL
+
+First, have a look at the SQL comparison: 
+
+https://www.mongodb.com/docs/manual/reference/sql-aggregation-comparison/
+
+Now, reflect on the similarities of aggregation pipelines and SQL queries.
+What do you find more _user friendly_? What do you think is more _efficient_?
+Think also about abstraction levels, imperative vs. declarative, alignment with distributed system concepts (partitioning/sharding).
+
+
+
 
 ### Hand-in: short report
 
