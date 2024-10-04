@@ -31,8 +31,8 @@ Before, you can switch into that file system, you need to copy some essential bi
 into the new root.
 
 ```shell
-# copying bash, kill and ls
-cp /usr/bin/bash /usr/bin/ls /usr/bin/kill /home/isolated/bin
+# copying bash, kill, cat and ls
+cp /usr/bin/cat /usr/bin/bash /usr/bin/ls /usr/bin/kill /home/isolated/bin
 # copying the shared object libraries
 cp /lib/aarch64-linux-gnu/libselinux.so.1 \
  /lib/aarch64-linux-gnu/libc.so.6 \
