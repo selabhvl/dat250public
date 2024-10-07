@@ -31,5 +31,8 @@ WORKDIR /app
 # copy the app from the builder image
 COPY --from=builder --chown=1000:1000 /home/gradle/app.jar . 
 
+# copy the database file
+COPY --chown=1000:1000 app.mv.db /app/storage/app.mv.db
+
 # Start the Spring Boot app when the container starts
 CMD ["java", "-jar", "app.jar"]
