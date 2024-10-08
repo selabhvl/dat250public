@@ -26,23 +26,23 @@ We want to replace this with a real production such as [Postgres](https://www.po
 Those, who had set up a database such as Postgres on their home servers may agree that installing 
 these types of software products can become rather complicated and difficult.
 On of the main advantages of Docker is that it greatly simplifies running such software.
-Instead of manally installing PostgreSQL and configuring it correctly, we simply need to get our hands
+Instead of manually installing PostgreSQL and configuring it correctly, we simply need to get our hands
 on a suitable container image and run it.
 
-Thanfully, there is an officially maintained [docker image of PostgreSQL](https://hub.docker.com/_/postgres/).
+Thankfully, there is an officially maintained [docker image of PostgreSQL](https://hub.docker.com/_/postgres/).
 
 You can download to your machine via:
 ```shell
 docker pull postgres
 ```
 
-Before running the image you should have a look at the image documentation on DockerHub (or even at the [Dockerfile](https://github.com/docker-library/postgres/blob/master/17/bullseye/Dockerfile) itself) to seet what the confiuration options are.
+Before running the image you should have a look at the image documentation on DockerHub (or even at the [Dockerfile](https://github.com/docker-library/postgres/blob/master/17/bullseye/Dockerfile) itself) to see what the configuration options are.
 
-Can you find out what `-p` and `-e` arguments you have to pass to the `docker run` command 
+Can you find out what `-p` and `-e` arguments you have to pass to the `docker run` command?
 
 ```shell
-docker -p << Find out what Port you have to expose... >> \
- -e << Find out what environment variables you have to set... >> \
+docker -p {{ Find out what Port you have to expose... }} \
+ -e {{ Find out what environment variables you have to set... }} \
  -d --name my-postgres --rm postgres
 ```
 
@@ -66,7 +66,15 @@ Once, you are logged in, create a new user for your JPA client.
 CREATE USER jpa_client WITH PASSWORD 'secret';
 ```
 
-Replace the old connection parameters in the `persistence.xml` from the JPA example, which used H2:
+After the new user has been created, switch over to the Java project.
+To change the database from H2 to PostgreSQL, you first have to add the correct JDBC driver.
+Open the `build.gradle.kts` file and add the following dependency:
+
+```kotlin
+implementation("org.postgresql:postgresql:42.7.4")
+```
+
+Also, replace the old connection parameters in the `persistence.xml` from the JPA example, which used H2:
 ```xml
     ...
     <property name="hibernate.dialect" value="org.hibernate.dialect.H2Dialect"/>
@@ -78,24 +86,28 @@ with the PostgreSQL connection:
 ```xml
 
     ...
-    <property name="hibernate.dialect" value="org.hibernate.dialect.H2Dialect"/>
-    <property name="hibernate.connection.driver_class" value="org.hibernate.dialect.PostgreSQLDialect"/>
+    <property name="hibernate.dialect" value="org.hibernate.dialect.PostgreSQLDialect"/>
+    <property name="hibernate.connection.driver_class" value="org.postgresql.Driver"/>
     <property name="hibernate.connection.url" value="jdbc:postgresql://127.0.0.1:5432/postgres"/>
     <property name="hibernate.connection.username" value="jpa_client"/>
     <property name="hibernate.connection.password" value="secret"/>
     ...
 ```
 
-Try running your Unit test now?
-What do you see?
-Probably, your tests will be failing!
-This is because JPA might not automatically generate the DDL statements for you here.
-And this is also rather dangerous when it comes to production databases. 
-Instead, you should rather apply such SQL migrations manually.
+Try running your Unit test now!
 
-First, let us obtain the DDL statements.
-They can be automatically generated from your annoted clases. 
-Add the following three lines to your `persistence.xml`:
+Are your tests passing, or do you see any errors?
+
+Probably, your tests will be failing!
+
+Depending on whether you had enabled the [automatic schema-generation](https://docs.jboss.org/hibernate/orm/6.1/userguide/html_single/Hibernate_User_Guide.html#configurations-hbmddl) in your `persistence.xml`, you might get errors because the tables expected by 
+JPA are not present. 
+You may set the value of `hibernate.hbm2ddl.auto` to `create-drop` to initialize the database on startup.
+However, this is rather dangerous when it comes to production databases and might not be allowed in your environment.
+Instead, it is safer to apply such SQL migrations manually.
+
+Hibernate as your JPA implementation can automatically generate SQL `CREATE TABLE` statements from your annotated entities. 
+After adding the following three lines to your `persistence.xml`:
 
 ```xml
     ...
@@ -103,8 +115,8 @@ Add the following three lines to your `persistence.xml`:
     <property name="jakarta.persistence.schema-generation.scripts.create-target" value="schema.up.sql"/>
     <property name="jakarta.persistence.schema-generation.scripts.drop-target" value="schema.down.sql"/>
 ```
-When running your tests again, you will see that the new files `schema.up.sql` and `schema.down.sql` are generated.
-The former contains the `CREATE TABLE` statements that creates the table structure.
+you will see that the files `schema.up.sql` and `schema.down.sql` are generated when the `PersistenceContext`
+The file `schema.up.sql` will contain the `CREATE TABLE` that are needed.
 
 You may either apply them manually via a SQL client or, more elegantly, consult the [image documentation](https://hub.docker.com/_/postgres/) on how the `/docker-entrypoint-initdb.d/` directory can be used to bootstrap a database (Tips: use the `--volume` flag!).
 
@@ -134,9 +146,17 @@ When everything works as expected, consider the following improvements/extension
 - use a multi-stage build to make your image slim
 - write a GitHub Action workflow that automatically publishes the image to DockerHub.
 
-P.S.: You may want to have a look at the examples from [Lecture 14](../lectureexamples/l14_containers/).
+P.S.: You may want to have a look at the examples from [Lecture 14](../lectureexamples/l14_containers/Dockerfile`).
 
 
 
+## Optional Extensions 
 
-**TODO**
+If you want, you may want to take this experiment further by:
+
+- Write a docker-compose file.
+- Publish you newly built image on DockerHub. 
+- Add the image build step to you GitHub Actions CI pipeline.
+- Enable Kubernetes in DockerDekstop and create a deployment for your newly built image.
+
+
