@@ -20,10 +20,12 @@ command to check that the system is running, i.e. the above commad should not pr
 
 ### Using a Dockerized application: PostgreSQL
 
-Let us have a look at the code example from [expass4](./expass4.md) again:
-This [code](https://github.com/webminz/dat250-jpa-tutorial) is using the embedded H2 database.
-We want to replace this with a real production such as [Postgres](https://www.postgresql.org/).
-Those, who had set up a database such as Postgres on their home servers may agree that installing 
+Let us have a look at the [code](https://github.com/webminz/dat250-jpa-tutorial) from [expass4](./expass4.md) again, 
+which is using the embedded [H2](https://h2database.com/html/main.html) database.
+For a _production deployment_, we would like to replace this database with a proper 
+relational database managament system such as [Postgres](https://www.postgresql.org/).
+
+If you had set up a database such as Postgres on your home server before, you may agree that installing 
 these types of software products can become rather complicated and difficult.
 On of the main advantages of Docker is that it greatly simplifies running such software.
 Instead of manually installing PostgreSQL and configuring it correctly, we simply need to get our hands
@@ -36,12 +38,18 @@ You can download to your machine via:
 docker pull postgres
 ```
 
-Before running the image you should have a look at the image documentation on DockerHub (or even at the [Dockerfile](https://github.com/docker-library/postgres/blob/master/17/bullseye/Dockerfile) itself) to see what the configuration options are.
+> The image name `postgres` gets implicitly expanded to `docker.io/library/postgres:latest`, i.e.
+> the image tagged as `latest`, stored in the repository `postgres`, maintained by Docker Inc. (`library`)
+> and hosted on Docker Hub (`docker.io`).
 
+Before running the image you should have a look at the [image documentation](https://hub.docker.com/_/postgres/) on DockerHub (or maybe even at the [Dockerfile](https://github.com/docker-library/postgres/blob/master/17/bullseye/Dockerfile) itself) to see what the configuration options
+for this image are.
+
+**First Exercise:**
 Can you find out what `-p` and `-e` arguments you have to pass to the `docker run` command?
 
 ```shell
-docker -p {{ Find out what Port you have to expose... }} \
+docker run -p {{ Find out what Port you have to expose... }} \
  -e {{ Find out what environment variables you have to set... }} \
  -d --name my-postgres --rm postgres
 ```
@@ -59,8 +67,8 @@ docker logs my-postgres
 If everything looks alright, try to connect to the database using you favourite SQL client, e.g. [DBeaver](https://dbeaver.io/)
 or the Database client, which is integrated into IntelliJ.
 
-Use the credentials that you previously set through the environment variables.
-Once, you are logged in, create a new user for your JPA client.
+Use the credentials that you previously set via the environment variables.
+Once, you are logged in, create a new user for your JPA client (best practice).
 
 ```sql
 CREATE USER jpa_client WITH PASSWORD 'secret';
@@ -118,45 +126,52 @@ After adding the following three lines to your `persistence.xml`:
 you will see that the files `schema.up.sql` and `schema.down.sql` are generated when the `PersistenceContext`
 The file `schema.up.sql` will contain the `CREATE TABLE` that are needed.
 
-You may either apply them manually via a SQL client or, more elegantly, consult the [image documentation](https://hub.docker.com/_/postgres/) on how the `/docker-entrypoint-initdb.d/` directory can be used to bootstrap a database (Tips: use the `--volume` flag!).
+You may either apply them manually via a SQL client or, more elegantly, consult the [image documentation](https://hub.docker.com/_/postgres/) on how the `/docker-entrypoint-initdb.d/` directory can be used to bootstrap a database (Tips: [use the `--mount` flag!](https://docs.docker.com/reference/cli/docker/container/run/#mount)).
+
+Your task is to make sure that the Unit tests can be run just as before with the only difference that we 
+are using a real PostgreSQL database in the background instead of the embedded H2 database.
 
 
 ## Building you own dockerized application
 
 
-In the next stage, you shall try to containerize an existing application. 
+In the second part of this experiment, you shall try to containerize an existing application. 
 For this, go back to your code from [expass2](./expass2.md) or [expass3](./expass3.md),
-i.e. the Spring Boot application comprising a REST API for the _Poll App_, either with or 
-without SPA web user interface.
+i.e. the Spring Boot application comprising a REST API for the _Poll App_ either with or 
+without a SPA web user interface.
 We want to package this Spring Boot application as a container image such that it is easier
-to distribute it amongst other developers and eventually deploy it on the cloud.
+to distribute it among other developers and eventually deploy it on the cloud.
 
 Begin with selecting a suitable base image: Good candidates are the official [gradle](https://hub.docker.com/_/gradle) or [temurin](https://hub.docker.com/_/eclipse-temurin) images.
 
 Now, write your `Dockerfile`.
 Recall the following steps:
 
-- `FROM <base image>`
-- copy you application into the image via the `COPY` instruction
-- install dependencies and package the application (tips: have a look at the Dockerfile `RUN` instruction and the `gradle bootJar` task)
+- Start with the `FROM <base image>` line,
+- copy your application into the image via the `COPY` instruction,
+- and install dependencies as well as package the application by executing the respective shell commands with `RUN` statements (tips: the `gradle bootJar` task can be "handy" here).
 - The final instruction should be the `CMD` instruction that starts the Spring Boot Java application.
 
 When everything works as expected, consider the following improvements/extensions:
-- make sure that the app is not run as `root` user
-- use a multi-stage build to make your image slim
-- write a GitHub Action workflow that automatically publishes the image to DockerHub.
+- make sure that the app is not run as `root` user inside the container,
+- use a multi-stage build to keep your image "slim" and without extra vulnerabilities,
 
 P.S.: You may want to have a look at the examples from [Lecture 14](../lectureexamples/l14_containers/Dockerfile`).
 
+## Delivery: Document your experiments
+
+You shall document the two tasks (using the PostgreSQL docker image, and creating your own docker image) by writing 
+it down in a markdown file, which you then deliver via Canvas.
 
 
 ## Optional Extensions 
 
-If you want, you may want to take this experiment further by:
+If you want, you can take this experiment even further by:
 
-- Write a docker-compose file.
-- Publish you newly built image on DockerHub. 
-- Add the image build step to you GitHub Actions CI pipeline.
-- Enable Kubernetes in DockerDekstop and create a deployment for your newly built image.
+- [writing a docker-compose file](https://docs.docker.com/compose/intro/features-uses/),
+- [publishing you newly built image on DockerHub](https://docs.docker.com/docker-hub/repos/create/),
+- [adding the image build step to your GitHub Actions CI pipeline](https://github.com/marketplace/actions/build-and-push-docker-images),
+- [enabling Kubernetes in DockerDekstop](https://docs.docker.com/desktop/kubernetes/) and [create a deployment](https://kubernetes.io/docs/tasks/run-application/run-stateless-application-deployment/) for your newly built image,
+- ...
 
 
