@@ -43,7 +43,7 @@ Currently (Fall 2024), this is
 - [Java with SpringBoot](../expassignments/expass1.md) as the general platform/framework,
 - [Spring Web MVC](../expassignments/expass2.md) for implementing a HTTP/REST API,
 - [Svelte(Kit)](../expassignments/expass3.md) for implementing a Single Page App user interface,
-- [Spring Data JPA](../expassignments/expass4.md) for implementing object-relational database mapping,
+- [Jakarta Persistence API with Hibernate and H2](../expassignments/expass4.md) for implementing object-relational database mapping,
 - [MongoDB](../expassignments/expass5.md) as a non-relational database,
 - [RabbitMQ](../expassignments/expass6.md) as a message broker,
 - [Docker](../expassignments/expass7.md) as a container engine.

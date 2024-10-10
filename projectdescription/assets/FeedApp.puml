@@ -1,0 +1,29 @@
+@startuml
+node "External\nClients" as mu
+node "FeedApp" {
+component "Web UI\n(Svelte)" as ui
+interface HTTP
+component "REST API\n(Spring Web MVC)" as api
+ui -left-( HTTP
+api -up- HTTP
+component "Business Logic" as dom
+component "Persistence\n(JPA)" as per
+database H2
+api -down-> dom
+dom -down-> per
+per <-down-> H2
+}
+database "MongoDB" as mongo
+
+node "Analytics Component" {
+component "Poll Aggregator" as agg
+}
+queue "RabbitMQ" as msg
+agg <-down-> mongo
+agg -left-> msg
+dom --> msg
+
+actor "End Users"  as ru
+ru .> ui
+mu .down.> HTTP
+@enduml
