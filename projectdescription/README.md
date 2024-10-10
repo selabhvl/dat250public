@@ -35,8 +35,8 @@ The resulting system architecture may look something like this:
 
 ### Technology Stack 
 
-The technology stack to imolement the aforementioned requirements is totally up to you!
-Whithin the DAT250 course you have been exposed to a range of various technologies throught the software technology experiments,
+The technology stack to implement the aforementioned requirements is totally up to you!
+Whithin the DAT250 course you have been exposed to a range of various technologies through the software technology experiments,
 you are free to base your stack on those.
 
 Currently (Fall 2024), this is
@@ -49,7 +49,7 @@ Currently (Fall 2024), this is
 - [Docker](../expassignments/expass7.md) as a container engine.
 
 Additionally, you must choose **at leat one** technology not mentioned in the list above as part of your stack 
-and perform a _technology aassessment_ accourding to Brown and Walnau on it. 
+and perform a _technology aassessment_ according to Brown and Walnau on it. 
 
 
 ## Project Report
@@ -67,7 +67,7 @@ The report shall have the following structure:
 5. Conclusion [~½ page]
 6. References [~½ page]
 
-Details about what each section shall contain is found in the tempate. 
+Details about what each section shall contain is found in the template. 
 The most important sections are the _design of the FeedApp_ and the assessment of the _featured technology_.
 
 ### FeedApp Design 
@@ -90,7 +90,7 @@ and _where (user) interfaces_ are required.
 A domain model is usually depicted by means of an UML class diagram.
 The purpose of this diagram is to highlight the core domain concepts and their relationships.
 Also, the shown entities will become the classes in the _business logic layer_ of the resulting 
-application and play an important role for the design of tthe object-relational mapping. 
+application and play an important role for the design of the object-relational mapping. 
 
 A good starting point may be the following diagram:
 
@@ -133,14 +133,14 @@ To get some further inspiration on how such a design description may look like, 
 ### Technology Assessment
 
 The most _unique_ part of your report will be the technology asssesment.
-This asssesment shall follow the methodology described in the paper by Brown and Walnau.
+This assessment shall follow the methodology described in the paper by Brown and Walnau.
 
 You shall start with shortly describing the technology's genealogy, i.e. where it comes from and what are its predecessors.
 For this it may be useful to draw a _context graph_ as described in the paper, which will help to understand the context of 
 the technology. 
 Next, describe the technology's _problem habitat_, i.e. what concrete problem does the technology seek to solve or leverage.
 
-In the second stage of Browns and Walnaus "technological delta" framework, you must formulate a set of _hyptheses_
+In the second stage of Browns and Walnaus "technological delta" framework, you must formulate a set of _hypotheses_
 about what benefits the application of that technology will bring.
 Following from the hypotheses you design experiments that are meant to support to reject those hypotheses.
 For instance, if you are looking into implementing a different type of communication protocol/RPC framework, which
