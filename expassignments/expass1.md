@@ -156,7 +156,7 @@ Select the following values:
 
 - Project: Gradle - Kotlin 
 - Language: Java (or Kotlin if you are familiar with it)
-- Spring Boot: 3.3.3 
+- Spring Boot:  (>= 3.5.5)  
 - Metadata: write the metadata such that fits you :wink:
 - Packaging: Jar
 - Java: 21 
