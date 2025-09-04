@@ -7,15 +7,15 @@
   import {onMount} from "svelte";
 
   // component variables (internal state) used for value binding in the form below
-  let newLocationName;
-  let newLocationLat;
-  let newLocationLon;
+  let newLocationName = $state();
+  let newLocationLat = $state();
+  let newLocationLon = $state();
 
   // initially lead the existing weather locations via GET request.
-  let result = fetch("/locations").then((response) => {
+  let result = $state(fetch("/locations").then((response) => {
       return response.json();
     }
-  )
+  ))
 
 
   // This function gets executed when `create` button is clicked.
@@ -101,7 +101,7 @@
     <label for="create-lon">Longitude:</label>
     <input  id="create-lon" type="text" bind:value={newLocationLon}>
     <!-- The on:click registers an event handler, i.e. a function to be called (Command pattern) -->
-    <button on:click={createNewLocation} >Create</button>
+    <button onclick={createNewLocation} >Create</button>
   </div>
 </div>
 
