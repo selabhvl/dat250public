@@ -1,8 +1,8 @@
 <script>
-    let messages = [];
-    let currentMsg = "";
+    let messages = $state([]);
+    let currentMsg = $state("");
     let ws;
-    let status = "disconnected";
+    let status = $state("disconnected");
 
     function connect() {
         ws = new WebSocket("http://localhost:8081/ws/chat");
@@ -43,8 +43,8 @@
     <label for="msg">Message:</label>
     <input type="text" bind:value={currentMsg}>
     </div>
-    <button on:click={send}>Send</button>
-    <button on:click={connect}>Connect</button>
-    <button on:click={close}>Disconnect</button>
+    <button onclick={send}>Send</button>
+    <button onclick={connect}>Connect</button>
+    <button onclick={close}>Disconnect</button>
 </div>
 

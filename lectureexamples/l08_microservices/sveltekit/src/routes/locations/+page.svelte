@@ -7,14 +7,14 @@
     import {onMount} from "svelte";
 
     // component variables (internal state) used for value binding in the form below
-    let newLocationName;
-    let newLocationLat;
-    let newLocationLon;
+    let newLocationName = $state();
+    let newLocationLat = $state();
+    let newLocationLon = $state();
 
-    let result;
+    let result = $state();
 
     // initially lead the existing weather locations via GET request.
-    result = fetch("http://localhost:8080/api/locations").then((response) => {
+    result = fetch("http://localhost:8080/locations").then((response) => {
             return response.json();
         }
     )
@@ -23,7 +23,7 @@
     // This function gets executed when `create` button is clicked.
     // It performs a POST request to the API to create a new location.
     function createNewLocation() {
-        fetch("http://localhost:8080/api/locations", {
+        fetch("http://localhost:8080/locations", {
             method: "POST",
             body: JSON.stringify({
                 name: newLocationName,
@@ -50,7 +50,7 @@
         // here we use it register a background task (using JS setInterval() function) that every 5 sec (5000 ms)
         // refreshes the weather location data by calling the GET request again
         const intervalId = setInterval(() => {
-            result = fetch("http://localhost:8080/api/locations").then((response) => response.json());
+            result = fetch("http://localhost:8080/locations").then((response) => response.json());
         }, 5000);
 
         // the onMount function can return a callback function that "clears up" after a component has been removed.
@@ -103,7 +103,7 @@
         <label for="create-lon">Longitude:</label>
         <input  id="create-lon" type="text" bind:value={newLocationLon}>
         <!-- The on:click registers an event handler, i.e. a function to be called (Command pattern) -->
-        <button on:click={createNewLocation} >Create</button>
+        <button onclick={createNewLocation} >Create</button>
     </div>
 </div>
 
