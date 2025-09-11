@@ -1,0 +1,32 @@
+syntax = "proto2";
+
+option java_package = "no.hvl.dat250";
+
+service WeatherService {
+  rpc GetLocations (GetAllLocationsRequest) returns (LocationsResponse) {}
+  rpc GetLocationWeather (GetLocationWeatherRequest) returns (LocationWeather) {}
+}
+
+message GetAllLocationsRequest {
+
+}
+
+message Location {
+  required string name = 1;
+  required double latitude = 2;
+  required double longitude = 3;
+}
+
+message LocationsResponse {
+  repeated Location locations = 1;
+}
+
+message GetLocationWeatherRequest {
+  required string location = 1;
+}
+
+message LocationWeather {
+  required string name = 1;
+  optional double precipitation = 2;
+  optional double temperature = 3;
+}
