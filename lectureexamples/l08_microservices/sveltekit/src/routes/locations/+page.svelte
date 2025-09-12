@@ -1,68 +1,12 @@
 <script>
-    // Svelte component comprise behaviour written in a <script> tag (i.e. this one),
-    // structure given by arbitrary HTML or nested Svelte components and presentation
-    // specified in a <style> tag.
+    let { data } = $props()
+    let result = $state(data.locations);
 
-    // other components or Svelte-internal functions are imported using the JS module import syntax.
-    import {onMount} from "svelte";
-
-    // component variables (internal state) used for value binding in the form below
-    let newLocationName = $state();
-    let newLocationLat = $state();
-    let newLocationLon = $state();
-
-    let result = $state();
-
-    // initially lead the existing weather locations via GET request.
-    result = fetch("http://localhost:8080/locations").then((response) => {
-            return response.json();
-        }
-    )
-
-
-    // This function gets executed when `create` button is clicked.
-    // It performs a POST request to the API to create a new location.
-    function createNewLocation() {
-        fetch("http://localhost:8080/locations", {
-            method: "POST",
-            body: JSON.stringify({
-                name: newLocationName,
-                latitude: Number.parseFloat(newLocationLat),
-                longitude: Number.parseFloat(newLocationLon)
-            }),
-            headers: {
-                "Content-Type": "application/json"
-            }
-        }).then((response) => {
-            if (response.status === 201) {
-                alert(`Location ${newLocationName} successfully created!`);
-                newLocationName = "";
-                newLocationLat = "";
-                newLocationLon = "";
-            }
-        }).catch((error) => {
-            alert(error.message);
-        })
-    }
-
-    // The Svelte framework methods onMount can be used to execute code after the component has been rendered.
-    onMount(() => {
-        // here we use it register a background task (using JS setInterval() function) that every 5 sec (5000 ms)
-        // refreshes the weather location data by calling the GET request again
-        const intervalId = setInterval(() => {
-            result = fetch("http://localhost:8080/locations").then((response) => response.json());
-        }, 5000);
-
-        // the onMount function can return a callback function that "clears up" after a component has been removed.
-        // in this case, the background task should be removed by calling clearInterval()
-        return () => clearInterval(intervalId);
-    })
+    console.info("I am running on the client")
 </script>
 
-<!-- Basically normal HMTL -->
 <div class="content">
     <h1>Weather Observations</h1>
-    <!-- Svelte offers special templating synatx using curly braces, here for awaiting a Promise/Future -->
     {#await result}
         its is loading...
     {:then ready}
@@ -77,10 +21,8 @@
             </tr>
             </thead>
             <tbody>
-            <!-- and here for repeating elements based on the contents of a JS array -->
             {#each ready as location}
                 <tr>
-                    <!-- the curly brace evauluate a JS expression -->
                     <td>{location.name}</td>
                     <td>{location.latitude}</td>
                     <td>{location.longitude}</td>
@@ -93,18 +35,19 @@
     {:catch error}
         {error}
     {/await}
+    <form method="POST">
     <div class="create-location">
         <h2>Create new location</h2>
         <label for="create-name">Name:</label>
         <!-- The bind: syntax is used to establish two-way databinding with a variable -->
-        <input  id="create-name" type="text" bind:value={newLocationName}>
+        <input  id="create-name" type="text" name="location">
         <label for="create-lat">Latitude:</label>
-        <input  id="create-lat" type="text" bind:value={newLocationLat}>
+        <input  id="create-lat" type="text" name="latitude">
         <label for="create-lon">Longitude:</label>
-        <input  id="create-lon" type="text" bind:value={newLocationLon}>
-        <!-- The on:click registers an event handler, i.e. a function to be called (Command pattern) -->
-        <button onclick={createNewLocation} >Create</button>
+        <input  id="create-lon" type="text" name="longitude">
+        <button>Create</button>
     </div>
+    </form>
 </div>
 
 

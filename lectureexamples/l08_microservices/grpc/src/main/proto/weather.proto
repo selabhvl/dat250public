@@ -1,5 +1,7 @@
 syntax = "proto2";
 
+package weather;
+
 option java_package = "no.hvl.dat250";
 
 service WeatherService {
