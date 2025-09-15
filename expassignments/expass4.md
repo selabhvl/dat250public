@@ -127,7 +127,7 @@ public class PollsTest {
 
 You may change the imports and optionally also the package definitions such that they work with your folder structure.
 
-As you may notice, this codes exists a few methods to be available in your domain model.
+As you may notice, this codes assumes that a few methods are available in your domain model
 
 In `User.java` there should at least be the following constructor and methods:
 ```java
