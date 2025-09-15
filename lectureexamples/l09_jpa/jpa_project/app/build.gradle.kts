@@ -14,8 +14,9 @@ dependencies {
     // Drivers
     implementation("com.h2database:h2:2.3.232")
     implementation("org.postgresql:postgresql:42.7.7")
-    testImplementation("org.junit.jupiter:junit-jupiter:5.13.4")
 
+
+    testImplementation("org.junit.jupiter:junit-jupiter:5.13.4")
     testRuntimeOnly("org.junit.platform:junit-platform-launcher")
 
 

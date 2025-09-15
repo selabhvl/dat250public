@@ -6,6 +6,9 @@
              version="2.0">
 
     <persistence-unit name="test">
+        <class>no.hvl.dat250.jpa.entities.Course</class>
+        <class>no.hvl.dat250.jpa.entities.Teacher</class>
+        <class>no.hvl.dat250.jpa.entities.Student</class>
         <properties>
             <property name="jakarta.persistence.jdbc.url"
                       value="jdbc:postgresql://localhost:5432/postgres"/>

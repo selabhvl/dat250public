@@ -19,7 +19,7 @@ public class Demo2App {
         EntityManagerFactory emf = new PersistenceConfiguration("test2")
                 .managedClass(User.class)
                 // corresponds to 'jakarta.persistence.jdbc.url' in the persistence.xml
-                .property(PersistenceConfiguration.JDBC_URL, "jdbc:h2:mem")
+                .property(PersistenceConfiguration.JDBC_URL, "jdbc:h2:file:./users")
                 // other properties accordingly
                 .property(PersistenceConfiguration.JDBC_USER, "sa")
                 .property(PersistenceConfiguration.JDBC_PASSWORD, "")

@@ -1,6 +1,7 @@
 package no.hvl.dat250.jpa;
 
 import jakarta.persistence.*;
+import no.hvl.dat250.jpa.entities.Course;
 import no.hvl.dat250.jpa.entities.User;
 import org.hibernate.cfg.JdbcSettings;
 
@@ -12,6 +13,7 @@ public class Demo1App {
 
     public static void main(String[] args) {
         EntityManagerFactory emf = Persistence.createEntityManagerFactory("test");
+
         emf.runInTransaction(entityManager -> {
 
             // Executing native SQL query to check whether connection works
@@ -24,7 +26,12 @@ public class Demo1App {
             for (Object o : resultList) {
                 Tuple t = (Tuple) o;
                 System.out.printf("id: %s code: %s semester: %s-%s \n", t.get("id", String.class), t.get("code", String.class), t.get("year", BigDecimal.class).toPlainString(), t.get("semester", Character.class));
+            }
 
+
+            for (Object o : entityManager.createQuery("select c from Course c", Course.class).getResultList()) {
+                Course c = (Course) o;
+                System.out.println(c);
             }
         });
     }
