@@ -24,6 +24,14 @@ dependencies {
 }
 ```
 
+> [!IMPORTANT]
+> In this excercise we want to use Hibernate **alone**, i.e. without Springs auto-configuration magic.
+> Therefore, please make sure that you don not have the _Spring Boot Starter_ dependency in your build file 
+> to avoid weird exceptions:
+> ```kotlin
+> implementation("org.springframework.boot:spring-boot-starter-data-jpa:3.5.5") // I must not be here ...
+>```
+
 Next, you can copy the test code into a new Java class `PollsTest`, which should be placed in the `no.hvl.dat250.jpa.polls` package underneath
 the `src/test/java` source-set folder.
 
