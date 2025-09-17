@@ -6,6 +6,7 @@ package no.hvl.dat250.jpa;
 import jakarta.persistence.EntityManagerFactory;
 import jakarta.persistence.Persistence;
 import jakarta.persistence.PersistenceConfiguration;
+import no.hvl.dat250.jpa.entities.Post;
 import no.hvl.dat250.jpa.entities.User;
 import org.hibernate.cfg.JdbcSettings;
 
@@ -18,6 +19,7 @@ public class Demo2App {
 
         EntityManagerFactory emf = new PersistenceConfiguration("test2")
                 .managedClass(User.class)
+                .managedClass(Post.class)
                 // corresponds to 'jakarta.persistence.jdbc.url' in the persistence.xml
                 .property(PersistenceConfiguration.JDBC_URL, "jdbc:h2:file:./users")
                 // other properties accordingly
@@ -34,8 +36,13 @@ public class Demo2App {
         emf.runInTransaction(entityManager -> {
             User u1 = new User("alice");
             User u2 = new User("bob");
+
+            Post p = new Post("Post 1", "Lorem ipsum", u1);
+            u1.getPosts().add(p);
+
             entityManager.persist(u1);
             entityManager.persist(u2);
+            entityManager.persist(p);
         });
 
         emf.runInTransaction(entityManager -> {
@@ -44,7 +51,9 @@ public class Demo2App {
                     entityManager.createQuery("select u from User u", User.class).getResultList();
             for (Object o : resultList) {
                 User u = (User) o;
+
                 System.out.println(u);
+                System.out.println("User " + u.getUsername() + " has " + u.getPosts().size() + " posts");
             }
         });
 
