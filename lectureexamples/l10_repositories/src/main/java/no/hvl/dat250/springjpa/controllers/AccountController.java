@@ -1,7 +1,7 @@
-package no.hvl.data250.springjpa.controllers;
+package no.hvl.dat250.springjpa.controllers;
 
 import jakarta.persistence.EntityManager;
-import no.hvl.data250.springjpa.entities.Account;
+import no.hvl.dat250.springjpa.entities.Account;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.transaction.annotation.Transactional;
 import org.springframework.web.bind.annotation.*;
@@ -24,7 +24,7 @@ public class AccountController {
     @Transactional
     public Account updateAccount(@PathVariable String accountId, @RequestBody Account account) {
         Account storedAccount = em.find(Account.class, accountId);
-        storedAccount.setAmount(account.getAmount());
+        storedAccount.setBalance(account.getBalance());
         return storedAccount;
     }
 

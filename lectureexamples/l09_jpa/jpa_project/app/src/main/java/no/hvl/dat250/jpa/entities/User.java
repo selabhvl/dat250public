@@ -8,6 +8,7 @@ import java.util.Set;
 
 @Entity
 @Table(name = "users")
+@NamedQuery(name = "findAll" ,query = "select u from User u")
 public class User {
 
     @Id

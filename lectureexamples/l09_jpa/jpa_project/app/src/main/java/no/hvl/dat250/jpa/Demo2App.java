@@ -3,11 +3,10 @@
  */
 package no.hvl.dat250.jpa;
 
-import jakarta.persistence.EntityManagerFactory;
-import jakarta.persistence.Persistence;
-import jakarta.persistence.PersistenceConfiguration;
+import jakarta.persistence.*;
 import no.hvl.dat250.jpa.entities.Post;
 import no.hvl.dat250.jpa.entities.User;
+import no.hvl.dat250.jpa.entities.User_;
 import org.hibernate.cfg.JdbcSettings;
 
 import java.util.List;
@@ -21,7 +20,7 @@ public class Demo2App {
                 .managedClass(User.class)
                 .managedClass(Post.class)
                 // corresponds to 'jakarta.persistence.jdbc.url' in the persistence.xml
-                .property(PersistenceConfiguration.JDBC_URL, "jdbc:h2:file:./users")
+                .property(PersistenceConfiguration.JDBC_URL, "jdbc:h2:mem:users")
                 // other properties accordingly
                 .property(PersistenceConfiguration.JDBC_USER, "sa")
                 .property(PersistenceConfiguration.JDBC_PASSWORD, "")
@@ -45,17 +44,28 @@ public class Demo2App {
             entityManager.persist(p);
         });
 
-        emf.runInTransaction(entityManager -> {
-            // Using the JPA Querly Language here instead of SQL to fetch some data
-            List resultList =
-                    entityManager.createQuery("select u from User u", User.class).getResultList();
-            for (Object o : resultList) {
-                User u = (User) o;
+        List<User> users = findUsers(emf);
+        for (User u : users) {
+            System.out.printf("User '%s' has %d posts\n", u.getUsername(), u.getPosts().size());
+        }
 
-                System.out.println(u);
-                System.out.println("User " + u.getUsername() + " has " + u.getPosts().size() + " posts");
+    }
+
+
+    public static List<User> findUsers(EntityManagerFactory entityManagerFactory) {
+        EntityManager entityManager = entityManagerFactory.createEntityManager();
+        EntityTransaction tx = entityManager.getTransaction();
+        tx.begin();
+        try {
+            List resultList = entityManager.createNamedQuery(User_.QUERY_FIND_ALL, User.class).getResultList();
+            tx.commit();
+            //resultList.forEach(user -> entityManager.detach(user));
+            return resultList;
+        } catch (Throwable t) {
+            if (tx.isActive()) {
+                tx.rollback();
             }
-        });
-
+            throw t;
+        }
     }
 }

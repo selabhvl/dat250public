@@ -24,6 +24,14 @@ public class Post {
         this.author = author;
     }
 
+    public String getTitle() {
+        return title;
+    }
+
+    public String getContent() {
+        return content;
+    }
+
     public Post() {
     }
 }

@@ -30,5 +30,7 @@ lectureexamples/**/gradlew.bat
 lectureexamples/l06_SPAs/backend/src/main/resources/static/assets
 lectureexamples/l06_SPAs/backend/src/main/resources/static/index.html
 lectureexamples/l06_SPAs/backend/src/main/resources/static/vite.svg
-!lectureexamples/l08_jpa/LectureBasicDemos.java
 **/.DS_Store
+lectureexamples/**/employees*.mv.db
+lectureexamples/**/employees*.trace.db
+src/generated/java

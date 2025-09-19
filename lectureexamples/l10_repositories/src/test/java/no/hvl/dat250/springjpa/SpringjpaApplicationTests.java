@@ -1,4 +1,4 @@
-package no.hvl.data250.springjpa;
+package no.hvl.dat250.springjpa;
 
 import org.junit.jupiter.api.Test;
 import org.springframework.boot.test.context.SpringBootTest;

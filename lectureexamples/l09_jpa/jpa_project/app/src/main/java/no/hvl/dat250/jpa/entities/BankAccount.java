@@ -15,7 +15,7 @@ public class BankAccount {
     @Column(columnDefinition = "NUMERIC(10,2) CHECK (balance >= 0)")
     private BigDecimal balance;
 
-    
+
     public BankAccount(String accountNo, BigDecimal balance) {
         this.accountNo = accountNo;
         this.balance = balance;

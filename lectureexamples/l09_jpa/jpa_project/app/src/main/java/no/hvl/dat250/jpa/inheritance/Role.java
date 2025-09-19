@@ -3,12 +3,10 @@ package no.hvl.dat250.jpa.inheritance;
 import jakarta.persistence.*;
 
 @Entity
-@Inheritance(strategy = InheritanceType.TABLE_PER_CLASS)
-@SequenceGenerator(name = "role_seq")
 public abstract class Role {
 
     @Id
-    @GeneratedValue(strategy = GenerationType.SEQUENCE)
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
 
     private String positionText;

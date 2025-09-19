@@ -12,15 +12,13 @@ import java.util.List;
 public class Demo4App {
 
     public static void main(String[] args) throws InterruptedException {
-        EntityManagerFactory emf = new PersistenceConfiguration("test2")
+        EntityManagerFactory emf = new PersistenceConfiguration("test4")
                 .managedClass(BankAccount.class)
                 // corresponds to 'jakarta.persistence.jdbc.url' in the persistence.xml
                 .property(PersistenceConfiguration.JDBC_URL, "jdbc:h2:mem:bank")
-                // other properties accordingly
                 .property(PersistenceConfiguration.JDBC_USER, "sa")
                 .property(PersistenceConfiguration.JDBC_PASSWORD, "")
-                .property(PersistenceConfiguration.SCHEMAGEN_DATABASE_ACTION, "drop-and-create") // Recreate the database fresh; DO NOT USE IN PRODUCTION
-                // Hibernate specific properties are found in the JdbcSettings class
+                .property(PersistenceConfiguration.SCHEMAGEN_DATABASE_ACTION, "drop-and-create")
                 .property(JdbcSettings.SHOW_SQL, true)
                 .property(JdbcSettings.FORMAT_SQL, true)
                 .property(JdbcSettings.HIGHLIGHT_SQL, true)

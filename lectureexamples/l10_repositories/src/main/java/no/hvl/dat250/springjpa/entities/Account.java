@@ -1,4 +1,4 @@
-package no.hvl.data250.springjpa.entities;
+package no.hvl.dat250.springjpa.entities;
 
 import jakarta.persistence.Basic;
 import jakarta.persistence.Column;
@@ -14,12 +14,12 @@ public class Account {
     private String accountNo;
 
     @Basic(optional = false)
-    @Column(columnDefinition = "NUMERIC(10, 2) CHECK (amount > 0)")
-    private BigDecimal amount;
+    @Column(columnDefinition = "NUMERIC(10, 2) CHECK (balance > 0)")
+    private BigDecimal balance;
 
-    public Account(String accountNo, BigDecimal amount) {
+    public Account(String accountNo, BigDecimal balance) {
         this.accountNo = accountNo;
-        this.amount = amount;
+        this.balance = balance;
     }
 
     public Account() {
@@ -33,11 +33,11 @@ public class Account {
         this.accountNo = accountNo;
     }
 
-    public BigDecimal getAmount() {
-        return amount;
+    public BigDecimal getBalance() {
+        return balance;
     }
 
-    public void setAmount(BigDecimal amount) {
-        this.amount = amount;
+    public void setBalance(BigDecimal amount) {
+        this.balance = amount;
     }
 }

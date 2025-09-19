@@ -16,7 +16,7 @@ public class Demo3App {
                 .managedClass(EngineerRole.class)
                 .managedClass(CustomerSupportRole.class)
                 .managedClass(ManagerRole.class)
-                .property(PersistenceConfiguration.JDBC_URL, "jdbc:h2:file:./employees")
+                .property(PersistenceConfiguration.JDBC_URL, "jdbc:h2:mem:employees")
                 .property(PersistenceConfiguration.JDBC_USER, "sa")
                 .property(PersistenceConfiguration.JDBC_PASSWORD, "")
                 .property(JdbcSettings.SHOW_SQL, true)
