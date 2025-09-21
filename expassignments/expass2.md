@@ -26,7 +26,7 @@ classDiagram
     }
     User *--> "0..*" Vote : voted
     Poll *--> "2..*" VoteOption 
-    Vote "0..*" --> "1..1" VoteOption
+    Vote "0..*" --> "1..1" VoteOption : votedOn
     User *--> "0..*" Poll : created
 
 ```
