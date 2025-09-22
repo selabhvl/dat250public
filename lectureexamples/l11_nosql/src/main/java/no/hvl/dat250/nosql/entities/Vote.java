@@ -21,9 +21,6 @@ public class Vote {
     @ManyToOne
     private VoteOption votedOn;
 
-//    @ManyToOne
-//    @JsonBackReference(value = "voted")
-//    private User voter;
 
     public Vote(VoteOption votedOn) {
         this.votedOn = votedOn;
@@ -34,10 +31,6 @@ public class Vote {
     }
 
 
-    public String getId() {
-        return id.toString();
-    }
-
     public Instant getPublishedAt() {
         return publishedAt;
     }
@@ -46,8 +39,5 @@ public class Vote {
     public VoteOption getVotedOn() {
         return votedOn;
     }
-//
-//    public User getVoter() {
-//        return voter;
-//    }
+
 }

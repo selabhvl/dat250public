@@ -1,6 +1,5 @@
 package no.hvl.dat250.nosql.entities;
 
-import com.fasterxml.jackson.annotation.JsonBackReference;
 import com.fasterxml.jackson.annotation.JsonIdentityInfo;
 import com.fasterxml.jackson.annotation.JsonIgnore;
 import com.fasterxml.jackson.annotation.ObjectIdGenerators;
@@ -27,10 +26,6 @@ public class VoteOption {
     @OneToMany(mappedBy = "votedOn")
     private Set<Vote> votes;
 
-//    @ManyToOne
-//    @JsonBackReference(value = "voteOptions")
-//    private Poll poll;
-
     public VoteOption(String caption, Integer presentationOder) {
         this.caption = caption;
         this.presentationOder = presentationOder;
@@ -52,9 +47,6 @@ public class VoteOption {
         return presentationOder;
     }
 
-//    public Poll getPoll() {
-//        return poll;
-//    }
 
     public Integer getVoteCount() {
         if (this.votes != null) {

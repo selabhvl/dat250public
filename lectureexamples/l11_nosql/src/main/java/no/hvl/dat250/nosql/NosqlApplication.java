@@ -75,20 +75,6 @@ public class NosqlApplication {
 	}
 
 
-//	@Bean
-//	public CommandLineRunner startup(@Autowired UserRepo repo) {
-//		return args -> {
-//			AtomicLong userCounter = new AtomicLong();
-//			AtomicLong pollCounter = new AtomicLong();
-//			for (User u : populateTestDate()) {
-//				u.setId(userCounter.incrementAndGet());
-//				for (Poll p : u.getCreated()) {
-//					p.setId(pollCounter.incrementAndGet());
-//				}
-//				repo.save(u);
-//			}
-//
-//		};
-//	}
+
 
 }

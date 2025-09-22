@@ -23,9 +23,6 @@ public class Poll {
 
     private Instant validUntil;
 
-//    @ManyToOne
-//    @JsonBackReference(value = "created")
-//    private User author;
 
     @OneToMany(cascade = CascadeType.ALL, fetch = FetchType.EAGER)
     @JsonManagedReference(value = "voteOptions")
@@ -66,9 +63,6 @@ public class Poll {
         return validUntil;
     }
 
-//    public User getAuthor() {
-//        return author;
-//    }
 
     public List<VoteOption> getVoteOptions() {
         return voteOptions;
