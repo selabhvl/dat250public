@@ -9,5 +9,7 @@ import java.util.Optional;
 
 public interface AccountRepository extends CrudRepository<Account, String> {
 
-
+    @Override
+    @Lock(LockModeType.PESSIMISTIC_WRITE)
+    Optional<Account> findById(String s);
 }

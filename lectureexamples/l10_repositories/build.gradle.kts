@@ -29,3 +29,19 @@ dependencies {
 tasks.withType<Test> {
 	useJUnitPlatform()
 }
+
+tasks.register("resetData", JavaExec::class) {
+	dependsOn("classes")
+	mainClass = "no.hvl.dat250.springjpa.ResetData"
+	classpath = sourceSets.named("main").get().runtimeClasspath
+	group = "experiment"
+	description = "Resets the Bank account to the initial balance using the REST API"
+}
+
+tasks.register("runExperiment", JavaExec::class) {
+	dependsOn("classes")
+	mainClass = "no.hvl.dat250.springjpa.ConcurrentRequests"
+	classpath = sourceSets.named("main").get().runtimeClasspath
+	group = "experiment"
+	description = "Runs the experiment by trying to execute two concurrent transfers."
+}
