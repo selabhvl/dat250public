@@ -10,8 +10,7 @@ import java.util.Set;
 @Table(name = "users")
 public class User {
 
-
-
+    
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
@@ -72,7 +71,5 @@ public class User {
         return voted;
     }
 
-    public void setId(Long id) {
-        this.id = id;
-    }
+
 }
