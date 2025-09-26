@@ -35,6 +35,9 @@ public class VoteOption {
     public VoteOption() {
     }
 
+    public UUID getId() {
+        return id;
+    }
 
     public String getCaption() {
         return caption;
