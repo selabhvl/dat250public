@@ -1,3 +1,5 @@
+package no.hvl.dat250.messaging;
+
 import com.rabbitmq.client.Channel;
 import com.rabbitmq.client.Connection;
 import com.rabbitmq.client.ConnectionFactory;
@@ -5,9 +7,9 @@ import com.rabbitmq.client.ConnectionFactory;
 import java.io.IOException;
 import java.util.concurrent.TimeoutException;
 
-public class ExchangeProducer {
+public class FanoutProducer {
 
-    private static final String EXCHANGE_NAME = "test";
+    private static final String EXCHANGE_DECLARE = "hello";
 
     public static void main(String[] args) throws IOException, TimeoutException {
         ConnectionFactory connectionFactory = new ConnectionFactory();
@@ -19,10 +21,9 @@ public class ExchangeProducer {
         try (Connection connection = connectionFactory.newConnection()) {
             Channel channel = connection.createChannel();
 
-            channel.exchangeDeclare(EXCHANGE_NAME, "fanout");
-
+            channel.exchangeDeclare(EXCHANGE_DECLARE, "fanout");
             for (String arg : args) {
-                channel.basicPublish(EXCHANGE_NAME, "", null, arg.getBytes());
+                channel.basicPublish(EXCHANGE_DECLARE, "", null, arg.getBytes());
             }
             System.out.printf("Sent message %d messages \n", args.length);
         }

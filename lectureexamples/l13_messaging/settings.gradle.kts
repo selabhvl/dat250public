@@ -13,4 +13,6 @@ plugins {
 rootProject.name = "l13_messaging"
 include("prod-simple")
 include("consume-simple")
+include("prod-fanout")
+include("consume-fanout")
 include("lib")
