@@ -5,18 +5,29 @@ import org.springframework.security.core.CredentialsContainer;
 import org.springframework.security.core.GrantedAuthority;
 import org.springframework.security.core.userdetails.UserDetails;
 
+
+import java.util.Arrays;
 import java.util.Collection;
-import java.util.Collections;
+
 
 @Entity
 @Table(name = "users")
-public class User  {
+public class User implements UserDetails, CredentialsContainer {
 
 
-    public enum Roles {
+    @Override
+    public void eraseCredentials() {
+        this.password = null;
+    }
+
+    public enum Roles implements GrantedAuthority {
         NORMAL,
         PRIVILEGED;
-        
+
+        @Override
+        public String getAuthority() {
+            return name();
+        }
     }
 
 
@@ -44,6 +55,18 @@ public class User  {
         this.email = email;
         this.password = password;
         this.role = Roles.NORMAL;
+    }
+
+    @Override
+    public Collection<? extends GrantedAuthority> getAuthorities() {
+        return Arrays.asList(this.role);
+    }
+
+
+
+    @Override
+    public String getPassword() {
+        return password;
     }
 
     public String getUsername() {

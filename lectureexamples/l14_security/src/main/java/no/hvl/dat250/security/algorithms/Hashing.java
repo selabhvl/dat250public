@@ -1,5 +1,6 @@
 package no.hvl.dat250.security.algorithms;
 
+
 import org.springframework.security.crypto.bcrypt.BCrypt;
 
 import java.nio.charset.StandardCharsets;
@@ -12,9 +13,9 @@ public class Hashing {
 
     public static String doHash(String toHash) throws NoSuchAlgorithmException {
         MessageDigest messageDigest = MessageDigest.getInstance("sha512");
-        //String salt = "salt";
+        String salt = "salt";
         long before = System.currentTimeMillis();
-        //messageDigest.update(salt.getBytes(StandardCharsets.UTF_8));
+        messageDigest.update(salt.getBytes(StandardCharsets.UTF_8));
         byte[] result = messageDigest.digest(toHash.getBytes(StandardCharsets.UTF_8));
         long after = System.currentTimeMillis();
         long diff = after - before;

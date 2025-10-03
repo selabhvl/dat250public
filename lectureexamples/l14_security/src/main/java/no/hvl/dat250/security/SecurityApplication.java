@@ -15,12 +15,12 @@ public class SecurityApplication {
 
 
 	@Bean
-	public CommandLineRunner startupActions(UserRepository userRepository) {
+	public CommandLineRunner startupActions(UserRepository userRepository, PasswordEncoder encoder) {
 		return args -> {
-			User admin = new User("admin", "admin@company.com", "admin");
+			User admin = new User("admin", "admin@company.com", encoder.encode("admin"));
 			admin.setRole(User.Roles.PRIVILEGED);
 
-			User bob = new User("bob", "bob@bobsoft.org", "bob");
+			User bob = new User("bob", "bob@bobsoft.org", encoder.encode("bob"));
 
 			userRepository.save(admin);
 			userRepository.save(bob);
