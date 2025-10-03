@@ -1,5 +1,5 @@
 <!doctype html>
-<html lang="en">
+<html lang="en" xmlns:th="https://www.thymeleaf.org">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport"
@@ -8,15 +8,25 @@
     <title>Login</title>
 </head>
 <body>
-<form action="/login" method="post">
+<div th:if="${param.error}">
+    <p style="color: red">Invalid username/password !!!</p>
+</div>
+<div th:if="${param.logout}">
+    <p>Successfully logged out!</p>
+</div>
+<div th:if="${param.created}">
+    <p>User <em th:text="${param.created}"></em> created</p>
+</div>
+<div>
+<form th:action="@{/login}" method="post">
     <fieldset>
         <label for="username-field">Username:</label>
         <input type="text" name="username" id="username-field">
         <label for="password-field">Password:</label>
         <input type="password" name="password" id="password-field">
-        <input type="submit" title="Login">
+        <button type="submit">Login</button>
     </fieldset>
 </form>
-
+</div>
 </body>
 </html>

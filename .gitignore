@@ -34,3 +34,5 @@ lectureexamples/l06_SPAs/backend/src/main/resources/static/vite.svg
 lectureexamples/**/employees*.mv.db
 lectureexamples/**/employees*.trace.db
 src/generated/java
+lectureexamples/l14_security/selfsigned.crt
+lectureexamples/l14_security/selfsigned.key

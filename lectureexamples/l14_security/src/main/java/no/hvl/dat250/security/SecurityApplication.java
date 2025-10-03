@@ -4,6 +4,7 @@ import org.springframework.boot.CommandLineRunner;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.context.annotation.Bean;
+import org.springframework.security.crypto.password.PasswordEncoder;
 
 @SpringBootApplication
 public class SecurityApplication {
@@ -16,7 +17,7 @@ public class SecurityApplication {
 	@Bean
 	public CommandLineRunner startupActions(UserRepository userRepository) {
 		return args -> {
-			User admin = new User("admin", "admin@company.com", "1234");
+			User admin = new User("admin", "admin@company.com", "admin");
 			admin.setRole(User.Roles.PRIVILEGED);
 
 			User bob = new User("bob", "bob@bobsoft.org", "bob");
