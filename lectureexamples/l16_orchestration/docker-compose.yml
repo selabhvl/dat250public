@@ -1,0 +1,27 @@
+services:
+  my-db:
+    image: postgres
+    environment:
+      - POSTGRES_PASSWORD=supersecret
+    expose:
+      - "5432"
+    volumes:
+      - type: bind
+        source: /Users/past-madm/Projects/teaching/dat250/dat250public/lectureexamples/l14_containers/schema.up.sql
+        target: /docker-entrypoint-initdb.d/schema.up.sql
+    networks:
+      - app-network 
+  my-app:
+    build: .
+    environment:
+      - DB_SERVER=my-db
+      - DB_PORT=5432
+      - DB_USER=postgres 
+      - DB_PASSWORD=supersecret 
+      - DB_NAME=postgres
+    ports:
+      - 8080:8080
+    networks:
+      - app-network
+networks:
+  app-network:

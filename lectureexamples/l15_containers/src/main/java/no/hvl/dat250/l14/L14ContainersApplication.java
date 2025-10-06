@@ -18,4 +18,18 @@ public class L14ContainersApplication {
 	public static void main(String[] args) {
 		SpringApplication.run(L14ContainersApplication.class, args);
 	}
+
+
+	@Bean
+	public CommandLineRunner initializer(@Autowired LocationRepository repository) {
+		return new CommandLineRunner() {
+			@Override
+			public void run(String... args) throws Exception {
+				Location l = new Location("Bergen", 65.12, 5.3);
+				repository.save(l);
+			}
+		};
+	}
+
+
 }

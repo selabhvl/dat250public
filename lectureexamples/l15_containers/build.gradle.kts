@@ -20,7 +20,9 @@ repositories {
 dependencies {
 	implementation("org.springframework.boot:spring-boot-starter-data-jpa")
 	implementation("org.springframework.boot:spring-boot-starter-web")
-	runtimeOnly("com.h2database:h2")
+// https://mvnrepository.com/artifact/org.postgresql/postgresql
+	implementation("org.postgresql:postgresql:42.7.4")
+	testRuntimeOnly("com.h2database:h2")
 	testImplementation("org.springframework.boot:spring-boot-starter-test")
 	testRuntimeOnly("org.junit.platform:junit-platform-launcher")
 }

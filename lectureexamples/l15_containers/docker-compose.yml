@@ -1,0 +1,28 @@
+services:
+  my-db:
+    image: postgres
+    environment:
+      POSTGRES_PASSWORD: supersecret
+    ports:
+      - "5432:5432"
+    volumes:
+      - type: bind
+        source: /Users/past-madm/Projects/teaching/dat250/dat250public/lectureexamples/l14_containers/schema.up.sql
+        target: /docker-entrypoint-initdb.d/schema.up.sql
+      - type: volume 
+        source: my-vol 
+        target: /var/lib/postgresql
+  my-app:
+    build: .
+    environment:
+      DB_HOST: my-db
+      DB_PORT: "5432"
+      DB_NAME: postgres 
+      DB_USER: postgres 
+      DB_PASS: supersecret
+    ports:
+      - "8080:8080"
+volumes:
+  my-vol:
+networks:
+  my-nw:
