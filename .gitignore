@@ -36,3 +36,6 @@ lectureexamples/**/employees*.trace.db
 src/generated/java
 lectureexamples/l14_security/selfsigned.crt
 lectureexamples/l14_security/selfsigned.key
+lectureexamples/l15_containers/app.trace.db
+lectureexamples/l15_containers/app.mv.db
+lectureexamples/l15_containers/schema.down.sql
