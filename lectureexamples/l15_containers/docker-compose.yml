@@ -1,28 +1,31 @@
 services:
-  my-db:
-    image: postgres
+  testdb:
+    image: postgres:17
     environment:
       POSTGRES_PASSWORD: supersecret
     ports:
-      - "5432:5432"
+      - 5432:5432
+    networks:
+      - pollsnw
     volumes:
-      - type: bind
-        source: /Users/past-madm/Projects/teaching/dat250/dat250public/lectureexamples/l14_containers/schema.up.sql
-        target: /docker-entrypoint-initdb.d/schema.up.sql
-      - type: volume 
-        source: my-vol 
+      - type: volume
+        source: pollsdbvol
         target: /var/lib/postgresql
-  my-app:
-    build: .
+      - type: bind
+        source: /Users/past-madm/Projects/teaching/dat250/dat250public/lectureexamples/l15_containers/schema.up.sql
+        target: /docker-entrypoint-initdb.d/schema.up.sql
+  pollsapp:
+    build:
+      context: .
     environment:
-      DB_HOST: my-db
-      DB_PORT: "5432"
-      DB_NAME: postgres 
-      DB_USER: postgres 
+      DB_HOST: testdb
+      DB_USER: postgres
       DB_PASS: supersecret
     ports:
-      - "8080:8080"
-volumes:
-  my-vol:
+      - 8080:8080
+    networks:
+      - pollsnw
 networks:
-  my-nw:
+  pollsnw:
+volumes:
+  pollsdbvol:
