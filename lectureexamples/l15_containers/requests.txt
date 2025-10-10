@@ -1,0 +1,3 @@
+curl -X POST localhost:8080/users --json '{"username":"past","email":"past@hvl.no"}'
+curl -X POST localhost:8080/polls --json '{"question":"Vim or emacs","createdBy":1,"options":["Vim","Emcas"]}'
+curl -X POST localhost:8080/polls/1/votes --data option=0 --data userId=1
