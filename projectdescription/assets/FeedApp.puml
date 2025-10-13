@@ -11,19 +11,18 @@ component "Persistence\n(JPA)" as per
 database H2
 api -down-> dom
 dom -down-> per
-per <-down-> H2
+per -down-> H2
 }
-database "MongoDB" as mongo
+database "Redis" as redis
 
-node "Analytics Component" {
-component "Poll Aggregator" as agg
-}
+
 queue "RabbitMQ" as msg
-agg <-down-> mongo
-agg -left-> msg
-dom --> msg
+dom --> msg : messaging
+api -left-> redis : cache
 
 actor "End Users"  as ru
 ru .> ui
 mu .down.> HTTP
+mu .> msg
 @enduml
+
