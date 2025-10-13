@@ -24,8 +24,9 @@ Concretely, the non-functional requirements are as follows:
 1. There shall be a(n) (object-oriented) _Domain Model_ and custom _Business Logic_ for processing users, polls, and votes.
 2. The FeedApp functionality must be exposed via a _REST API_ that incorporates _security aspects_ (session or token-based authentication and role-based authorization).
 3. All domain entities are _persistently stored_ in a _relational database_ (object-relational mapping). 
-4. There is a _Web UI_ implemented either as a Single or Multi Page Application
-5. Each vote event shall trigger the FeedApp to send an aggregated presentation of each poll to an _analytical component_, which stores its data in a _NoSQL database_. That communication channel between the FeedApp and its analytical component shall be based on _messaging_ in order to decouple both of them.
+4. There is a _Web UI_ implemented either as a Single or Multi Page Application.
+5. The application should make use of a NoSQL database at some point in the stack (e.g. a Cache, or a redundancy storage for high availability).
+5. Each vote event shall trigger the FeedApp to send a notification to a _messaging solution_, i.e. a component that allows arbitrary clients to subscribe to these vote events.
 6. The source code of the application must be in a publicly accessible _git repository_ and there must be a _CI-pipeline_ that automatically tests and builds the application, 
 7. The application must be delivered as one or multiple _container images_ hosted in a public container registry
 
@@ -44,7 +45,7 @@ Currently (Fall 2024), this is
 - [Spring Web MVC](../expassignments/expass2.md) for implementing a HTTP/REST API,
 - [Svelte(Kit)](../expassignments/expass3.md) for implementing a Single Page App user interface,
 - [Jakarta Persistence API with Hibernate and H2](../expassignments/expass4.md) for implementing object-relational database mapping,
-- [MongoDB](../expassignments/expass5.md) as a non-relational database,
+- [Redis](../expassignments/expass5.md) as a non-relational database (used for caching),
 - [RabbitMQ](../expassignments/expass6.md) as a message broker,
 - [Docker](../expassignments/expass7.md) as a container engine.
 
