@@ -26,6 +26,8 @@ public class XmlStreamReading extends DefaultHandler {
             currentOrder = attributes.getValue("orderNo");
             currentTotal = 0.0;
         }
+
+
         if ("item".equals(qName)) {
             int quantity = Integer.parseInt(attributes.getValue("quantity"));
             double price = Double.parseDouble(attributes.getValue("unitPrice"));

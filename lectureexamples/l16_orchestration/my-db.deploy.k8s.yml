@@ -16,19 +16,24 @@ spec:
         app: my-db
     spec:
       containers:
-      - image: postgres:latest
-        imagePullPolicy: Always
-        name: postgres
-        env:
-          - name: POSTGRES_PASSWORD
-            value: supersecret
-        volumeMounts:
-          - name: setup-sql
-            mountPath: /docker-entrypoint-initdb.d
+        - image: postgres:17
+          imagePullPolicy: Always
+          name: postgres
+          env:
+            - name: POSTGRES_PASSWORD
+              value: supersecret
+          volumeMounts:
+            # - name: setup-sql
+            #   mountPath: /docker-entrypoint-initdb.d
+            - name: storage
+              mountPath: /var/lib/postgresql
       volumes:
-        - name: setup-sql 
-          configMap:
-            name: setup-sql
-            items:
-              - key: SQL_UP
-                path: schema.up.sql
+        # - name: setup-sql
+        #   configMap:
+        #     name: setup-sql
+        #     items:
+        #       - key: SQL_UP
+        #         path: schema.up.sql
+        - name: storage
+          persistentVolumeClaim:
+            claimName: myclaim

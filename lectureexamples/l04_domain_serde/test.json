@@ -1,0 +1,16 @@
+  {
+    "username" : "user",
+    "email" : "john.doe@example.com",
+    "createdPolls" : [ {
+      "_id" : 1,
+      "question" : "Annanas on Pizza: Is it ok?",
+      "options" : [ {
+        "order" : 1,
+        "caption" : "Mamma mia! Noooooo"
+      }, {
+        "order" : 0,
+        "caption" : "Of course!"
+      } ],
+      "creator" : "user"
+    } ]
+  }

@@ -1,6 +1,10 @@
 package no.hvl.dat250.l04.examples.domains;
 
 
+import com.fasterxml.jackson.annotation.JsonIdentityInfo;
+import com.fasterxml.jackson.annotation.JsonIdentityReference;
+import com.fasterxml.jackson.annotation.JsonIgnore;
+import com.fasterxml.jackson.annotation.ObjectIdGenerators;
 import com.google.common.collect.Lists;
 
 import java.time.Instant;
@@ -57,9 +61,9 @@ public class Polls {
         private String question;
         private Set<VoteOption> options;
 
-        private User creator;
 
-        private Instant closesAt;
+
+        private User creator;
 
 
 
@@ -67,16 +71,9 @@ public class Polls {
             this.question = question;
             this.options = options;
             this.creator = creator;
-            //creator.getCreatedPolls().add(this);  // this line is dangerous...
+            // creator.getCreatedPolls().add(this);  // this line is dangerous...
         }
 
-        public Instant getClosesAt() {
-            return closesAt;
-        }
-
-        public void setClosesAt(Instant closesAt) {
-            this.closesAt = closesAt;
-        }
 
         public String getQuestion() {
             return question;

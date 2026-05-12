@@ -28,7 +28,6 @@ public class JsonDataBinding {
         Polls.VoteOption yes = new Polls.VoteOption(0, "Of course!");
         Polls.VoteOption no = new Polls.VoteOption(1, "Mamma mia! Noooooo");
         Polls.Poll poll = new Polls.Poll("Annanas on Pizza: Is it ok?", Sets.newHashSet(yes, no), user);
-        poll.setClosesAt(LocalDateTime.of(2024, 9, 3, 21, 59, 59).toInstant(ZoneOffset.UTC));
 
         ObjectMapper mapper = initJackson();
 

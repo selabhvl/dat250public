@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<person firstname="Harald" lastname="König">
+    <address>
+        <street>Main Street</street>
+        <number>28</number>
+    </address>
+</person>

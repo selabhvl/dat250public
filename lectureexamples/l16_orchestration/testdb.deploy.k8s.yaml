@@ -1,0 +1,25 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  labels:
+    app: testdb
+  name: testdb
+  namespace: default
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: testdb
+  template:
+    metadata:
+      labels:
+        app: testdb
+    spec:
+      containers:
+        - image: postgres:17
+          imagePullPolicy: IfNotPresent
+          name: postgres
+          resources: {}
+          env:
+            - name: POSTGRES_PASSWORD
+              value: supersecret

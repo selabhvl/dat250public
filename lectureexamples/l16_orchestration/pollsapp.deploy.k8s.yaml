@@ -1,0 +1,25 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  labels:
+    app: pollsapp
+  name: pollsapp
+  namespace: default
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: pollsapp
+  template:
+    metadata:
+      labels:
+        app: pollsapp
+    spec:
+      containers:
+        - image: webminz/pollsapp:tagname
+          imagePullPolicy: IfNotPresent
+          name: pollsapp
+          env:
+            DB_HOST: testdb
+            DB_USER: postgres
+            DB_PASS: supersecret

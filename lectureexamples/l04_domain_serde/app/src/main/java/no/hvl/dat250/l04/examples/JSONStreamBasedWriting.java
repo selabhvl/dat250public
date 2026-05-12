@@ -21,6 +21,7 @@ public class JSONStreamBasedWriting {
 
         try {
             JsonGenerator generator = factory.createGenerator(outout, JsonEncoding.UTF8);
+
             generator.writeStartObject();
             generator.writeFieldName("name");
             generator.writeString("Patrick Stünkel");
@@ -31,6 +32,7 @@ public class JSONStreamBasedWriting {
             generator.writeEndObject();
             generator.flush();
             generator.close();
+
         } catch (IOException e) {
             throw new RuntimeException(e);
         }

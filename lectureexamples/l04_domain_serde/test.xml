@@ -1,0 +1,18 @@
+<Poll>
+  <question>Annanas on Pizza: Is it ok?</question>
+  <options>
+    <options>
+      <order>1</order>
+      <caption>Mamma mia! Noooooo</caption>
+    </options>
+    <options>
+      <order>0</order>
+      <caption>Of course!</caption>
+    </options>
+  </options>
+  <creator>
+    <username>user</username>
+    <email>john.doe@example.com</email>
+    <createdPolls/>
+  </creator>
+</Poll>
